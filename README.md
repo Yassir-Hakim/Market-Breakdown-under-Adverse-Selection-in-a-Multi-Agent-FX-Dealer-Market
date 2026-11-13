@@ -1,6 +1,6 @@
 # Market Breakdown under Adverse Selection in a Multi-Agent FX Dealer Market
 
-Code, saved runs and paper for a research project at the University of Bath, Department of Mathematical Sciences, supervised by Dr Avi Mayorcas (June–October 2026).
+Code, saved runs and paper for a research project at the University of Bath, supervised by Dr Avi Mayorcas (Department of Mathematical Sciences), June–October 2026.
 
 **Paper:** [`Paper/main.pdf`](Paper/main.pdf) (40 pages)
 
