@@ -1,0 +1,36 @@
+PASS  worst  5.8e-16  flow   7.17% (saved   7.17%)  share  97.20% (saved  97.20%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.025_bid_size_2way
+PASS  worst  7.4e-16  flow   0.00% (saved    nan%)  share  98.50% (saved    nan%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.02_bid_size_2way
+PASS  worst  5.8e-16  flow   0.00% (saved    nan%)  share  97.80% (saved    nan%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.02_round_size_2way
+PASS  worst  5.8e-16  flow   0.00% (saved    nan%)  share  99.99% (saved    nan%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.02_turn_size_2way
+PASS  worst  6.9e-16  flow  23.06% (saved    nan%)  share  91.18% (saved  91.18%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  5.8e-16  flow  14.91% (saved    nan%)  share  96.57% (saved  96.57%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_longer
+PASS  worst  7.2e-16  flow   7.38% (saved    nan%)  share  97.41% (saved  97.41%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_lr
+PASS  worst  6.9e-16  flow   0.00% (saved    nan%)  share  99.27% (saved    nan%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.03_round_size_2way
+PASS  worst  7.3e-16  flow  21.82% (saved    nan%)  share  92.87% (saved  92.87%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.03_turn_size_2way
+PASS  worst  5.8e-16  flow  11.42% (saved  11.42%)  share  48.33% (saved  48.33%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.04_bid_size_2way
+PASS  worst  5.8e-16  flow  47.51% (saved  47.51%)  share  71.27% (saved  71.27%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.05_bid_size_2way
+PASS  worst  5.8e-16  flow  49.14% (saved  49.14%)  share  76.12% (saved  76.12%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.06_bid_size_2way
+PASS  worst  4.7e-16  flow  48.83% (saved    nan%)  share  69.24% (saved  69.24%)  frozen None  T1-T2-T3-T4_mm0.01_bdc0.07_bid_size_2way
+PASS  worst  5.8e-16  flow  46.73% (saved  46.73%)  share  92.26% (saved  92.26%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_frozen_cotrained/respond_on_cards
+PASS  worst  6.9e-16  flow  19.57% (saved  19.57%)  share  91.23% (saved  91.23%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_outer30_anneal700
+PASS  worst  7.0e-16  flow  18.68% (saved  18.68%)  share  97.00% (saved  97.00%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed142
+PASS  worst  7.0e-16  flow  18.19% (saved  18.19%)  share  97.21% (saved  97.21%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed242
+PASS  worst  5.8e-16  flow   0.00% (saved   0.00%)  share    nan% (saved    nan%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_tau_const
+PASS  worst  7.3e-16  flow  27.18% (saved  27.18%)  share  87.83% (saved  87.83%)  frozen None  checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_tau_const_mm
+PASS  worst  7.3e-16  flow  23.03% (saved  23.03%)  share  87.92% (saved  87.92%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  7.3e-16  flow  14.91% (saved  14.91%)  share  85.97% (saved  85.97%)  frozen None  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way/respond_on_cards
+PASS  worst  4.4e-16  flow   1.82% (saved   1.82%)  share  98.48% (saved  98.48%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  4.7e-16  flow   1.82% (saved   1.82%)  share  97.23% (saved  97.23%)  frozen None  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way/respond_on_cards
+PASS  worst  7.4e-16  flow   0.00% (saved   0.00%)  share  99.97% (saved    nan%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop12s0_mm0.01_bdc0.02_bid_size_2way
+PASS  worst  7.2e-16  flow   0.00% (saved   0.00%)  share  96.50% (saved    nan%)  frozen None  pop12s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards
+PASS  worst  7.4e-16  flow  19.31% (saved  19.31%)  share  83.94% (saved  83.94%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop12s0_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  5.8e-16  flow  10.89% (saved  10.89%)  share  81.52% (saved  81.52%)  frozen None  pop12s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards
+PASS  worst  7.5e-16  flow   0.00% (saved   0.00%)  share  98.21% (saved    nan%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop24s0_mm0.01_bdc0.02_bid_size_2way
+PASS  worst  6.9e-16  flow   0.00% (saved   0.00%)  share    nan% (saved    nan%)  frozen None  pop24s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards
+PASS  worst  7.8e-16  flow  20.07% (saved  20.07%)  share  82.63% (saved  82.63%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop24s0_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  7.1e-16  flow  17.09% (saved  17.09%)  share  84.54% (saved  84.54%)  frozen None  pop24s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards
+PASS  worst  4.7e-16  flow   0.01% (saved   0.01%)  share  99.98% (saved    nan%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop4s0_mm0.01_bdc0.02_bid_size_2way
+PASS  worst  5.8e-16  flow   0.00% (saved   0.00%)  share  99.99% (saved    nan%)  frozen None  pop4s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards
+PASS  worst  5.8e-16  flow  20.01% (saved  20.01%)  share  81.68% (saved  81.68%)  frozen {'identical': True, 'table_file': 'agents_final.pth'}  pop4s0_mm0.01_bdc0.03_bid_size_2way
+PASS  worst  5.8e-16  flow  13.31% (saved  13.31%)  share  80.35% (saved  80.35%)  frozen None  pop4s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards
+written /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/verification/verify_population.json

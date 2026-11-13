@@ -1,0 +1,51 @@
+fee_aware_dp.py, 2026-09-27 23:48, 947s; identity check passed; gates 1-2 passed
+
+Exact DP with the market maker's own Bureau fee g, one offer per round, four rounds
+(% of starting capital; +/- is 2 s.e. of the paired difference; floor = always-Bureau, analytic)
+
+side A  card GBP 100,000 -> $ 125,000 target, residue A 2%, deficit B 3%
+  (f, g)          f'     floor   DP value            DP edge       network edge       DP - network  DP table   r1 DP: z, fill   r1 net: z, fill
+  (2%, 0%)     2.00%  -1.4441%   -1.4183% +0.0258 +/- 0.0020 +0.0246 +/- 0.0018 +0.0011 +/- 0.0012   -1.223%   +1.33sd  9.12%    +1.45sd  7.33%
+  (2%, 1%)     1.01%  -1.4441%   -1.4441% +0.0000 +/- 0.0001 -0.0004 +/- 0.0001 +0.0004 +/- 0.0001   -1.249%   +3.33sd  0.04%    +3.30sd  0.05%
+  (3%, 0%)     3.00%  -2.4730%   -2.2794% +0.1936 +/- 0.0056 +0.1898 +/- 0.0225 +0.0038 +/- 0.0213   -2.087%   +0.67sd 25.25%    +0.66sd 25.57%
+  (3%, 1%)     2.02%  -2.4730%   -2.4456% +0.0274 +/- 0.0020 +0.0264 +/- 0.0020 +0.0010 +/- 0.0006   -2.252%   +1.33sd  9.12%    +1.35sd  8.77%
+
+side B  card $ 200,000 -> GBP 155,000 target, residue A 3%, deficit B 2%
+  (f, g)          f'     floor   DP value            DP edge       network edge       DP - network  DP table   r1 DP: z, fill   r1 net: z, fill
+  (2%, 0%)     2.00%  -2.0210%   -1.9967% +0.0242 +/- 0.0158 +0.0100 +/- 0.0163 +0.0142 +/- 0.0139   -2.002%   +1.67sd  4.78%    +1.77sd  3.82%
+  (2%, 1%)     1.01%  -2.0210%   -2.0193% +0.0016 +/- 0.0058 +0.0003 +/- 0.0038 +0.0013 +/- 0.0055   -2.021%   +3.67sd  0.01%    +4.25sd  0.00%
+  (3%, 0%)     3.00%  -3.0297%   -2.6101% +0.4196 +/- 0.0257 +0.4096 +/- 0.0252 +0.0100 +/- 0.0059   -2.620%   +1.00sd 15.87%    +0.93sd 17.57%
+  (3%, 1%)     2.02%  -3.0297%   -2.9991% +0.0306 +/- 0.0155 +0.0058 +/- 0.0233 +0.0248 +/- 0.0177   -3.008%   +1.67sd  4.78%    +1.78sd  3.74%
+
+flows under the DP (share of starting capital, rounds 1-4; offer rate = offers per game)
+  side A (2%, 0%): to MM  9.12%  0.00%  0.00%  0.00%   to Bureau 90.89%  0.00%  0.00%  0.00%   left at end 0.00%   P(fill | offer)  9.12%   --     --     --  
+  side A (2%, 1%): to MM  0.05%  0.00%  0.00%  0.00%   to Bureau 99.95%  0.00%  0.00%  0.00%   left at end 0.00%   P(fill | offer)  0.05%   --     --     --  
+  side A (3%, 0%): to MM 25.22%  1.48%  0.17%  0.02%   to Bureau 68.98%  3.69%  0.38%  0.06%   left at end 0.00%   P(fill | offer) 25.22% 25.51% 26.28% 24.15%
+  side A (3%, 1%): to MM  9.12%  0.00%  0.00%  0.00%   to Bureau 90.89%  0.00%  0.00%  0.00%   left at end 0.00%   P(fill | offer)  9.12%   --     --     --  
+  side B (2%, 0%): to MM  4.85%  2.26%  1.56%  1.23%   to Bureau 48.17% 13.04%  5.97% 22.94%   left at end 0.00%   P(fill | offer)  4.85%  4.60%  4.63%  4.77%
+  side B (2%, 1%): to MM  0.00%  0.00%  0.00%  0.00%   to Bureau 89.25%  2.77%  2.49%  5.49%   left at end 0.00%   P(fill | offer)  0.02%  0.05%  0.09%  0.11%
+  side B (3%, 0%): to MM 16.03% 15.79% 14.77% 12.92%   to Bureau  0.00%  0.00%  0.00% 40.44%   left at end 0.06%   P(fill | offer) 16.03% 18.80% 21.66% 24.19%
+  side B (3%, 1%): to MM  4.85%  2.45%  1.74%  1.42%   to Bureau 48.81% 12.64%  5.72% 21.88%   left at end 0.50%   P(fill | offer)  4.85%  4.98%  5.19%  5.45%
+
+gates 3-4 (replay vs table, money conservation) and gate 5 (floor < DP table < clairvoyant):
+  side A (2%, 0%): gates 3-4 passed (table - replay +0.216 points), gate 5 passed, clairvoyant +4.103%
+  side A (2%, 1%): gates 3-4 passed (table - replay +0.217 points), gate 5 passed, clairvoyant +3.105%
+  side A (3%, 0%): gates 3-4 passed (table - replay +0.230 points), gate 5 passed, clairvoyant +4.103%
+  side A (3%, 1%): gates 3-4 passed (table - replay +0.214 points), gate 5 passed, clairvoyant +3.105%
+  side B (2%, 0%): gates 3-4 passed (table - replay +0.006 points), gate 5 passed, clairvoyant +3.827%
+  side B (2%, 1%): gates 3-4 passed (table - replay +0.003 points), gate 5 passed, clairvoyant +2.856%
+  side B (3%, 0%): gates 3-4 passed (table - replay -0.064 points), gate 5 passed, clairvoyant +3.827%
+  side B (3%, 1%): gates 3-4 passed (table - replay -0.002 points), gate 5 passed, clairvoyant +2.856%
+
+HYPOTHESES (stated before the run)
+  H1 (2%,1%) on the floor, |edge| < 0.005%: SUPPORTED (side A +0.0000 +/- 0.0001; side B +0.0016 +/- 0.0058)
+  H2 (3%,1%) nearer (2%,0) than (3%,0): SUPPORTED (side A (3%,1%) +0.0274 vs (2%,0) +0.0258, (3%,0) +0.1936; side B (3%,1%) +0.0306 vs (2%,0) +0.0242, (3%,0) +0.4196)
+  H3 networks match the DP within 2 s.e.: NOT SUPPORTED
+     A f=0.02 g=0: +0.0011 +/- 0.0012
+     A f=0.02 g=0.01: +0.0004 +/- 0.0001 (outside)
+     A f=0.03 g=0: +0.0038 +/- 0.0213
+     A f=0.03 g=0.01: +0.0010 +/- 0.0006 (outside)
+     B f=0.02 g=0: +0.0142 +/- 0.0139 (outside)
+     B f=0.02 g=0.01: +0.0013 +/- 0.0055
+     B f=0.03 g=0: +0.0100 +/- 0.0059 (outside)
+     B f=0.03 g=0.01: +0.0248 +/- 0.0177 (outside)

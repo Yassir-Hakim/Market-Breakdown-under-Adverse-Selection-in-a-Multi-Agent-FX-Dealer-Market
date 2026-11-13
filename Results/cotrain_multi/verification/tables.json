@@ -1,0 +1,1317 @@
+{
+ "rules": {
+  "start_amounts": [
+   50000.0,
+   100000.0,
+   200000.0,
+   500000.0
+  ],
+  "target_u": [
+   0.9,
+   1.1
+  ],
+  "penalties": [
+   0.0,
+   0.02,
+   0.03,
+   0.05,
+   0.1,
+   0.2
+  ],
+  "a0": 1.25,
+  "sd": 0.05,
+  "rounds": 4
+ },
+ "four_cards": [
+  {
+   "name": "T1",
+   "side": "A",
+   "L": 100000.0,
+   "T": 125000.0,
+   "A": 0.02,
+   "B": 0.03,
+   "pounds": 100000.0,
+   "u": 1.0,
+   "bureau_worth_it": true
+  },
+  {
+   "name": "T2",
+   "side": "B",
+   "L": 200000.0,
+   "T": 155000.0,
+   "A": 0.03,
+   "B": 0.02,
+   "pounds": 160000.0,
+   "u": 0.96875,
+   "bureau_worth_it": true
+  },
+  {
+   "name": "T3",
+   "side": "A",
+   "L": 50000.0,
+   "T": 63000.0,
+   "A": 0.2,
+   "B": 0.0,
+   "pounds": 50000.0,
+   "u": 1.008,
+   "bureau_worth_it": true
+  },
+  {
+   "name": "T4",
+   "side": "B",
+   "L": 500000.0,
+   "T": 396000.0,
+   "A": 0.0,
+   "B": 0.2,
+   "pounds": 400000.0,
+   "u": 0.99,
+   "bureau_worth_it": true
+  }
+ ],
+ "runs": [
+  {
+   "folder": "checks/pop4s1_mm0.01_bdc0.03_bid_size_2way",
+   "n": 4,
+   "seed": 1,
+   "mm_fee": 0.01,
+   "trader_fee": 0.03,
+   "spread": 0.02,
+   "saved_table_is_the_draw": true,
+   "capital": 250000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "A",
+     "L": 50000.0,
+     "T": 68108.0,
+     "A": 0.0,
+     "B": 0.02,
+     "pounds": 50000.0,
+     "u": 1.089728,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 100000.0,
+     "T": 78773.0,
+     "A": 0.02,
+     "B": 0.1,
+     "pounds": 80000.0,
+     "u": 0.9846625,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 100000.0,
+     "T": 80793.0,
+     "A": 0.03,
+     "B": 0.0,
+     "pounds": 80000.0,
+     "u": 1.0099125,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R04",
+     "side": "B",
+     "L": 50000.0,
+     "T": 42028.0,
+     "A": 0.2,
+     "B": 0.05,
+     "pounds": 40000.0,
+     "u": 1.0507,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 2000,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.1490535726521462,
+   "share_on_cards": 0.8596549296907732
+  },
+  {
+   "folder": "checks/pop4s2_mm0.01_bdc0.03_bid_size_2way",
+   "n": 4,
+   "seed": 2,
+   "mm_fee": 0.01,
+   "trader_fee": 0.03,
+   "spread": 0.02,
+   "saved_table_is_the_draw": true,
+   "capital": 980000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 100000.0,
+     "T": 73471.0,
+     "A": 0.1,
+     "B": 0.03,
+     "pounds": 80000.0,
+     "u": 0.9183875,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R02",
+     "side": "A",
+     "L": 200000.0,
+     "T": 261428.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 200000.0,
+     "u": 1.045712,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "A",
+     "L": 500000.0,
+     "T": 596871.0,
+     "A": 0.0,
+     "B": 0.02,
+     "pounds": 500000.0,
+     "u": 0.9549936,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 200000.0,
+     "T": 253113.0,
+     "A": 0.02,
+     "B": 0.0,
+     "pounds": 200000.0,
+     "u": 1.012452,
+     "bureau_worth_it": false
+    }
+   ],
+   "train": {
+    "mm_steps": 2000,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.018211940188478062,
+   "share_on_cards": 0.9722537648045924
+  },
+  {
+   "folder": "pop12s0_mm0.01_bdc0.02_bid_size_2way",
+   "n": 12,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.02,
+   "spread": 0.01,
+   "saved_table_is_the_draw": true,
+   "capital": 1510000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 200000.0,
+     "T": 167344.0,
+     "A": 0.05,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.0459,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 200000.0,
+     "T": 173922.0,
+     "A": 0.02,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 1.0870125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 200000.0,
+     "T": 171437.0,
+     "A": 0.0,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.07148125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 50000.0,
+     "T": 65371.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 50000.0,
+     "u": 1.045936,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R05",
+     "side": "A",
+     "L": 50000.0,
+     "T": 63018.0,
+     "A": 0.2,
+     "B": 0.0,
+     "pounds": 50000.0,
+     "u": 1.008288,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R06",
+     "side": "A",
+     "L": 100000.0,
+     "T": 123067.0,
+     "A": 0.03,
+     "B": 0.0,
+     "pounds": 100000.0,
+     "u": 0.984536,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R07",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64633.0,
+     "A": 0.0,
+     "B": 0.05,
+     "pounds": 50000.0,
+     "u": 1.034128,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R08",
+     "side": "A",
+     "L": 200000.0,
+     "T": 255769.0,
+     "A": 0.1,
+     "B": 0.03,
+     "pounds": 200000.0,
+     "u": 1.023076,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R09",
+     "side": "A",
+     "L": 100000.0,
+     "T": 137021.0,
+     "A": 0.2,
+     "B": 0.03,
+     "pounds": 100000.0,
+     "u": 1.096168,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R10",
+     "side": "B",
+     "L": 200000.0,
+     "T": 164815.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 1.03009375,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R11",
+     "side": "B",
+     "L": 200000.0,
+     "T": 148323.0,
+     "A": 0.03,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 0.92701875,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R12",
+     "side": "B",
+     "L": 200000.0,
+     "T": 160811.0,
+     "A": 0.03,
+     "B": 0.02,
+     "pounds": 160000.0,
+     "u": 1.00506875,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 800,
+    "trader_steps": 800,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 700,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 1.0780062589042396e-12,
+   "share_on_cards": 0.964981871961794
+  },
+  {
+   "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way",
+   "n": 12,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.03,
+   "spread": 0.02,
+   "saved_table_is_the_draw": true,
+   "capital": 1510000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 200000.0,
+     "T": 167344.0,
+     "A": 0.05,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.0459,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 200000.0,
+     "T": 173922.0,
+     "A": 0.02,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 1.0870125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 200000.0,
+     "T": 171437.0,
+     "A": 0.0,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.07148125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 50000.0,
+     "T": 65371.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 50000.0,
+     "u": 1.045936,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R05",
+     "side": "A",
+     "L": 50000.0,
+     "T": 63018.0,
+     "A": 0.2,
+     "B": 0.0,
+     "pounds": 50000.0,
+     "u": 1.008288,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R06",
+     "side": "A",
+     "L": 100000.0,
+     "T": 123067.0,
+     "A": 0.03,
+     "B": 0.0,
+     "pounds": 100000.0,
+     "u": 0.984536,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R07",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64633.0,
+     "A": 0.0,
+     "B": 0.05,
+     "pounds": 50000.0,
+     "u": 1.034128,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R08",
+     "side": "A",
+     "L": 200000.0,
+     "T": 255769.0,
+     "A": 0.1,
+     "B": 0.03,
+     "pounds": 200000.0,
+     "u": 1.023076,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R09",
+     "side": "A",
+     "L": 100000.0,
+     "T": 137021.0,
+     "A": 0.2,
+     "B": 0.03,
+     "pounds": 100000.0,
+     "u": 1.096168,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R10",
+     "side": "B",
+     "L": 200000.0,
+     "T": 164815.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 1.03009375,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R11",
+     "side": "B",
+     "L": 200000.0,
+     "T": 148323.0,
+     "A": 0.03,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 0.92701875,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R12",
+     "side": "B",
+     "L": 200000.0,
+     "T": 160811.0,
+     "A": 0.03,
+     "B": 0.02,
+     "pounds": 160000.0,
+     "u": 1.00506875,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 2000,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.10892662261104097,
+   "share_on_cards": 0.8152189218382803
+  },
+  {
+   "folder": "pop24s0_mm0.01_bdc0.02_bid_size_2way",
+   "n": 24,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.02,
+   "spread": 0.01,
+   "saved_table_is_the_draw": true,
+   "capital": 4980000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 100000.0,
+     "T": 72537.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 80000.0,
+     "u": 0.9067125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 200000.0,
+     "T": 149621.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 160000.0,
+     "u": 0.93513125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 50000.0,
+     "T": 38398.0,
+     "A": 0.05,
+     "B": 0.03,
+     "pounds": 40000.0,
+     "u": 0.95995,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 100000.0,
+     "T": 113208.0,
+     "A": 0.0,
+     "B": 0.0,
+     "pounds": 100000.0,
+     "u": 0.905664,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R05",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64340.0,
+     "A": 0.1,
+     "B": 0.02,
+     "pounds": 50000.0,
+     "u": 1.02944,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R06",
+     "side": "A",
+     "L": 200000.0,
+     "T": 244184.0,
+     "A": 0.03,
+     "B": 0.2,
+     "pounds": 200000.0,
+     "u": 0.976736,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R07",
+     "side": "A",
+     "L": 500000.0,
+     "T": 648193.0,
+     "A": 0.2,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0371088,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R08",
+     "side": "A",
+     "L": 200000.0,
+     "T": 259422.0,
+     "A": 0.1,
+     "B": 0.03,
+     "pounds": 200000.0,
+     "u": 1.037688,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R09",
+     "side": "A",
+     "L": 500000.0,
+     "T": 652686.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0442976,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R10",
+     "side": "B",
+     "L": 200000.0,
+     "T": 153928.0,
+     "A": 0.03,
+     "B": 0.03,
+     "pounds": 160000.0,
+     "u": 0.96205,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R11",
+     "side": "B",
+     "L": 200000.0,
+     "T": 173889.0,
+     "A": 0.2,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.08680625,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R12",
+     "side": "B",
+     "L": 100000.0,
+     "T": 81144.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.0143,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R13",
+     "side": "B",
+     "L": 200000.0,
+     "T": 154813.0,
+     "A": 0.05,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 0.96758125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R14",
+     "side": "B",
+     "L": 100000.0,
+     "T": 86244.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.07805,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R15",
+     "side": "B",
+     "L": 200000.0,
+     "T": 146688.0,
+     "A": 0.05,
+     "B": 0.03,
+     "pounds": 160000.0,
+     "u": 0.9168,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R16",
+     "side": "B",
+     "L": 500000.0,
+     "T": 422968.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 400000.0,
+     "u": 1.05742,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R17",
+     "side": "B",
+     "L": 500000.0,
+     "T": 364685.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 400000.0,
+     "u": 0.9117125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R18",
+     "side": "B",
+     "L": 100000.0,
+     "T": 74404.0,
+     "A": 0.2,
+     "B": 0.03,
+     "pounds": 80000.0,
+     "u": 0.93005,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R19",
+     "side": "B",
+     "L": 500000.0,
+     "T": 378451.0,
+     "A": 0.1,
+     "B": 0.1,
+     "pounds": 400000.0,
+     "u": 0.9461275,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R20",
+     "side": "B",
+     "L": 50000.0,
+     "T": 39236.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 40000.0,
+     "u": 0.9809,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R21",
+     "side": "A",
+     "L": 500000.0,
+     "T": 635042.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0160672,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R22",
+     "side": "B",
+     "L": 100000.0,
+     "T": 82752.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.0344,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R23",
+     "side": "B",
+     "L": 500000.0,
+     "T": 389209.0,
+     "A": 0.2,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 0.9730225,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R24",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64114.0,
+     "A": 0.1,
+     "B": 0.2,
+     "pounds": 50000.0,
+     "u": 1.025824,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 1400,
+    "trader_steps": 1400,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 700,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.0,
+   "share_on_cards": NaN
+  },
+  {
+   "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way",
+   "n": 24,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.03,
+   "spread": 0.02,
+   "saved_table_is_the_draw": true,
+   "capital": 4980000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 100000.0,
+     "T": 72537.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 80000.0,
+     "u": 0.9067125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 200000.0,
+     "T": 149621.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 160000.0,
+     "u": 0.93513125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 50000.0,
+     "T": 38398.0,
+     "A": 0.05,
+     "B": 0.03,
+     "pounds": 40000.0,
+     "u": 0.95995,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 100000.0,
+     "T": 113208.0,
+     "A": 0.0,
+     "B": 0.0,
+     "pounds": 100000.0,
+     "u": 0.905664,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R05",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64340.0,
+     "A": 0.1,
+     "B": 0.02,
+     "pounds": 50000.0,
+     "u": 1.02944,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R06",
+     "side": "A",
+     "L": 200000.0,
+     "T": 244184.0,
+     "A": 0.03,
+     "B": 0.2,
+     "pounds": 200000.0,
+     "u": 0.976736,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R07",
+     "side": "A",
+     "L": 500000.0,
+     "T": 648193.0,
+     "A": 0.2,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0371088,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R08",
+     "side": "A",
+     "L": 200000.0,
+     "T": 259422.0,
+     "A": 0.1,
+     "B": 0.03,
+     "pounds": 200000.0,
+     "u": 1.037688,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R09",
+     "side": "A",
+     "L": 500000.0,
+     "T": 652686.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0442976,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R10",
+     "side": "B",
+     "L": 200000.0,
+     "T": 153928.0,
+     "A": 0.03,
+     "B": 0.03,
+     "pounds": 160000.0,
+     "u": 0.96205,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R11",
+     "side": "B",
+     "L": 200000.0,
+     "T": 173889.0,
+     "A": 0.2,
+     "B": 0.05,
+     "pounds": 160000.0,
+     "u": 1.08680625,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R12",
+     "side": "B",
+     "L": 100000.0,
+     "T": 81144.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.0143,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R13",
+     "side": "B",
+     "L": 200000.0,
+     "T": 154813.0,
+     "A": 0.05,
+     "B": 0.1,
+     "pounds": 160000.0,
+     "u": 0.96758125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R14",
+     "side": "B",
+     "L": 100000.0,
+     "T": 86244.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.07805,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R15",
+     "side": "B",
+     "L": 200000.0,
+     "T": 146688.0,
+     "A": 0.05,
+     "B": 0.03,
+     "pounds": 160000.0,
+     "u": 0.9168,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R16",
+     "side": "B",
+     "L": 500000.0,
+     "T": 422968.0,
+     "A": 0.02,
+     "B": 0.02,
+     "pounds": 400000.0,
+     "u": 1.05742,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R17",
+     "side": "B",
+     "L": 500000.0,
+     "T": 364685.0,
+     "A": 0.2,
+     "B": 0.1,
+     "pounds": 400000.0,
+     "u": 0.9117125,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R18",
+     "side": "B",
+     "L": 100000.0,
+     "T": 74404.0,
+     "A": 0.2,
+     "B": 0.03,
+     "pounds": 80000.0,
+     "u": 0.93005,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R19",
+     "side": "B",
+     "L": 500000.0,
+     "T": 378451.0,
+     "A": 0.1,
+     "B": 0.1,
+     "pounds": 400000.0,
+     "u": 0.9461275,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R20",
+     "side": "B",
+     "L": 50000.0,
+     "T": 39236.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 40000.0,
+     "u": 0.9809,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R21",
+     "side": "A",
+     "L": 500000.0,
+     "T": 635042.0,
+     "A": 0.0,
+     "B": 0.2,
+     "pounds": 500000.0,
+     "u": 1.0160672,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R22",
+     "side": "B",
+     "L": 100000.0,
+     "T": 82752.0,
+     "A": 0.2,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 1.0344,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R23",
+     "side": "B",
+     "L": 500000.0,
+     "T": 389209.0,
+     "A": 0.2,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 0.9730225,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R24",
+     "side": "A",
+     "L": 50000.0,
+     "T": 64114.0,
+     "A": 0.1,
+     "B": 0.2,
+     "pounds": 50000.0,
+     "u": 1.025824,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 2000,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.17094218320981142,
+   "share_on_cards": 0.8454237985021625
+  },
+  {
+   "folder": "pop4s0_mm0.01_bdc0.02_bid_size_2way",
+   "n": 4,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.02,
+   "spread": 0.01,
+   "saved_table_is_the_draw": true,
+   "capital": 1380000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 100000.0,
+     "T": 72264.0,
+     "A": 0.0,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 0.9033,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 500000.0,
+     "T": 433020.0,
+     "A": 0.05,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 1.08255,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 500000.0,
+     "T": 403490.0,
+     "A": 0.1,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 1.008725,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 500000.0,
+     "T": 664482.0,
+     "A": 0.1,
+     "B": 0.0,
+     "pounds": 500000.0,
+     "u": 1.0631712,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 800,
+    "trader_steps": 800,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 800,
+    "stopped_early": true,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 3.974909936578743e-05,
+   "share_on_cards": 0.9999263559141116
+  },
+  {
+   "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way",
+   "n": 4,
+   "seed": 0,
+   "mm_fee": 0.01,
+   "trader_fee": 0.03,
+   "spread": 0.02,
+   "saved_table_is_the_draw": true,
+   "capital": 1380000.0,
+   "cards": [
+    {
+     "name": "R01",
+     "side": "B",
+     "L": 100000.0,
+     "T": 72264.0,
+     "A": 0.0,
+     "B": 0.02,
+     "pounds": 80000.0,
+     "u": 0.9033,
+     "bureau_worth_it": false
+    },
+    {
+     "name": "R02",
+     "side": "B",
+     "L": 500000.0,
+     "T": 433020.0,
+     "A": 0.05,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 1.08255,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R03",
+     "side": "B",
+     "L": 500000.0,
+     "T": 403490.0,
+     "A": 0.1,
+     "B": 0.05,
+     "pounds": 400000.0,
+     "u": 1.008725,
+     "bureau_worth_it": true
+    },
+    {
+     "name": "R04",
+     "side": "A",
+     "L": 500000.0,
+     "T": 664482.0,
+     "A": 0.1,
+     "B": 0.0,
+     "pounds": 500000.0,
+     "u": 1.0631712,
+     "bureau_worth_it": true
+    }
+   ],
+   "train": {
+    "mm_steps": 2000,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "test": {
+    "mm_steps": 0,
+    "trader_steps": 2000,
+    "stopped_early": false,
+    "games_per_step": 1000,
+    "record_games": 20000,
+    "eval_games": 200000,
+    "lr_trader": 0.001,
+    "lr_mm": 0.0001
+   },
+   "flow_on_cards": 0.13308505730102918,
+   "share_on_cards": 0.8034988139080023
+  }
+ ],
+ "baseline_same_test": {
+  "flow": 0.4672923200409252,
+  "share": 0.9225729395100531
+ }
+}

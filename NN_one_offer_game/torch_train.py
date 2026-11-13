@@ -24,7 +24,7 @@ import torch
 
 from rl_env import Game, P_MIN, P_MAX
 import rl_diagnostics as D
-from Mechanics.fx_mechanics import results_path
+from Mechanics.fx_mechanics import results_path, BDC_FEE_DEFAULT
 
 # ============================ SETTINGS ======================================
 GATE = "smoothed"     # "smoothed": annealed sigmoid (the recipe, made to
@@ -507,7 +507,7 @@ def main():
     # environment and is never chosen in this file. 
     spec = Game().spec
 
-    run_directory = results_path(f"torch_{spec.side}_R{spec.rounds}_{GATE}")
+    run_directory = results_path(f"torch_{spec.side}_R{spec.rounds}_{GATE}_BdC_Fee_{BDC_FEE_DEFAULT}")
     run_directory.mkdir(parents=True, exist_ok=True)
 
     print(f"game (from rl_env): side {spec.side}, rounds {spec.rounds}, "

@@ -1,0 +1,272 @@
+[
+ {
+  "label": "Baseline, co-trained",
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way",
+  "cards": {
+   "T1": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.3069020587183588,
+    "edge_median": -0.045837998530023946,
+    "q_mean": 0.9958929919537545,
+    "accept": 0.0943,
+    "pl": -0.024330655946563435,
+    "gain_over_bureau": 0.0005027195095416848
+   },
+   "T2": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2075086190442288,
+    "edge_median": -0.03370081260150573,
+    "q_mean": 0.9738962751842131,
+    "accept": 0.1692,
+    "pl": -0.02879751590468883,
+    "gain_over_bureau": 0.001407114443114874
+   },
+   "T3": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.3083455775176778,
+    "edge_median": -0.04699316299077985,
+    "q_mean": 0.9892682385558481,
+    "accept": 0.0879,
+    "pl": -0.023269209499348766,
+    "gain_over_bureau": 0.00047010425586391756
+   },
+   "T4": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2114570726376002,
+    "edge_median": -0.03054109395554245,
+    "q_mean": 0.9937235140063607,
+    "accept": 0.20955,
+    "pl": -0.03436206268231777,
+    "gain_over_bureau": 0.0010896141358914101
+   }
+  },
+  "bid_r1": 0.9926073456889525,
+  "ask_r1": 1.0018721156236137,
+  "mm_bp": 57.66612460029935,
+  "X1_median": 1.249621892265884
+ },
+ {
+  "label": "Baseline, same test",
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_frozen_cotrained/respond_on_cards",
+  "cards": {
+   "T1": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.301591065019502,
+    "edge_median": -0.04158791798025027,
+    "q_mean": 0.9964315022804336,
+    "accept": 0.11155,
+    "pl": -0.024319249566738834,
+    "gain_over_bureau": 0.0005141258893662804
+   },
+   "T2": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2080480761970538,
+    "edge_median": -0.0332691162970738,
+    "q_mean": 0.9881362302622366,
+    "accept": 0.17265,
+    "pl": -0.028768430150783352,
+    "gain_over_bureau": 0.0014362001970203648
+   },
+   "T3": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.305759810310714,
+    "edge_median": -0.04492392330877368,
+    "q_mean": 0.990044427522932,
+    "accept": 0.0971,
+    "pl": -0.023264396814968027,
+    "gain_over_bureau": 0.0004749169402446664
+   },
+   "T4": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2220944674170398,
+    "edge_median": -0.02202860322107013,
+    "q_mean": 0.9890237962681602,
+    "accept": 0.2812,
+    "pl": -0.03412709613951637,
+    "gain_over_bureau": 0.0013245806786928089
+   }
+  },
+  "bid_r1": 0.9922354454524396,
+  "ask_r1": 1.0014771082569092,
+  "mm_bp": 116.98558140740103,
+  "X1_median": 1.249621892265884
+ },
+ {
+  "label": "Population, 4",
+  "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "cards": {
+   "T1": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.297791838745673,
+    "edge_median": -0.03854761731221057,
+    "q_mean": 0.9976311986810344,
+    "accept": 0.13305,
+    "pl": -0.024167903583787623,
+    "gain_over_bureau": 0.0006654718723174912
+   },
+   "T2": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2014541362784605,
+    "edge_median": -0.03854586437538939,
+    "q_mean": 0.9802898503284112,
+    "accept": 0.1262,
+    "pl": -0.02946505392554293,
+    "gain_over_bureau": 0.0007395764222607879
+   },
+   "T3": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.297700862327079,
+    "edge_median": -0.03847481415538548,
+    "q_mean": 0.9903542239434734,
+    "accept": 0.13525,
+    "pl": -0.02304026990466459,
+    "gain_over_bureau": 0.0006990438505481059
+   },
+   "T4": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.186980844642768,
+    "edge_median": -0.050128001120401534,
+    "q_mean": 0.9990488342533171,
+    "accept": 0.06565,
+    "pl": -0.03534271452231058,
+    "gain_over_bureau": 0.00010896229589860453
+   }
+  },
+  "bid_r1": 0.993798165977833,
+  "ask_r1": 1.0097431104150445,
+  "mm_bp": 40.07016480943839,
+  "X1_median": 1.249621892265884
+ },
+ {
+  "label": "Population, 12",
+  "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "cards": {
+   "T1": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.3073416718153257,
+    "edge_median": -0.04618979542129999,
+    "q_mean": 0.9961355450883348,
+    "accept": 0.0911,
+    "pl": -0.024369840426790447,
+    "gain_over_bureau": 0.00046353502931466826
+   },
+   "T2": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2019220418043066,
+    "edge_median": -0.03817142669248307,
+    "q_mean": 0.9695377424168165,
+    "accept": 0.12975,
+    "pl": -0.029455619397142783,
+    "gain_over_bureau": 0.0007490109506609275
+   },
+   "T3": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.3016112638267563,
+    "edge_median": -0.041604081915420976,
+    "q_mean": 0.9896923211102263,
+    "accept": 0.1121,
+    "pl": -0.023252765859511495,
+    "gain_over_bureau": 0.0004865478957011928
+   },
+   "T4": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.163193877034455,
+    "edge_median": -0.0691633331321769,
+    "q_mean": 0.9985651539101815,
+    "accept": 0.02015,
+    "pl": -0.035398429024354715,
+    "gain_over_bureau": 5.3247793854474426e-05
+   }
+  },
+  "bid_r1": 0.992384102918421,
+  "ask_r1": 1.00743811061155,
+  "mm_bp": 31.911801942554746,
+  "X1_median": 1.249621892265884
+ },
+ {
+  "label": "Population, 24",
+  "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "cards": {
+   "T1": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2976205410817399,
+    "edge_median": -0.03841053771637884,
+    "q_mean": 0.9974333302681635,
+    "accept": 0.12915,
+    "pl": -0.02427229275458928,
+    "gain_over_bureau": 0.0005610827015158337
+   },
+   "T2": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2015001497390705,
+    "edge_median": -0.03850904246878306,
+    "q_mean": 0.9807497238655644,
+    "accept": 0.1349,
+    "pl": -0.028890718748196615,
+    "gain_over_bureau": 0.0013139115996070973
+   },
+   "T3": {
+    "side": "A",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.2968435756210916,
+    "edge_median": -0.03778877727391068,
+    "q_mean": 0.9902327674109138,
+    "accept": 0.13515,
+    "pl": -0.02313580916866591,
+    "gain_over_bureau": 0.0006035045865467833
+   },
+   "T4": {
+    "side": "B",
+    "offers_made": 1.0,
+    "forward_share": 1.0,
+    "P_median": 1.1929559949592656,
+    "edge_median": -0.045346434509319695,
+    "q_mean": 0.9971685759387903,
+    "accept": 0.0909,
+    "pl": -0.03515098653337574,
+    "gain_over_bureau": 0.0003006902848334411
+   }
+  },
+  "bid_r1": 0.9929333618782001,
+  "ask_r1": 1.0077092623407466,
+  "mm_bp": 47.66974533006372,
+  "X1_median": 1.249621892265884
+ }
+]

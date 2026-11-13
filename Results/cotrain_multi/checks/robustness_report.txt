@@ -1,0 +1,30 @@
+Final evaluation (MM bp; MM Bureau flow, % capital; Bureau share of its fills; filled, % capital;
+pound sellers share of its fills)  |  mean +/- sd of the last ten validation readings
+
+A. Co-trained on the four cards, 2% spread: what the schedule and the seed do
+                                                MM bp    flow  BdC shr  filled GBP-sell   | late: MM bp          filled %        BdC share %
+  base run (seed 42, anneal 700 of 2000 steps)   +57.7   23.1%   91.2%   25.3%    7.7%   |  +49.2 +/- 13.6   16.0 +/-  5.0   91.9 +/-  1.8
+  seed 142                                       +39.6   18.7%   97.0%   19.3%    2.6%   |  +33.2 +/- 13.4   14.5 +/-  6.9   97.2 +/-  0.4
+  seed 242                                       +43.2   18.2%   97.2%   18.7%    2.9%   |  +33.1 +/-  8.4   15.7 +/-  5.3   97.3 +/-  0.2
+  tau constant 0.02, both agents                  -0.0    0.0%    nan%    0.0%    0.0%   |   +0.0 +/-  0.0    0.0 +/-  0.0        -      
+  tau constant 0.02, market maker only           +64.6   27.2%   87.8%   30.9%    9.6%   |  +52.0 +/- 14.5   16.2 +/-  4.9   90.1 +/-  1.8
+  30 outer steps, anneal held at 700 steps       +52.8   19.6%   91.2%   21.5%    8.6%   |  +52.4 +/-  2.0   15.7 +/-  1.4   91.2 +/-  0.4
+  on disk: longer (30 outer, trader lr 1e-4)     +29.9   14.9%   96.6%   15.4%    4.7%   |  +29.1 +/-  0.5   15.3 +/-  1.2   96.7 +/-  0.1
+  on disk: lr (trader lr 1e-4)                   +22.5    7.4%   97.4%    7.6%    4.8%   |  +20.0 +/-  2.1   11.1 +/-  2.4   97.0 +/-  0.2
+
+B. The four cards retrained from fresh against a FROZEN market maker, 2% spread
+                                                MM bp    flow  BdC shr  filled GBP-sell   | late: MM bp          filled %        BdC share %
+  frozen co-trained MM (the base run)           +117.0   46.7%   92.3%   50.7%    4.5%   | +115.5 +/-  6.7   23.4 +/-  1.4   92.5 +/-  0.3
+  frozen MM trained on 4 random traders, table 0   +40.1   13.3%   80.3%   16.6%   17.2%   |  +38.2 +/-  1.7   11.4 +/-  0.4   82.0 +/-  1.6
+  frozen MM trained on 4 random traders, table 1   +40.5   14.9%   86.0%   17.3%   21.4%   |  +37.3 +/-  3.3   11.9 +/-  0.9   85.3 +/-  0.9
+  frozen MM trained on 4 random traders, table 2    +3.3    1.8%   97.2%    1.9%   56.8%   |   +3.6 +/-  0.4    1.8 +/-  0.2   96.9 +/-  0.1
+  frozen MM trained on 12 random traders         +31.9   10.9%   81.5%   13.4%   15.6%   |  +29.2 +/-  2.7    8.7 +/-  0.7   82.8 +/-  0.7
+  frozen MM trained on 24 random traders         +47.7   17.1%   84.5%   20.2%   13.8%   |  +46.0 +/-  6.2   13.5 +/-  1.7   86.1 +/-  1.4
+
+C. The random tables themselves, co-trained, 2% spread
+                                                MM bp    flow  BdC shr  filled GBP-sell   | late: MM bp          filled %        BdC share %
+  4 random traders, table 0                      +58.7   20.0%   81.7%   24.5%   17.5%   |  +53.3 +/- 18.5   12.7 +/-  5.1   86.2 +/-  7.2
+  4 random traders, table 1                      +62.0   23.0%   87.9%   26.2%   10.5%   |  +51.2 +/- 17.3    9.3 +/-  3.5   89.9 +/-  1.4
+  4 random traders, table 2                       +2.9    1.8%   98.5%    1.8%  100.0%   |   +3.1 +/-  0.5    0.8 +/-  0.1   98.5 +/-  0.1
+  12 random traders                              +56.6   19.3%   83.9%   23.0%   14.6%   |  +43.1 +/- 15.4   13.8 +/-  5.2   87.3 +/-  3.9
+  24 random traders                              +53.8   20.1%   82.6%   24.3%   20.6%   |  +40.1 +/- 10.6   12.7 +/-  3.6   86.5 +/-  2.2

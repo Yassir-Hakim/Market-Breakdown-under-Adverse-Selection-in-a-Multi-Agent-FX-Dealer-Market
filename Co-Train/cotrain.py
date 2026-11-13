@@ -64,7 +64,7 @@ from NN_one_offer_game.rl_diagnostics import dump_all_pl   # always-BdC per
 from DP_Models.v2_multiple_rounds import bdc_baseline      # the analytic
                                               # floor: check 5 and the summary
 from MM_Phase_1.train_traders import CARD
-from Mechanics.fx_mechanics import results_path
+from Mechanics.fx_mechanics import results_path, BDC_FEE_DEFAULT
 
 # ============================ SETTINGS ======================================
 SIDES = ("A", "B")
@@ -372,6 +372,27 @@ def cotrain(spec, run):
     val_rate_moves_sd = torch.randn(VAL_PATHS, spec.rounds + 1,
                                     generator=validation_generator)
     val_bdc_pl = always_bdc_pl(spec, val_rate_moves_sd)   # the floor on them
+    # the trader's best response to the HARDCODED fee-aware MM, replayed on
+    # THESE validation paths so the curve panel's reference is paired with the
+    # curve. The number in torch_train_fee's own summary.txt is on its seed
+    # (1234), not this file's (9012), so it is a different path family and
+    # cannot be drawn here. The rule is the one torch_train_fee trained
+    # against, which check 1F certifies equal to torch_train_fee.rollout at
+    # this fee, so the replay describes the game that was actually trained
+    br_net = load_best_response(side, spec)
+    if br_net is None:
+        best_response_pl = float("nan")
+    else:
+        br_rule = next(r for r in M.reference_rules(MM_FEE)
+                       if r.name == ("fee-aware+flatten" if MM_FEE > 0
+                                     else "naive+flatten"))
+        with torch.no_grad():
+            best_response_pl = float(M.rollout(
+                None, br_net, spec, val_rate_moves_sd, rule=br_rule,
+                fee=MM_FEE)[1].mean())
+        print(f"  best response to the hardcoded {br_rule.name} MM, on these "
+              f"{VAL_PATHS:,} validation paths: {best_response_pl * 100:+.4f}%",
+              flush=True)
     rule_names = [rule.name for rule in M.reference_rules(MM_FEE)]
 
     # block 0: the pair as initialised, so the curves start where the
@@ -413,6 +434,8 @@ def cotrain(spec, run):
     curve = {key: np.array([row[key] for row in history])
              for key in history[0]}
     curve["stopped_at"] = -1 if stopped_at is None else stopped_at
+    curve["best_response_pl"] = best_response_pl   # constant: the paths are
+                                                   # fixed, as bdc_pl is
     np.savez(run / "cotrain_curve.npz", **curve)
     return trader_net, mm_net, curve
 
@@ -474,10 +497,32 @@ def load_phase1(side):
     return trader_net, mm_net, fingerprint
 
 
+def load_best_response(side, spec):
+    """torch_train_fee's trader for this side at THIS g and BdC fee: the
+    trader's best response to the HARDCODED fee-aware MM, which is a DIFFERENT
+    opponent from the co-trained MM -- neither a ceiling nor a floor for the
+    pair, only a reference. None if that run is absent, so a side can be
+    co-trained before it exists. mm_train already imports torch_train_fee as
+    TF, so M.TF is the same module instance the engine's folder scheme uses,
+    and M.TF.build_net guarantees the architecture matches the weights."""
+    run = results_path(f"mm_phase1/torch_{side}_R{spec.rounds}_{M.TF.GATE}"
+                       f"_g{MM_FEE:g}_BDC_FEE_{BDC_FEE_DEFAULT}")
+    weights = run / "policy_best.pth"
+    if not weights.exists():
+        print(f"  [best-response line skipped] no torch_train_fee trader for "
+              f"side {side} at g {MM_FEE:g}, BdC fee {BDC_FEE_DEFAULT:g} "
+              f"(looked in {run})", flush=True)
+        return None
+    net = M.TF.build_net(M.TF.SEED_INIT)
+    net.load_state_dict(torch.load(weights))
+    set_learning(net, False)
+    return net
+
+
 def run_side(side):
     # ---- 1. WHICH GAME ----------------------------------------------------
     spec = CARD[side]
-    run = results_path(f"cotrain/{side}_fee{MM_FEE:g}")
+    run = results_path(f"cotrain/{side}_fee{MM_FEE:g}_BdC_FEE{BDC_FEE_DEFAULT}")
     run.mkdir(parents=True, exist_ok=True)
     print(f"\n################ side {side}: card L={spec.L:,.0f} T={spec.T:,.0f} "
           f"A={spec.A} B={spec.B} rounds={spec.rounds} K={spec.K}  MM fee "

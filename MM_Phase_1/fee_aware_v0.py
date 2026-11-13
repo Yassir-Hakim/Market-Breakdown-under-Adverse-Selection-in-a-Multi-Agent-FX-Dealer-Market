@@ -77,7 +77,7 @@ class TraderSpec:
                           # "B": starts in dollars, wants pounds (the T4 family)
     capital: float = 50_000.0
     params: GameParams = field(default_factory=GameParams)
-    mm_fee: float = 0.003   # the MM's own Bureau cost g; 0.0 is v0
+    mm_fee: float = 0.01   # the MM's own Bureau cost g; 0.0 is v0
 
 
 def solve_v0(spec=None):

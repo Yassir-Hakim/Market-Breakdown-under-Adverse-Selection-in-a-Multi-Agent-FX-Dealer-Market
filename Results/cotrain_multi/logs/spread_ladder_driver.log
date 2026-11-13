@@ -1,0 +1,13 @@
+  [done already] T1-T2-T3-T4 mm 0.01 bdc 0.02 bid: /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/T1-T2-T3-T4_mm0.01_bdc0.02_bid_size_2way
+  [done already] T1-T2-T3-T4 mm 0.01 bdc 0.03 bid: /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way
+  [done already] T1-T2-T3-T4 mm 0.01 bdc 0.07 bid: /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/T1-T2-T3-T4_mm0.01_bdc0.07_bid_size_2way
+4 arm(s) to run, 4 at a time, 1 thread(s) each; logs in /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/logs
+  started  T1-T2-T3-T4 mm 0.01 bdc 0.025 bid       -> T1-T2-T3-T4_mm0.01_bdc0.025_bid.log
+  started  T1-T2-T3-T4 mm 0.01 bdc 0.04 bid       -> T1-T2-T3-T4_mm0.01_bdc0.04_bid.log
+  started  T1-T2-T3-T4 mm 0.01 bdc 0.05 bid       -> T1-T2-T3-T4_mm0.01_bdc0.05_bid.log
+  started  T1-T2-T3-T4 mm 0.01 bdc 0.06 bid       -> T1-T2-T3-T4_mm0.01_bdc0.06_bid.log
+  finished T1-T2-T3-T4 mm 0.01 bdc 0.025 bid        87.5 min
+  finished T1-T2-T3-T4 mm 0.01 bdc 0.04 bid        87.8 min
+  finished T1-T2-T3-T4 mm 0.01 bdc 0.05 bid        89.2 min
+  finished T1-T2-T3-T4 mm 0.01 bdc 0.06 bid        89.4 min
+all arms done in 89.4 min

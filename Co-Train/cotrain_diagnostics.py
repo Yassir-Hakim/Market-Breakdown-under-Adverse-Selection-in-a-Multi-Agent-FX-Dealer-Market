@@ -49,7 +49,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-from Mechanics.fx_mechanics import GameParams, results_path
+from Mechanics.fx_mechanics import GameParams, results_path, BDC_FEE_DEFAULT
 from NN_one_offer_game.rl_env import GameSpec
 import cotrain as C
 import MM_Phase_1.mm_diagnostics as mm_diagnostics
@@ -68,7 +68,7 @@ COLOUR = {"mm": "tab:purple", "trader": "tab:green", "init": "0.5"}
 
 
 def load(side):
-    run = results_path(f"cotrain/{side}_fee{MM_FEE:g}")
+    run = results_path(f"cotrain/{side}_fee{MM_FEE:g}_BdC_FEE{BDC_FEE_DEFAULT}")
     for name in ("cotrain_curve.npz", "cotrain_eval.npz"):
         assert (run / name).exists(), (
             f"no run to plot for side {side} at MM fee {MM_FEE:g} ({run} has "
@@ -149,6 +149,18 @@ def plot_curve(run, curve, evaluation):
         floor = float(curve["bdc_pl"][0])     # constant: fixed paths
         bottom.axhline(floor * 100, color="tab:orange", ls="--", lw=1.4,
                        label=f"always-BdC on the same paths ({floor * 100:+.3f}%)")
+    # the trader's best response to the HARDCODED fee-aware MM, replayed by
+    # cotrain.py on THESE validation paths. A DIFFERENT opponent, so it is
+    # neither a ceiling nor a floor for the co-trained trader: a more generous
+    # learned MM puts the co-trained trader above it
+    if "best_response_pl" in curve and np.isfinite(curve["best_response_pl"]):
+        br = float(curve["best_response_pl"])
+        bottom.axhline(br * 100, color="tab:purple", ls="-.", lw=1.4,
+                       label=f"best response to the hardcoded fee-aware MM, "
+                             f"same paths ({br * 100:+.3f}%)")
+    elif "best_response_pl" not in curve:
+        print(f"  {run.name}: cotrain_curve.npz predates best_response_pl; "
+              f"no best-response line. A fresh cotrain.py run adds it")
     _mark_movers(bottom, x, curve["trader_pl"] * 100, moved)
     bottom.set_ylabel("trader P/L, % of L")
     bottom.set_xlabel("block (0 = the pair as initialised; then alternating)")
@@ -303,14 +315,7 @@ def plot_pair_views(run, evaluation):
     via mm_diagnostics.plot_level, straight off cotrain_eval.npz."""
     side, fee = str(evaluation["side"]), float(evaluation["fee"])
     spec = _spec_from(evaluation)
-    if fee != 0.0:
-        # at any positive fee the co-trained pair does not trade, so a v2
-        # single-game figure is one rejected quote and a Bureau dump --
-        # nothing to see. mm_level.png still carries the level and repay
-        mm_diagnostics.plot_level(run, evaluation)
-        print(f"  {run.name}: mm_level.png (path figures skipped: fee "
-              f"{fee:g} > 0, the pair does not trade)")
-        return
+    
     if "set_record_quoted_price" not in evaluation:
         print(f"  {run.name}: no set-path record in cotrain_eval.npz -- "
               f"re-run cotrain.py with EVAL_ONLY = True to add it; skipping "

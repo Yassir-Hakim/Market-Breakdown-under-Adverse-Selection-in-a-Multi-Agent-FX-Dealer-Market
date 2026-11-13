@@ -1,0 +1,16 @@
+  runs   runs_cards                0.0s
+  runs   runs_fee_dp               0.0s
+  runs   runs_fee_dp_summary       0.0s
+  runs   runs_mm_phase1            0.1s
+  runs   runs_cotrain              0.1s
+  runs   runs_ppo                  0.0s
+  runs   runs_ladder               0.0s
+  runs   runs_arms                 0.0s
+  runs   runs_population           0.0s
+  runs   runs_mechanism            0.0s
+  runs   runs_curves               0.0s
+  runs   runs_robustness           0.0s
+  runs   runs_verification         0.0s
+  wrote numbers.tex (950 values)
+  tables tab_cards, tab_feedp, tab_ladder, tab_population, tab_robust, tab_cotrain, tab_mmnet
+done in 0s

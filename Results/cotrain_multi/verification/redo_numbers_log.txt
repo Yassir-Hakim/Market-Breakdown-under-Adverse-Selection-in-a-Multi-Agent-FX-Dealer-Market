@@ -1,0 +1,268 @@
+
+Every run: money is % of the game's money (start amounts at 1.25 $/GBP), over the recorded games; P/L over the evaluation games.
+
+T1-T4 co-trained, spread 1%  [T1-T2-T3-T4_mm0.01_bdc0.02_bid_size_2way]  trained 12 MM / 12 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00%  netted 0.00%  cards to Bureau 100.13%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.00%  own-currency check 1.5e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games -0.0 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,610 @ 1.4194 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.46% Bureau-only -1.45% gain -0.0 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 192,525 @ 1.0693 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.01% Bureau-only -2.01% gain -0.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,468 @ 1.4250 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.1 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 497,988 @ 1.0687 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.42% Bureau-only -2.42% gain -0.0 bp
+
+T1-T4 co-trained, spread 1.5%  [T1-T2-T3-T4_mm0.01_bdc0.025_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 7.38%  MM to Bureau 7.17% (saved 7.17%)  netted 0.21%  cards to Bureau 92.61%  left over 0.00%  (sum 100.0%)  total Bureau 99.8%  both sides in a round 0.0%  matchable 0.01%  own-currency check 2.9e-16
+  200,000 games: MM P/L +14.0 bp +/- 1.0 (recorded games +15.6 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,611 @ 1.3604 filled 0.4% | to MM 0.4% Bureau 99.6% left 0.0% | P/L -1.97% Bureau-only -1.97% gain -0.2 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 193,511 @ 1.1786 filled 7.8% | to MM 9.3% Bureau 90.7% left 0.0% | P/L -2.46% Bureau-only -2.52% gain +5.3 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,501 @ 1.3617 filled 0.3% | to MM 0.3% Bureau 99.7% left 0.0% | P/L -1.87% Bureau-only -1.87% gain -0.2 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 495,263 @ 1.1822 filled 8.2% | to MM 8.6% Bureau 91.4% left 0.0% | P/L -2.94% Bureau-only -2.98% gain +3.8 bp
+
+T1-T4 co-trained, spread 2%  [T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 25.29%  MM to Bureau 23.06%  netted 2.23%  cards to Bureau 74.22%  left over 0.06%  (sum 99.6%)  total Bureau 97.3%  both sides in a round 0.0%  matchable 1.68%  own-currency check 2.9e-16
+  200,000 games: MM P/L +57.7 bp +/- 1.6 (recorded games +61.1 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,589 @ 1.3069 filled 9.4% | to MM 9.4% Bureau 90.6% left 0.0% | P/L -2.43% Bureau-only -2.48% gain +5.0 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 194,779 @ 1.2075 filled 16.9% | to MM 41.2% Bureau 58.5% left 0.3% | P/L -2.88% Bureau-only -3.02% gain +14.1 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,463 @ 1.3083 filled 8.8% | to MM 8.7% Bureau 91.3% left 0.0% | P/L -2.33% Bureau-only -2.37% gain +4.7 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 496,862 @ 1.2115 filled 21.0% | to MM 23.9% Bureau 76.1% left 0.0% | P/L -3.44% Bureau-only -3.55% gain +10.9 bp
+
+T1-T4 co-trained, spread 3%  [T1-T2-T3-T4_mm0.01_bdc0.04_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 23.64%  MM to Bureau 11.42% (saved 11.42%)  netted 12.21%  cards to Bureau 75.89%  left over 0.21%  (sum 99.7%)  total Bureau 87.3%  both sides in a round 2.8%  matchable 11.87%  own-currency check 2.9e-16
+  200,000 games: MM P/L +64.8 bp +/- 0.5 (recorded games +66.4 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,379 @ 1.2853 filled 14.9% | to MM 38.6% Bureau 61.4% left 0.0% | P/L -3.34% Bureau-only -3.51% gain +17.4 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 193,594 @ 1.1885 filled 4.8% | to MM 63.5% Bureau 35.5% left 1.0% | P/L -3.50% Bureau-only -4.03% gain +52.9 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,382 @ 1.2915 filled 12.4% | to MM 55.8% Bureau 44.1% left 0.1% | P/L -3.08% Bureau-only -3.38% gain +29.5 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,489 @ 1.0759 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -4.69% Bureau-only -4.69% gain -0.0 bp
+
+T1-T4 co-trained, spread 4%  [T1-T2-T3-T4_mm0.01_bdc0.05_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 66.67%  MM to Bureau 47.51% (saved 47.51%)  netted 19.16%  cards to Bureau 20.28%  left over 11.25%  (sum 98.2%)  total Bureau 67.8%  both sides in a round 14.2%  matchable 18.67%  own-currency check 2.3e-16
+  200,000 games: MM P/L +235.8 bp +/- 1.7 (recorded games +241.2 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,056 @ 1.3336 filled 0.4% | to MM 65.5% Bureau 0.0% left 34.5% | P/L -3.87% Bureau-only -4.55% gain +67.4 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 179,791 @ 1.1806 filled 1.8% | to MM 70.5% Bureau 0.0% left 29.5% | P/L -4.04% Bureau-only -5.04% gain +100.4 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 47,570 @ 1.3772 filled 0.0% | to MM 70.4% Bureau 29.5% left 0.0% | P/L -3.58% Bureau-only -4.39% gain +81.0 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 177,300 @ 1.2296 filled 13.2% | to MM 66.1% Bureau 33.8% left 0.0% | P/L -5.42% Bureau-only -5.85% gain +43.8 bp
+
+T1-T4 co-trained, spread 5%  [T1-T2-T3-T4_mm0.01_bdc0.06_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 64.56%  MM to Bureau 49.14% (saved 49.14%)  netted 15.42%  cards to Bureau 17.99%  left over 15.65%  (sum 98.2%)  total Bureau 67.1%  both sides in a round 19.5%  matchable 14.98%  own-currency check 3.6e-14
+  200,000 games: MM P/L +229.1 bp +/- 1.6 (recorded games +234.2 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,058 @ 1.3610 filled 0.0% | to MM 60.7% Bureau 0.0% left 39.3% | P/L -3.77% Bureau-only -5.58% gain +181.2 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 170,182 @ 1.1245 filled 0.0% | to MM 54.2% Bureau 0.0% left 45.8% | P/L -4.37% Bureau-only -6.06% gain +168.4 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 14,708 @ 1.3992 filled 0.0% | to MM 70.0% Bureau 30.0% left 0.0% | P/L -3.88% Bureau-only -5.39% gain +151.8 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 0 @ nan filled 0.0% | to MM 70.5% Bureau 29.5% left 0.0% | P/L -5.84% Bureau-only -7.03% gain +119.2 bp
+
+T1-T4 co-trained, spread 6%  [T1-T2-T3-T4_mm0.01_bdc0.07_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 70.52%  MM to Bureau 48.83%  netted 21.69%  cards to Bureau 2.31%  left over 24.14%  (sum 97.0%)  total Bureau 51.1%  both sides in a round 72.2%  matchable 21.53%  own-currency check 3.4e-10
+  200,000 games: MM P/L +348.3 bp +/- 1.5 (recorded games +351.6 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 98,925 @ 1.4847 filled 0.0% | to MM 56.4% Bureau 0.0% left 43.6% | P/L -3.53% Bureau-only -6.62% gain +308.8 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 106,143 @ 0.9607 filled 0.0% | to MM 41.0% Bureau 0.0% left 59.0% | P/L -4.47% Bureau-only -7.08% gain +261.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 0 @ nan filled 0.0% | to MM 67.2% Bureau 32.8% left 0.0% | P/L -4.11% Bureau-only -6.40% gain +229.4 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 0 @ nan filled 0.0% | to MM 90.8% Bureau 0.0% left 9.2% | P/L -8.32% Bureau-only -8.21% gain -10.3 bp
+
+MM trained with T1-T4, same test, spread 2%  [checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_frozen_cotrained/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 50.65%  MM to Bureau 46.73% (saved 46.73%)  netted 3.92%  cards to Bureau 48.24%  left over 0.07%  (sum 99.0%)  total Bureau 95.0%  both sides in a round 0.0%  matchable 3.03%  own-currency check 2.9e-16
+  200,000 games: MM P/L +117.0 bp +/- 2.1 (recorded games +120.1 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,643 @ 1.3016 filled 11.2% | to MM 11.2% Bureau 88.8% left 0.0% | P/L -2.43% Bureau-only -2.48% gain +5.1 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 197,627 @ 1.2080 filled 17.3% | to MM 49.6% Bureau 50.1% left 0.3% | P/L -2.88% Bureau-only -3.02% gain +14.4 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,502 @ 1.3058 filled 9.7% | to MM 9.7% Bureau 90.3% left 0.0% | P/L -2.33% Bureau-only -2.37% gain +4.7 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 494,512 @ 1.2221 filled 28.1% | to MM 65.4% Bureau 34.6% left 0.0% | P/L -3.41% Bureau-only -3.55% gain +13.2 bp
+
+MM trained on 4 random traders, tested on T1-T4, spread 1%  [pop4s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards]  trained 0 MM / 8 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00% (saved 0.00%)  netted 0.00%  cards to Bureau 100.13%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.00%  own-currency check 1.5e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games +0.0 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,560 @ 1.4233 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.46% Bureau-only -1.45% gain -0.1 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 195,629 @ 1.0680 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.01% Bureau-only -2.01% gain -0.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,386 @ 1.4158 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.1 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,182 @ 1.0776 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.42% Bureau-only -2.42% gain -0.0 bp
+
+4 random traders co-trained with their MM, spread 1%  [pop4s0_mm0.01_bdc0.02_bid_size_2way]  trained 8 MM / 8 trader blocks
+  20,000 games: MM trades 0.01%  MM to Bureau 0.01% (saved 0.01%)  netted 0.00%  cards to Bureau 94.31%  left over 5.83%  (sum 100.1%)  total Bureau 94.3%  both sides in a round 0.0%  matchable 0.00%  own-currency check 1.2e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games +0.0 bp)
+    R01 sells USD L 100,000 T 72,264 A 0 B 0.02 | r1 91,764 @ 1.0765 filled 0.0% | to MM 0.0% Bureau 0.2% left 99.8% | P/L -1.81% Bureau-only -1.99% gain +18.4 bp
+    R02 sells USD L 500,000 T 433,020 A 0.05 B 0.05 | r1 482,714 @ 1.0762 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.50% Bureau-only -2.50% gain -0.0 bp
+    R03 sells USD L 500,000 T 403,490 A 0.1 B 0.05 | r1 482,688 @ 1.0724 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.16% Bureau-only -2.16% gain -0.0 bp
+    R04 sells GBP L 500,000 T 664,482 A 0.1 B 0 | r1 498,340 @ 1.4179 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.0 bp
+
+MM trained on 12 random traders, tested on T1-T4, spread 1%  [pop12s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards]  trained 0 MM / 7 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00% (saved 0.00%)  netted 0.00%  cards to Bureau 100.13%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.00%  own-currency check 1.5e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games +0.0 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,518 @ 1.4395 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.46% Bureau-only -1.45% gain -0.1 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 193,156 @ 1.0682 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.01% Bureau-only -2.01% gain -0.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,331 @ 1.4419 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.1 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 498,406 @ 1.0578 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.42% Bureau-only -2.42% gain -0.0 bp
+
+12 random traders co-trained with their MM, spread 1%  [pop12s0_mm0.01_bdc0.02_bid_size_2way]  trained 8 MM / 8 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00% (saved 0.00%)  netted 0.00%  cards to Bureau 100.11%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.00%  own-currency check 2.9e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games -0.0 bp)
+    R01 sells USD L 200,000 T 167,344 A 0.05 B 0.05 | r1 192,691 @ 1.0803 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.33% Bureau-only -2.33% gain -0.1 bp
+    R02 sells USD L 200,000 T 173,922 A 0.02 B 0.1 | r1 193,283 @ 1.0708 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -3.06% Bureau-only -3.06% gain -0.0 bp
+    R03 sells USD L 200,000 T 171,437 A 0 B 0.05 | r1 196,445 @ 1.0726 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.45% Bureau-only -2.45% gain -0.1 bp
+    R04 sells GBP L 50,000 T 65,371 A 0.2 B 0.02 | r1 49,804 @ 1.4278 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.51% Bureau-only -1.51% gain -0.0 bp
+    R05 sells GBP L 50,000 T 63,018 A 0.2 B 0 | r1 49,813 @ 1.4167 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.0 bp
+    R06 sells GBP L 100,000 T 123,067 A 0.03 B 0 | r1 99,989 @ 1.4647 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.0 bp
+    R07 sells GBP L 50,000 T 64,633 A 0 B 0.05 | r1 49,227 @ 1.4175 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.66% Bureau-only -1.66% gain -0.1 bp
+    R08 sells GBP L 200,000 T 255,769 A 0.1 B 0.03 | r1 192,676 @ 1.4163 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.51% Bureau-only -1.51% gain -0.0 bp
+    R09 sells GBP L 100,000 T 137,021 A 0.2 B 0.03 | r1 99,646 @ 1.4154 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.72% Bureau-only -1.72% gain -0.0 bp
+    R10 sells USD L 200,000 T 164,815 A 0.2 B 0.1 | r1 197,449 @ 1.0729 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.51% Bureau-only -2.51% gain -0.0 bp
+    R11 sells USD L 200,000 T 148,323 A 0.03 B 0.05 | r1 188,954 @ 1.0689 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.00% Bureau-only -2.00% gain -0.1 bp
+    R12 sells USD L 200,000 T 160,811 A 0.03 B 0.02 | r1 107,290 @ 0.8268 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.06% Bureau-only -2.05% gain -0.1 bp
+
+MM trained on 24 random traders, tested on T1-T4, spread 1%  [pop24s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards]  trained 0 MM / 7 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00% (saved 0.00%)  netted 0.00%  cards to Bureau 100.13%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.00%  own-currency check 1.5e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games +0.0 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,509 @ 1.4392 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.46% Bureau-only -1.45% gain -0.0 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 190,244 @ 1.0642 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.01% Bureau-only -2.01% gain -0.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,351 @ 1.4410 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.1 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 497,288 @ 1.0583 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.42% Bureau-only -2.42% gain -0.0 bp
+
+24 random traders co-trained with their MM, spread 1%  [pop24s0_mm0.01_bdc0.02_bid_size_2way]  trained 14 MM / 14 trader blocks
+  20,000 games: MM trades 0.00%  MM to Bureau 0.00% (saved 0.00%)  netted 0.00%  cards to Bureau 99.99%  left over 0.11%  (sum 100.1%)  total Bureau 100.0%  both sides in a round 0.0%  matchable 0.00%  own-currency check 2.9e-16
+  200,000 games: MM P/L +0.0 bp +/- 0.0 (recorded games +0.0 bp)
+    R01 sells USD L 100,000 T 72,537 A 0.2 B 0.1 | r1 96,303 @ 1.0756 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.99% Bureau-only -1.99% gain -0.0 bp
+    R02 sells USD L 200,000 T 149,621 A 0 B 0.2 | r1 197,055 @ 1.0447 filled 0.0% | to MM 0.0% Bureau 96.8% left 3.2% | P/L -1.99% Bureau-only -2.03% gain +4.5 bp
+    R03 sells USD L 50,000 T 38,398 A 0.05 B 0.03 | r1 48,928 @ 1.0638 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.01% Bureau-only -2.01% gain -0.1 bp
+    R04 sells GBP L 100,000 T 113,208 A 0 B 0 | r1 99,795 @ 1.4495 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.37% Bureau-only -1.37% gain -0.0 bp
+    R05 sells GBP L 50,000 T 64,340 A 0.1 B 0.02 | r1 49,896 @ 1.4306 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.47% Bureau-only -1.47% gain -0.0 bp
+    R06 sells GBP L 200,000 T 244,184 A 0.03 B 0.2 | r1 199,927 @ 1.4567 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.67% Bureau-only -1.67% gain -0.0 bp
+    R07 sells GBP L 500,000 T 648,193 A 0.2 B 0.2 | r1 494,254 @ 1.4234 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.58% Bureau-only -2.58% gain -0.1 bp
+    R08 sells GBP L 200,000 T 259,422 A 0.1 B 0.03 | r1 192,070 @ 1.4241 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.55% Bureau-only -1.55% gain -0.1 bp
+    R09 sells GBP L 500,000 T 652,686 A 0 B 0.2 | r1 498,808 @ 1.4299 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.71% Bureau-only -2.71% gain -0.0 bp
+    R10 sells USD L 200,000 T 153,928 A 0.03 B 0.03 | r1 198,999 @ 1.0545 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.02% Bureau-only -2.01% gain -0.1 bp
+    R11 sells USD L 200,000 T 173,889 A 0.2 B 0.05 | r1 185,552 @ 1.0718 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.53% Bureau-only -2.52% gain -0.0 bp
+    R12 sells USD L 100,000 T 81,144 A 0.02 B 0.02 | r1 51,367 @ 0.8422 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.07% Bureau-only -2.07% gain -0.1 bp
+    R13 sells USD L 200,000 T 154,813 A 0.05 B 0.1 | r1 196,878 @ 1.0630 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.09% Bureau-only -2.09% gain -0.0 bp
+    R14 sells USD L 100,000 T 86,244 A 0.02 B 0.02 | r1 99,048 @ 1.0690 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.19% Bureau-only -2.19% gain -0.1 bp
+    R15 sells USD L 200,000 T 146,688 A 0.05 B 0.03 | r1 196,952 @ 1.0655 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -1.99% Bureau-only -1.99% gain -0.1 bp
+    R16 sells USD L 500,000 T 422,968 A 0.02 B 0.02 | r1 494,850 @ 1.0614 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.15% Bureau-only -2.15% gain -0.1 bp
+    R17 sells USD L 500,000 T 364,685 A 0.2 B 0.1 | r1 490,903 @ 1.0654 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.00% Bureau-only -2.00% gain -0.0 bp
+    R18 sells USD L 100,000 T 74,404 A 0.2 B 0.03 | r1 94,125 @ 1.0729 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.00% Bureau-only -2.00% gain -0.0 bp
+    R19 sells USD L 500,000 T 378,451 A 0.1 B 0.1 | r1 486,414 @ 1.0649 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.03% Bureau-only -2.03% gain -0.0 bp
+    R20 sells USD L 50,000 T 39,236 A 0.2 B 0.02 | r1 49,111 @ 1.0621 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.02% Bureau-only -2.02% gain -0.0 bp
+    R21 sells GBP L 500,000 T 635,042 A 0 B 0.2 | r1 497,929 @ 1.4386 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.20% Bureau-only -2.20% gain -0.0 bp
+    R22 sells USD L 100,000 T 82,752 A 0.2 B 0.02 | r1 98,486 @ 1.0635 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.10% Bureau-only -2.10% gain -0.0 bp
+    R23 sells USD L 500,000 T 389,209 A 0.2 B 0.05 | r1 493,635 @ 1.0649 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.05% Bureau-only -2.05% gain -0.0 bp
+    R24 sells GBP L 50,000 T 64,114 A 0.1 B 0.2 | r1 49,944 @ 1.4457 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -2.37% Bureau-only -2.37% gain -0.0 bp
+
+MM trained on 4 random traders, tested on T1-T4, spread 2%  [pop4s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 16.56%  MM to Bureau 13.31% (saved 13.31%)  netted 3.25%  cards to Bureau 83.20%  left over 0.04%  (sum 99.8%)  total Bureau 96.5%  both sides in a round 0.1%  matchable 2.92%  own-currency check 2.9e-16
+  200,000 games: MM P/L +40.1 bp +/- 1.0 (recorded games +43.0 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,763 @ 1.2978 filled 13.3% | to MM 13.4% Bureau 86.6% left 0.0% | P/L -2.42% Bureau-only -2.48% gain +6.7 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 196,058 @ 1.2015 filled 12.6% | to MM 40.5% Bureau 59.4% left 0.2% | P/L -2.95% Bureau-only -3.02% gain +7.4 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,518 @ 1.2977 filled 13.5% | to MM 13.6% Bureau 86.4% left 0.0% | P/L -2.30% Bureau-only -2.37% gain +7.0 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,524 @ 1.1870 filled 6.6% | to MM 7.6% Bureau 92.4% left 0.0% | P/L -3.53% Bureau-only -3.55% gain +1.1 bp
+
+4 random traders co-trained with their MM, spread 2%  [pop4s0_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 24.49%  MM to Bureau 20.01% (saved 20.01%)  netted 4.49%  cards to Bureau 69.31%  left over 5.87%  (sum 99.7%)  total Bureau 89.3%  both sides in a round 0.0%  matchable 4.08%  own-currency check 2.3e-16
+  200,000 games: MM P/L +58.7 bp +/- 1.2 (recorded games +61.7 bp)
+    R01 sells USD L 100,000 T 72,264 A 0 B 0.02 | r1 92,294 @ 1.0425 filled 0.0% | to MM 0.0% Bureau 0.0% left 100.0% | P/L -1.81% Bureau-only -2.99% gain +118.5 bp
+    R02 sells USD L 500,000 T 433,020 A 0.05 B 0.05 | r1 475,497 @ 1.2012 filled 12.1% | to MM 32.3% Bureau 67.7% left 0.1% | P/L -3.49% Bureau-only -3.55% gain +6.2 bp
+    R03 sells USD L 500,000 T 403,490 A 0.1 B 0.05 | r1 481,309 @ 1.2067 filled 14.7% | to MM 36.3% Bureau 63.7% left 0.0% | P/L -3.16% Bureau-only -3.20% gain +4.2 bp
+    R04 sells GBP L 500,000 T 664,482 A 0.1 B 0 | r1 497,457 @ 1.3003 filled 11.8% | to MM 11.8% Bureau 88.2% left 0.0% | P/L -2.32% Bureau-only -2.37% gain +5.7 bp
+
+MM trained on 12 random traders, tested on T1-T4, spread 2%  [pop12s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 13.36%  MM to Bureau 10.89% (saved 10.89%)  netted 2.47%  cards to Bureau 86.48%  left over 0.03%  (sum 99.9%)  total Bureau 97.4%  both sides in a round 1.5%  matchable 2.22%  own-currency check 2.9e-16
+  200,000 games: MM P/L +31.9 bp +/- 0.8 (recorded games +32.7 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,614 @ 1.3073 filled 9.1% | to MM 9.2% Bureau 90.8% left 0.0% | P/L -2.44% Bureau-only -2.48% gain +4.6 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 193,908 @ 1.2019 filled 13.0% | to MM 39.0% Bureau 60.9% left 0.2% | P/L -2.95% Bureau-only -3.02% gain +7.5 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,485 @ 1.3016 filled 11.2% | to MM 11.2% Bureau 88.8% left 0.0% | P/L -2.33% Bureau-only -2.37% gain +4.9 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,283 @ 1.1632 filled 2.0% | to MM 4.0% Bureau 96.0% left 0.0% | P/L -3.54% Bureau-only -3.55% gain +0.5 bp
+
+12 random traders co-trained with their MM, spread 2%  [pop12s0_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 23.00%  MM to Bureau 19.31% (saved 19.31%)  netted 3.69%  cards to Bureau 76.56%  left over 0.04%  (sum 99.6%)  total Bureau 95.9%  both sides in a round 6.9%  matchable 3.24%  own-currency check 2.9e-16
+  200,000 games: MM P/L +56.6 bp +/- 1.1 (recorded games +59.5 bp)
+    R01 sells USD L 200,000 T 167,344 A 0.05 B 0.05 | r1 194,851 @ 1.2158 filled 20.2% | to MM 30.5% Bureau 69.5% left 0.0% | P/L -3.33% Bureau-only -3.37% gain +4.2 bp
+    R02 sells USD L 200,000 T 173,922 A 0.02 B 0.1 | r1 193,849 @ 1.2086 filled 15.4% | to MM 42.4% Bureau 57.5% left 0.0% | P/L -4.07% Bureau-only -4.16% gain +9.0 bp
+    R03 sells USD L 200,000 T 171,437 A 0 B 0.05 | r1 195,348 @ 1.2032 filled 12.7% | to MM 45.5% Bureau 54.2% left 0.3% | P/L -3.43% Bureau-only -3.50% gain +7.2 bp
+    R04 sells GBP L 50,000 T 65,371 A 0.2 B 0.02 | r1 49,734 @ 1.3120 filled 8.1% | to MM 8.1% Bureau 91.9% left 0.0% | P/L -2.47% Bureau-only -2.53% gain +5.8 bp
+    R05 sells GBP L 50,000 T 63,018 A 0.2 B 0 | r1 49,750 @ 1.3136 filled 7.7% | to MM 7.7% Bureau 92.3% left 0.0% | P/L -2.32% Bureau-only -2.37% gain +5.8 bp
+    R06 sells GBP L 100,000 T 123,067 A 0.03 B 0 | r1 99,994 @ 1.3119 filled 8.0% | to MM 8.0% Bureau 92.0% left 0.0% | P/L -2.32% Bureau-only -2.37% gain +5.4 bp
+    R07 sells GBP L 50,000 T 64,633 A 0 B 0.05 | r1 49,421 @ 1.3119 filled 8.2% | to MM 8.1% Bureau 91.9% left 0.0% | P/L -2.65% Bureau-only -2.71% gain +5.6 bp
+    R08 sells GBP L 200,000 T 255,769 A 0.1 B 0.03 | r1 195,132 @ 1.3057 filled 9.5% | to MM 9.3% Bureau 90.7% left 0.0% | P/L -2.50% Bureau-only -2.54% gain +4.4 bp
+    R09 sells GBP L 100,000 T 137,021 A 0.2 B 0.03 | r1 99,521 @ 1.2988 filled 12.0% | to MM 12.0% Bureau 88.0% left 0.0% | P/L -2.71% Bureau-only -2.76% gain +4.8 bp
+    R10 sells USD L 200,000 T 164,815 A 0.2 B 0.1 | r1 198,873 @ 1.2208 filled 24.4% | to MM 30.5% Bureau 69.5% left 0.0% | P/L -3.55% Bureau-only -3.60% gain +5.5 bp
+    R11 sells USD L 200,000 T 148,323 A 0.03 B 0.05 | r1 195,022 @ 1.2201 filled 23.6% | to MM 33.8% Bureau 66.2% left 0.0% | P/L -2.97% Bureau-only -3.00% gain +3.6 bp
+    R12 sells USD L 200,000 T 160,811 A 0.03 B 0.02 | r1 104,263 @ 0.9253 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -3.07% Bureau-only -3.07% gain -0.1 bp
+
+MM trained on 24 random traders, tested on T1-T4, spread 2%  [pop24s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 20.22%  MM to Bureau 17.09% (saved 17.09%)  netted 3.13%  cards to Bureau 79.45%  left over 0.05%  (sum 99.7%)  total Bureau 96.5%  both sides in a round 0.2%  matchable 2.93%  own-currency check 2.9e-16
+  200,000 games: MM P/L +47.7 bp +/- 1.2 (recorded games +50.5 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,743 @ 1.2976 filled 12.9% | to MM 13.1% Bureau 86.9% left 0.0% | P/L -2.43% Bureau-only -2.48% gain +5.6 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 196,150 @ 1.2015 filled 13.5% | to MM 46.0% Bureau 53.8% left 0.2% | P/L -2.89% Bureau-only -3.02% gain +13.1 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,512 @ 1.2968 filled 13.5% | to MM 13.6% Bureau 86.4% left 0.0% | P/L -2.31% Bureau-only -2.37% gain +6.0 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 498,584 @ 1.1930 filled 9.1% | to MM 11.8% Bureau 88.2% left 0.0% | P/L -3.52% Bureau-only -3.55% gain +3.0 bp
+
+24 random traders co-trained with their MM, spread 2%  [pop24s0_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 24.28%  MM to Bureau 20.07% (saved 20.07%)  netted 4.22%  cards to Bureau 73.23%  left over 2.13%  (sum 99.6%)  total Bureau 93.3%  both sides in a round 63.3%  matchable 3.82%  own-currency check 6.8e-10
+  200,000 games: MM P/L +53.8 bp +/- 1.1 (recorded games +56.9 bp)
+    R01 sells USD L 100,000 T 72,537 A 0.2 B 0.1 | r1 95,818 @ 1.2055 filled 16.3% | to MM 22.8% Bureau 77.1% left 0.0% | P/L -2.90% Bureau-only -3.00% gain +9.6 bp
+    R02 sells USD L 200,000 T 149,621 A 0 B 0.2 | r1 197,632 @ 1.1983 filled 13.1% | to MM 18.7% Bureau 79.6% left 1.8% | P/L -2.93% Bureau-only -3.06% gain +12.9 bp
+    R03 sells USD L 50,000 T 38,398 A 0.05 B 0.03 | r1 48,780 @ 1.2073 filled 17.3% | to MM 49.6% Bureau 50.4% left 0.1% | P/L -2.85% Bureau-only -3.02% gain +17.6 bp
+    R04 sells GBP L 100,000 T 113,208 A 0 B 0 | r1 0 @ nan filled 0.0% | to MM 0.0% Bureau 0.0% left 100.0% | P/L -0.00% Bureau-only -2.37% gain +237.4 bp
+    R05 sells GBP L 50,000 T 64,340 A 0.1 B 0.02 | r1 49,813 @ 1.2993 filled 12.4% | to MM 12.4% Bureau 87.6% left 0.0% | P/L -2.44% Bureau-only -2.50% gain +6.4 bp
+    R06 sells GBP L 200,000 T 244,184 A 0.03 B 0.2 | r1 199,795 @ 1.3000 filled 12.1% | to MM 12.1% Bureau 87.9% left 0.0% | P/L -2.72% Bureau-only -2.78% gain +6.1 bp
+    R07 sells GBP L 500,000 T 648,193 A 0.2 B 0.2 | r1 492,689 @ 1.2960 filled 13.6% | to MM 13.5% Bureau 86.5% left 0.0% | P/L -3.69% Bureau-only -3.77% gain +8.0 bp
+    R08 sells GBP L 200,000 T 259,422 A 0.1 B 0.03 | r1 195,362 @ 1.2967 filled 13.5% | to MM 13.2% Bureau 86.8% left 0.0% | P/L -2.52% Bureau-only -2.59% gain +6.3 bp
+    R09 sells GBP L 500,000 T 652,686 A 0 B 0.2 | r1 497,439 @ 1.3003 filled 11.8% | to MM 11.8% Bureau 88.2% left 0.0% | P/L -3.84% Bureau-only -3.91% gain +7.5 bp
+    R10 sells USD L 200,000 T 153,928 A 0.03 B 0.03 | r1 195,840 @ 1.2062 filled 16.6% | to MM 48.1% Bureau 51.6% left 0.2% | P/L -2.86% Bureau-only -3.03% gain +16.3 bp
+    R11 sells USD L 200,000 T 173,889 A 0.2 B 0.05 | r1 188,962 @ 1.2091 filled 18.2% | to MM 18.7% Bureau 81.3% left 0.0% | P/L -3.50% Bureau-only -3.57% gain +7.6 bp
+    R12 sells USD L 100,000 T 81,144 A 0.02 B 0.02 | r1 81,089 @ 1.2104 filled 19.1% | to MM 17.1% Bureau 82.8% left 0.0% | P/L -3.02% Bureau-only -3.08% gain +6.6 bp
+    R13 sells USD L 200,000 T 154,813 A 0.05 B 0.1 | r1 195,793 @ 1.2072 filled 17.1% | to MM 25.4% Bureau 74.5% left 0.0% | P/L -3.04% Bureau-only -3.13% gain +9.1 bp
+    R14 sells USD L 100,000 T 86,244 A 0.02 B 0.02 | r1 99,036 @ 1.2073 filled 17.3% | to MM 52.7% Bureau 46.7% left 0.6% | P/L -2.98% Bureau-only -3.21% gain +22.5 bp
+    R15 sells USD L 200,000 T 146,688 A 0.05 B 0.03 | r1 193,441 @ 1.2055 filled 16.2% | to MM 43.4% Bureau 56.5% left 0.1% | P/L -2.82% Bureau-only -2.99% gain +17.0 bp
+    R16 sells USD L 500,000 T 422,968 A 0.02 B 0.02 | r1 486,874 @ 1.2036 filled 15.2% | to MM 47.0% Bureau 52.5% left 0.5% | P/L -2.98% Bureau-only -3.17% gain +18.4 bp
+    R17 sells USD L 500,000 T 364,685 A 0.2 B 0.1 | r1 487,628 @ 1.2043 filled 15.5% | to MM 31.4% Bureau 68.6% left 0.0% | P/L -2.89% Bureau-only -3.00% gain +11.2 bp
+    R18 sells USD L 100,000 T 74,404 A 0.2 B 0.03 | r1 95,360 @ 1.2094 filled 18.4% | to MM 19.1% Bureau 80.9% left 0.0% | P/L -2.92% Bureau-only -3.00% gain +7.5 bp
+    R19 sells USD L 500,000 T 378,451 A 0.1 B 0.1 | r1 487,733 @ 1.2069 filled 16.7% | to MM 22.8% Bureau 77.2% left 0.0% | P/L -2.97% Bureau-only -3.05% gain +8.3 bp
+    R20 sells USD L 50,000 T 39,236 A 0.2 B 0.02 | r1 48,316 @ 1.2065 filled 16.8% | to MM 43.4% Bureau 56.6% left 0.0% | P/L -2.87% Bureau-only -3.03% gain +16.5 bp
+    R21 sells GBP L 500,000 T 635,042 A 0 B 0.2 | r1 495,946 @ 1.3010 filled 11.6% | to MM 11.6% Bureau 88.4% left 0.0% | P/L -3.32% Bureau-only -3.38% gain +5.6 bp
+    R22 sells USD L 100,000 T 82,752 A 0.2 B 0.02 | r1 97,808 @ 1.2068 filled 16.9% | to MM 48.6% Bureau 51.4% left 0.0% | P/L -2.93% Bureau-only -3.12% gain +19.3 bp
+    R23 sells USD L 500,000 T 389,209 A 0.2 B 0.05 | r1 488,446 @ 1.2076 filled 17.1% | to MM 31.0% Bureau 69.0% left 0.0% | P/L -2.97% Bureau-only -3.08% gain +10.9 bp
+    R24 sells GBP L 50,000 T 64,114 A 0.1 B 0.2 | r1 49,760 @ 1.2918 filled 15.8% | to MM 15.8% Bureau 84.2% left 0.0% | P/L -3.48% Bureau-only -3.56% gain +7.3 bp
+
+T1-T4 co-trained, spread 2%, starting weights seed 142  [checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed142]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 19.26%  MM to Bureau 18.68% (saved 18.68%)  netted 0.58%  cards to Bureau 80.45%  left over 0.00%  (sum 99.7%)  total Bureau 99.1%  both sides in a round 0.0%  matchable 0.09%  own-currency check 2.9e-16
+  200,000 games: MM P/L +39.6 bp +/- 1.6 (recorded games +42.6 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,038 @ 1.3390 filled 2.3% | to MM 2.3% Bureau 97.7% left 0.0% | P/L -2.46% Bureau-only -2.48% gain +2.0 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 196,886 @ 1.2051 filled 19.8% | to MM 23.4% Bureau 76.6% left 0.0% | P/L -2.83% Bureau-only -3.02% gain +19.0 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,890 @ 1.3383 filled 2.4% | to MM 2.4% Bureau 97.6% left 0.0% | P/L -2.35% Bureau-only -2.37% gain +2.1 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 489,260 @ 1.2117 filled 23.0% | to MM 22.9% Bureau 77.1% left 0.0% | P/L -3.39% Bureau-only -3.55% gain +15.2 bp
+
+T1-T4 co-trained, spread 2%, starting weights seed 242  [checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed242]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 18.71%  MM to Bureau 18.19% (saved 18.19%)  netted 0.52%  cards to Bureau 80.96%  left over 0.00%  (sum 99.7%)  total Bureau 99.1%  both sides in a round 0.0%  matchable 0.06%  own-currency check 2.9e-16
+  200,000 games: MM P/L +43.2 bp +/- 1.5 (recorded games +46.5 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,111 @ 1.3299 filled 2.9% | to MM 2.9% Bureau 97.1% left 0.0% | P/L -2.47% Bureau-only -2.48% gain +1.5 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 184,462 @ 1.2051 filled 19.0% | to MM 18.0% Bureau 82.0% left 0.0% | P/L -2.88% Bureau-only -3.02% gain +14.4 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,835 @ 1.3389 filled 1.8% | to MM 1.8% Bureau 98.2% left 0.0% | P/L -2.36% Bureau-only -2.37% gain +1.2 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 488,734 @ 1.2165 filled 23.9% | to MM 24.2% Bureau 75.8% left 0.0% | P/L -3.45% Bureau-only -3.55% gain +9.1 bp
+
+MM trained on 4 random traders (draw 1), tested on T1-T4, spread 2%  [checks/pop4s1_mm0.01_bdc0.03_bid_size_2way/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 17.34%  MM to Bureau 14.91% (saved 14.91%)  netted 2.43%  cards to Bureau 82.44%  left over 0.03%  (sum 99.8%)  total Bureau 97.3%  both sides in a round 0.0%  matchable 2.03%  own-currency check 2.9e-16
+  200,000 games: MM P/L +40.5 bp +/- 1.2 (recorded games +43.4 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,788 @ 1.2909 filled 17.3% | to MM 17.5% Bureau 82.5% left 0.0% | P/L -2.40% Bureau-only -2.48% gain +8.2 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 194,979 @ 1.1930 filled 9.2% | to MM 25.5% Bureau 74.3% left 0.1% | P/L -2.98% Bureau-only -3.02% gain +3.7 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,617 @ 1.2899 filled 17.5% | to MM 17.7% Bureau 82.3% left 0.0% | P/L -2.30% Bureau-only -2.37% gain +7.2 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,705 @ 1.2013 filled 12.9% | to MM 13.2% Bureau 86.8% left 0.0% | P/L -3.51% Bureau-only -3.55% gain +3.5 bp
+
+4 random traders (draw 1) co-trained with their MM, spread 2%  [checks/pop4s1_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 26.20%  MM to Bureau 23.03% (saved 23.03%)  netted 3.17%  cards to Bureau 37.77%  left over 35.67%  (sum 99.6%)  total Bureau 60.8%  both sides in a round 0.0%  matchable 2.74%  own-currency check 2.9e-16
+  200,000 games: MM P/L +62.0 bp +/- 1.4 (recorded games +65.1 bp)
+    R01 sells GBP L 50,000 T 68,108 A 0 B 0.02 | r1 48,516 @ 1.3281 filled 4.8% | to MM 13.7% Bureau 0.0% left 86.3% | P/L -2.12% Bureau-only -2.62% gain +49.7 bp
+    R02 sells USD L 100,000 T 78,773 A 0.02 B 0.1 | r1 98,685 @ 1.2046 filled 13.6% | to MM 15.7% Bureau 84.3% left 0.0% | P/L -3.21% Bureau-only -3.23% gain +1.7 bp
+    R03 sells USD L 100,000 T 80,793 A 0.03 B 0 | r1 98,289 @ 1.1909 filled 8.6% | to MM 41.2% Bureau 0.0% left 58.8% | P/L -2.91% Bureau-only -2.99% gain +7.9 bp
+    R04 sells USD L 50,000 T 42,028 A 0.2 B 0.05 | r1 48,708 @ 1.1925 filled 8.8% | to MM 29.5% Bureau 70.5% left 0.0% | P/L -3.36% Bureau-only -3.40% gain +3.9 bp
+
+MM trained on 4 random traders (draw 2), tested on T1-T4, spread 2%  [checks/pop4s2_mm0.01_bdc0.03_bid_size_2way/respond_on_cards]  trained 0 MM / 20 trader blocks
+  20,000 games: MM trades 1.87%  MM to Bureau 1.82% (saved 1.82%)  netted 0.05%  cards to Bureau 98.24%  left over 0.00%  (sum 100.1%)  total Bureau 100.1%  both sides in a round 0.0%  matchable 0.10%  own-currency check 2.9e-16
+  200,000 games: MM P/L +3.3 bp +/- 0.1 (recorded games +3.3 bp)
+    T1 sells GBP L 100,000 T 125,000 A 0.02 B 0.03 | r1 99,702 @ 1.3180 filled 5.0% | to MM 5.0% Bureau 95.0% left 0.0% | P/L -2.46% Bureau-only -2.48% gain +2.1 bp
+    T2 sells USD L 200,000 T 155,000 A 0.03 B 0.02 | r1 196,791 @ 1.1589 filled 1.6% | to MM 3.3% Bureau 96.7% left 0.0% | P/L -3.02% Bureau-only -3.02% gain +0.1 bp
+    T3 sells GBP L 50,000 T 63,000 A 0.2 B 0 | r1 49,471 @ 1.3193 filled 5.0% | to MM 5.0% Bureau 95.0% left 0.0% | P/L -2.35% Bureau-only -2.37% gain +2.5 bp
+    T4 sells USD L 500,000 T 396,000 A 0 B 0.2 | r1 499,754 @ 1.1003 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -3.55% Bureau-only -3.55% gain -0.0 bp
+
+4 random traders (draw 2) co-trained with their MM, spread 2%  [checks/pop4s2_mm0.01_bdc0.03_bid_size_2way]  trained 20 MM / 20 trader blocks
+  20,000 games: MM trades 1.85%  MM to Bureau 1.82% (saved 1.82%)  netted 0.03%  cards to Bureau 47.17%  left over 50.99%  (sum 100.0%)  total Bureau 49.0%  both sides in a round 0.0%  matchable 0.00%  own-currency check 2.9e-16
+  200,000 games: MM P/L +2.9 bp +/- 0.1 (recorded games +2.8 bp)
+    R01 sells USD L 100,000 T 73,471 A 0.1 B 0.03 | r1 98,631 @ 1.0632 filled 0.0% | to MM 0.0% Bureau 100.0% left 0.0% | P/L -3.00% Bureau-only -2.99% gain -0.2 bp
+    R02 sells GBP L 200,000 T 261,428 A 0.2 B 0.02 | r1 199,539 @ 1.3185 filled 4.7% | to MM 4.7% Bureau 95.3% left 0.0% | P/L -2.51% Bureau-only -2.53% gain +1.9 bp
+    R03 sells GBP L 500,000 T 596,871 A 0 B 0.02 | r1 477,855 @ 1.4167 filled 0.0% | to MM 0.1% Bureau 0.0% left 99.9% | P/L -1.93% Bureau-only -2.39% gain +46.8 bp
+    R04 sells GBP L 200,000 T 253,113 A 0.02 B 0 | r1 199,454 @ 1.3222 filled 4.2% | to MM 4.2% Bureau 95.8% left 0.0% | P/L -2.35% Bureau-only -2.37% gain +2.1 bp
+
+wrote Results/cotrain_multi/verification/redo_numbers.json

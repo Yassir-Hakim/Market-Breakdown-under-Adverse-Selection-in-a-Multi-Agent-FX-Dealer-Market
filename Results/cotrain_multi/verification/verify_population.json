@@ -1,0 +1,5583 @@
+[
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.025_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.025,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.025,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.6396524200976734e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 1.6396524200976734e-16,
+   "final_clear": 2.6234438721562776e-16,
+   "mm_pl": 3.885780586188048e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.07170972022199308,
+  "saved_share": 0.9719713400151128,
+  "flow": 0.07170972022199308,
+  "share": 0.9719713400151128,
+  "filled_of_capital": 0.07377760770279307,
+  "bought_share": 0.010181383042256093,
+  "imbalance_floor": 0.9983459399867335,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.00465,
+  "mm_bp": 14.028066706963534,
+  "mm_bp_2se": 0.9942881194035512,
+  "edge_pct": [
+   -0.0015123970014273493,
+   0.05319343275155888,
+   -0.0016924403331520026,
+   0.03838266247584535
+  ],
+  "edge_2se_pct": [
+   0.0002946610874438403,
+   0.006655380300622101,
+   0.0002851418224075004,
+   0.0027512877682348163
+  ],
+  "filled_by_trader": [
+   0.0037435067377905233,
+   0.07417992839507534,
+   0.0031934407945835262,
+   0.08630745109689633
+  ],
+  "bid_by_round": [
+   0.9835765736635613,
+   0.9786577843670368,
+   0.9761168459007381,
+   0.9690564879932668
+  ],
+  "ask_by_round": [
+   1.001022349082049,
+   1.0038901329976728,
+   1.0061893906869166,
+   1.0118355002701405
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.02_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 7.355227538141662e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": NaN,
+  "flow": 8.051860134461872e-08,
+  "share": 0.9850066619206147,
+  "filled_of_capital": 8.174422007219684e-08,
+  "bought_share": 1.0,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.008410018624303293,
+  "mm_bp_2se": 0.013402549119312535,
+  "edge_pct": [
+   -0.0004901729822432125,
+   -0.0004650055276008887,
+   -0.0006221241811676358,
+   -0.00034131838655058566
+  ],
+  "edge_2se_pct": [
+   5.6853624461327157e-05,
+   0.001216393139053766,
+   7.044297437506406e-05,
+   0.0006284152551914761
+  ],
+  "filled_by_trader": [
+   5.809308171131286e-07,
+   0.0,
+   2.0111556668752883e-11,
+   0.0
+  ],
+  "bid_by_round": [
+   NaN,
+   0.9823537127311688,
+   NaN,
+   0.9693154343880259
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.02_round_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": false,
+   "mm_arch": "round",
+   "two_way": true,
+   "n_mm_feat": 7,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 5.820539362988431e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": NaN,
+  "flow": 2.4353094402788746e-12,
+  "share": 0.978009852722513,
+  "filled_of_capital": 2.490066366406879e-12,
+  "bought_share": 1.0,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.007857630027903026,
+  "mm_bp_2se": 0.015710204285481436,
+  "edge_pct": [
+   -0.0005771393009847074,
+   -0.0007003068539112283,
+   -0.0007402735237909967,
+   -0.0005480160654614626
+  ],
+  "edge_2se_pct": [
+   6.754819875250494e-05,
+   0.0016581123719535708,
+   8.578500516148268e-05,
+   0.0008727361045696726
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.0,
+   3.561612971791595e-11,
+   0.0
+  ],
+  "bid_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   0.9723579650185257
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.02_turn_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": false,
+   "mm_arch": "turn",
+   "two_way": true,
+   "n_mm_feat": 15,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": NaN,
+  "flow": 4.529844664054313e-05,
+  "share": 0.999917918262851,
+  "filled_of_capital": 4.530216512095287e-05,
+  "bought_share": 0.0038559986007003855,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.020794454788937235,
+  "mm_bp_2se": 0.023366211499563878,
+  "edge_pct": [
+   -0.0005179066962562388,
+   -0.0003492360497881248,
+   -0.0006991302771030278,
+   -0.0003645267636099618
+  ],
+  "edge_2se_pct": [
+   5.992146180788924e-05,
+   0.0008834793861360704,
+   7.939116885142255e-05,
+   0.0006420579736673728
+  ],
+  "filled_by_trader": [
+   8.138478270542493e-07,
+   5.579369699581825e-05,
+   8.626141064013065e-07,
+   5.679491357200213e-05
+  ],
+  "bid_by_round": [
+   NaN,
+   0.9841413589425569,
+   0.9764602855575527,
+   0.9736204979017387
+  ],
+  "ask_by_round": [
+   1.009268978214735,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 3.935165808234416e-16,
+   "mm_pl": 4.718447854656915e-16,
+   "trader_pl": 6.938893903907228e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": 0.9117963526058197,
+  "flow": 0.2305857107822216,
+  "share": 0.9117963526058197,
+  "filled_of_capital": 0.2528916792913587,
+  "bought_share": 0.07685442297388008,
+  "imbalance_floor": 0.9336105562979012,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.1799,
+  "mm_bp": 57.66612460029935,
+  "mm_bp_2se": 1.5695280031378454,
+  "edge_pct": [
+   0.050271950954168476,
+   0.14071144431148738,
+   0.047010425586391756,
+   0.10896141358914102
+  ],
+  "edge_2se_pct": [
+   0.0020914889555989926,
+   0.019115027804660803,
+   0.002001034537210296,
+   0.005626471367919365
+  ],
+  "filled_by_trader": [
+   0.09410002779643209,
+   0.1807099436661482,
+   0.08762854890117687,
+   0.21709593134442798
+  ],
+  "bid_by_round": [
+   0.9926073456889525,
+   0.9902790027500707,
+   0.9876076931819942,
+   0.9851624726385819
+  ],
+  "ask_by_round": [
+   1.0018721156236137,
+   1.003616035168734,
+   1.0047782588989849,
+   1.004638470958151
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_longer",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 30,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.0001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 2.6234438721562776e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 2.6234438721562776e-16,
+   "final_clear": 2.6234438721562776e-16,
+   "mm_pl": 3.885780586188048e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": 0.9657189520196972,
+  "flow": 0.14911236835697764,
+  "share": 0.9657189520196972,
+  "filled_of_capital": 0.15440555251103355,
+  "bought_share": 0.04709260504359918,
+  "imbalance_floor": 0.9916238147690232,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0746,
+  "mm_bp": 29.912924258227086,
+  "mm_bp_2se": 1.2527281564167307,
+  "edge_pct": [
+   -0.001526073591061476,
+   0.1601994913884373,
+   -0.008085395910093099,
+   0.151967341875826
+  ],
+  "edge_2se_pct": [
+   0.0016293421214259708,
+   0.003763454950249588,
+   0.0020607299213730263,
+   0.004012753583599936
+  ],
+  "filled_by_trader": [
+   0.035459356580892526,
+   0.19182031628675758,
+   0.04114186776959215,
+   0.21966255999338213
+  ],
+  "bid_by_round": [
+   0.9874659104413963,
+   0.9857884140650419,
+   0.9821980502486505,
+   0.9784147739504194
+  ],
+  "ask_by_round": [
+   0.9985448485719473,
+   0.9997702760574719,
+   1.0024451223784054,
+   1.0044298464683679
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_lr",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.0001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 2.6234438721562776e-16,
+   "fills_traders": 4.3655745685100557e-16,
+   "bureau_traders": 4.3655745685100557e-16,
+   "bureau_mm": 2.6234438721562776e-16,
+   "final_clear": 2.6234438721562776e-16,
+   "mm_pl": 3.885780586188048e-16,
+   "trader_pl": 7.216449660063518e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": 0.9741407341239663,
+  "flow": 0.07383772927114117,
+  "share": 0.9741407341239663,
+  "filled_of_capital": 0.07579780485983126,
+  "bought_share": 0.04777294341174717,
+  "imbalance_floor": 0.9966880185616842,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.01835,
+  "mm_bp": 22.494862103762582,
+  "mm_bp_2se": 0.897345521273706,
+  "edge_pct": [
+   -0.012818897063296806,
+   0.005345928926269242,
+   -0.028255154756431467,
+   -0.010018795049568836
+  ],
+  "edge_2se_pct": [
+   0.0014762765896391692,
+   0.0029620023244989703,
+   0.002406820046087566,
+   0.002754771299585503
+  ],
+  "filled_by_trader": [
+   0.017738641967091576,
+   0.09358541346807095,
+   0.021907264758889756,
+   0.11371575917799724
+  ],
+  "bid_by_round": [
+   0.9826317021349936,
+   0.979503502175959,
+   0.9756875448417666,
+   0.9726736330196326
+  ],
+  "ask_by_round": [
+   1.0102912826923092,
+   1.0123267509471345,
+   1.0154337488052045,
+   1.017568883604339
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_round_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": false,
+   "mm_arch": "round",
+   "two_way": true,
+   "n_mm_feat": 7,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 6.938893903907228e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": NaN,
+  "flow": 3.945894351722626e-05,
+  "share": 0.9927077979470993,
+  "filled_of_capital": 3.974879979670413e-05,
+  "bought_share": 1.0,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.010518466152294239,
+  "mm_bp_2se": 0.008845183949847764,
+  "edge_pct": [
+   -0.0013197033555597754,
+   -0.0013392493051418665,
+   -0.0016451190741949334,
+   -0.00112373823413856
+  ],
+  "edge_2se_pct": [
+   0.00015733794465560508,
+   0.003389797471084393,
+   0.00020122481605067423,
+   0.0014438970427572673
+  ],
+  "filled_by_trader": [
+   5.415419075779969e-05,
+   0.0,
+   0.0004565589219384692,
+   0.0
+  ],
+  "bid_by_round": [
+   0.980783854461021,
+   0.9796521327440455,
+   0.9794191503135048,
+   0.9777454727866861
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.03_turn_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": false,
+   "mm_arch": "turn",
+   "two_way": true,
+   "n_mm_feat": 15,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.0991310502441837e-16,
+   "mm_pl": 5.273559366969494e-16,
+   "trader_pl": 7.28583859910259e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": 0.9287004447667523,
+  "flow": 0.2182209401158807,
+  "share": 0.9287004447667523,
+  "filled_of_capital": 0.23497451879727263,
+  "bought_share": 0.08190154465783088,
+  "imbalance_floor": 0.952223591553306,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.1646,
+  "mm_bp": 49.89441926950499,
+  "mm_bp_2se": 1.5649998747543672,
+  "edge_pct": [
+   0.04682807601749731,
+   0.1730176106256657,
+   0.04698015773542576,
+   0.14514605960892732
+  ],
+  "edge_2se_pct": [
+   0.002042027230902712,
+   0.013731558942566167,
+   0.0020362226471430387,
+   0.005186318158088027
+  ],
+  "filled_by_trader": [
+   0.09115097648178823,
+   0.17923789197251705,
+   0.0912697291967154,
+   0.23122636652587983
+  ],
+  "bid_by_round": [
+   0.9923497437111237,
+   0.9877725596525297,
+   0.9839494391540171,
+   0.9805510000048208
+  ],
+  "ask_by_round": [
+   1.0001389959415579,
+   1.002473051923931,
+   1.004182077797711,
+   1.0069535125392146
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.04_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.04,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.04,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.229739315073255e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 1.229739315073255e-16,
+   "final_clear": 1.229739315073255e-16,
+   "mm_pl": 1.249000902703301e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.11424636743703256,
+  "saved_share": 0.4833343510321336,
+  "flow": 0.11424636743703256,
+  "share": 0.4833343510321336,
+  "filled_of_capital": 0.23637129699775283,
+  "bought_share": 0.39650109137025097,
+  "imbalance_floor": 0.49784020017046254,
+  "games_both_sides_same_round": 0.02815,
+  "games_both_sides_any_round": 0.42105,
+  "mm_bp": 64.79853742248281,
+  "mm_bp_2se": 0.5044838417633246,
+  "edge_pct": [
+   0.17381583457574515,
+   0.5286244368748862,
+   0.29548572965175635,
+   -0.000230525757891742
+  ],
+  "edge_2se_pct": [
+   0.017136961951802896,
+   0.026068850920715904,
+   0.023689244013754,
+   0.0005346438491012404
+  ],
+  "filled_by_trader": [
+   0.19374341835273287,
+   0.2010111536425853,
+   0.20778900124467378,
+   0.0
+  ],
+  "bid_by_round": [
+   0.9867863539116524,
+   0.9904169120367026,
+   0.9948026496455145,
+   0.9989211179722852
+  ],
+  "ask_by_round": [
+   1.01827358973547,
+   1.0130226355058003,
+   1.0066541535220357,
+   1.0007897778232588
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.05_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.05,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.05,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 5.820766091346741e-16,
+   "bureau_traders": 5.820766091346741e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.591026776273486e-16,
+   "mm_pl": 5.273559366969494e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.4751453556588473,
+  "saved_share": 0.712685214103136,
+  "flow": 0.4751453556588473,
+  "share": 0.712685214103136,
+  "filled_of_capital": 0.6666973668827747,
+  "bought_share": 0.2127078522829349,
+  "imbalance_floor": 0.7199976498583175,
+  "games_both_sides_same_round": 0.1424,
+  "games_both_sides_any_round": 0.48195,
+  "mm_bp": 235.78026607698288,
+  "mm_bp_2se": 1.699276892960912,
+  "edge_pct": [
+   0.673970552965687,
+   1.0039236149287176,
+   0.8102806455232827,
+   0.438257477860807
+  ],
+  "edge_2se_pct": [
+   0.0331729388931171,
+   0.028527027255741945,
+   0.029850518810682115,
+   0.029775780285908146
+  ],
+  "filled_by_trader": [
+   0.1775885073691153,
+   0.21787039051078683,
+   0.19334431123492848,
+   0.24538081275294737
+  ],
+  "bid_by_round": [
+   0.9652417408633609,
+   0.9749443019934414,
+   0.9851819052433013,
+   1.0053712509305046
+  ],
+  "ask_by_round": [
+   1.0295637272507339,
+   1.0277030041955415,
+   1.0178833034082255,
+   1.0072292971152448
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.06_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.06,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.06,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 5.820766091346741e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.0991310502441837e-16,
+   "mm_pl": 4.718447854656915e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.49144391123296227,
+  "saved_share": 0.7612085518368485,
+  "flow": 0.49144391123296227,
+  "share": 0.7612085518368485,
+  "filled_of_capital": 0.6456100763017892,
+  "bought_share": 0.20872154768614806,
+  "imbalance_floor": 0.767938934206993,
+  "games_both_sides_same_round": 0.19515,
+  "games_both_sides_any_round": 0.4241,
+  "mm_bp": 229.1188504377604,
+  "mm_bp_2se": 1.5557048670634082,
+  "edge_pct": [
+   1.8115096541149442,
+   1.6840125874199012,
+   1.5180839671033042,
+   1.191763096823581
+  ],
+  "edge_2se_pct": [
+   0.03431788972048623,
+   0.030763766587763638,
+   0.03154199931362842,
+   0.03184292928701212
+  ],
+  "filled_by_trader": [
+   0.15932944158233905,
+   0.1558229426616784,
+   0.23035641796422895,
+   0.3302043238497306
+  ],
+  "bid_by_round": [
+   0.9589836568501706,
+   0.9724339446498751,
+   0.9864544616436579,
+   1.003883269214409
+  ],
+  "ask_by_round": [
+   1.053597664784287,
+   1.0361619079708961,
+   1.023130805961443,
+   1.0056990347608188
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "T1-T2-T3-T4_mm0.01_bdc0.07_bid_size_2way",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.07,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.07,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": null,
+   "roster_seed": null,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 3.201350295967131e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 3.935165808234416e-16,
+   "mm_pl": 4.718447854656915e-16,
+   "trader_pl": 4.718447854656915e-16
+  },
+  "passed": true,
+  "saved_flow": NaN,
+  "saved_share": 0.6924199948098174,
+  "flow": 0.4882776483748929,
+  "share": 0.6924199948098174,
+  "filled_of_capital": 0.7051755466839241,
+  "bought_share": 0.1797546500434014,
+  "imbalance_floor": 0.6946169870463536,
+  "games_both_sides_same_round": 0.7223,
+  "games_both_sides_any_round": 0.79115,
+  "mm_bp": 348.3263956969648,
+  "mm_bp_2se": 1.523674540801061,
+  "edge_pct": [
+   3.0879194843075277,
+   2.6099147159177916,
+   2.293606800773797,
+   -0.10273890878642522
+  ],
+  "edge_2se_pct": [
+   0.03548734478147603,
+   0.032013533817557775,
+   0.03382201391597552,
+   0.037647431521913334
+  ],
+  "filled_by_trader": [
+   0.142600855863049,
+   0.12921723858041448,
+   0.3373939569512908,
+   0.4984190805300815
+  ],
+  "bid_by_round": [
+   NaN,
+   0.9330154442289393,
+   0.9756009904241482,
+   1.009710670661324
+  ],
+  "ask_by_round": [
+   NaN,
+   1.0390070154915476,
+   1.0587009500107154,
+   1.0031797846078931
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_frozen_cotrained/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "_frozen_cotrained",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 3.935165808234416e-16,
+   "mm_pl": 4.996003610813204e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.4672923200409252,
+  "saved_share": 0.9225729395100531,
+  "flow": 0.4672923200409252,
+  "share": 0.9225729395100531,
+  "filled_of_capital": 0.5065098920949146,
+  "bought_share": 0.04453230045381778,
+  "imbalance_floor": 0.9400943097045177,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.179,
+  "mm_bp": 116.98558140740103,
+  "mm_bp_2se": 2.132464959627223,
+  "edge_pct": [
+   0.05141258893662804,
+   0.14362001970203647,
+   0.04749169402446664,
+   0.13245806786928088
+  ],
+  "edge_2se_pct": [
+   0.00232212757177823,
+   0.023261332136277298,
+   0.00210835665298252,
+   0.022798309269980666
+  ],
+  "filled_by_trader": [
+   0.11112759935544743,
+   0.18107837826570725,
+   0.09670342229128351,
+   0.28915882330110176
+  ],
+  "bid_by_round": [
+   0.9922354454524396,
+   0.9898525056723289,
+   0.9879352663855152,
+   0.9831757075637821
+  ],
+  "ask_by_round": [
+   1.0014771082569092,
+   1.002124039425881,
+   1.0027222346677502,
+   1.0035581172436925
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_outer30_anneal700",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 30,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": 700,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "_outer30_anneal700",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.91895726029302e-16,
+   "mm_pl": 4.510281037539698e-16,
+   "trader_pl": 6.938893903907228e-16
+  },
+  "passed": true,
+  "saved_flow": 0.1957393827624046,
+  "saved_share": 0.9122782680606634,
+  "flow": 0.1957393827624046,
+  "share": 0.9122782680606634,
+  "filled_of_capital": 0.21456104964388847,
+  "bought_share": 0.08571423079923846,
+  "imbalance_floor": 0.9335940553466032,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.16565,
+  "mm_bp": 52.806482354579714,
+  "mm_bp_2se": 1.4500976485184238,
+  "edge_pct": [
+   0.037177419202888654,
+   0.0727643935466482,
+   0.033490456276212645,
+   0.0542800324416558
+  ],
+  "edge_2se_pct": [
+   0.002016589221459531,
+   0.01961003036256299,
+   0.0017971061558765059,
+   0.005276429393192873
+  ],
+  "filled_by_trader": [
+   0.09243257923601267,
+   0.15242859389003005,
+   0.07609805912591013,
+   0.1759113850453943
+  ],
+  "bid_by_round": [
+   0.9914584339845467,
+   0.989420650050054,
+   0.9880441565848838,
+   0.9857140690198575
+  ],
+  "ask_by_round": [
+   1.0051670161635669,
+   1.005896344268601,
+   1.00591058479049,
+   1.0057748037080496
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed142",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    142,
+    142
+   ],
+   "run_tag": "_seed142",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.91895726029302e-16,
+   "mm_pl": 4.996003610813204e-16,
+   "trader_pl": 7.008282842946301e-16
+  },
+  "passed": true,
+  "saved_flow": 0.1867817291887242,
+  "saved_share": 0.9700213653026261,
+  "flow": 0.1867817291887242,
+  "share": 0.9700213653026261,
+  "filled_of_capital": 0.19255424248356864,
+  "bought_share": 0.025620470132421136,
+  "imbalance_floor": 0.9953240788727757,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.04585,
+  "mm_bp": 39.64061043535922,
+  "mm_bp_2se": 1.5515941420579509,
+  "edge_pct": [
+   0.020103817142620044,
+   0.1898430396028503,
+   0.020930107139446187,
+   0.15179569992244793
+  ],
+  "edge_2se_pct": [
+   0.0010174216652550135,
+   0.00748860842643871,
+   0.0010281650668951309,
+   0.004393110123170607
+  ],
+  "filled_by_trader": [
+   0.023189354256450828,
+   0.18849242686776227,
+   0.023886840741320012,
+   0.23857941933536525
+  ],
+  "bid_by_round": [
+   0.992084374351355,
+   0.9892613126214711,
+   0.984759058748455,
+   0.9798529122050109
+  ],
+  "ask_by_round": [
+   0.9993329984578092,
+   1.0035994360983596,
+   1.0077765701480519,
+   1.0114141774587977
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_seed242",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    242,
+    242
+   ],
+   "run_tag": "_seed242",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 5.246887744312555e-16,
+   "mm_pl": 6.938893903907228e-16,
+   "trader_pl": 7.008282842946301e-16
+  },
+  "passed": true,
+  "saved_flow": 0.18186243189453039,
+  "saved_share": 0.9720739882622589,
+  "flow": 0.18186243189453033,
+  "share": 0.9720739882622587,
+  "filled_of_capital": 0.18708702638946156,
+  "bought_share": 0.02874929822253661,
+  "imbalance_floor": 0.9966283660711649,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.10105,
+  "mm_bp": 43.150749303339246,
+  "mm_bp_2se": 1.531061234691913,
+  "edge_pct": [
+   0.014779744545356795,
+   0.1438731245742391,
+   0.011768045065566118,
+   0.09138666362197075
+  ],
+  "edge_2se_pct": [
+   0.0010230567480240516,
+   0.003784970414143087,
+   0.000823246265295732,
+   0.004451494272918868
+  ],
+  "filled_by_trader": [
+   0.02901028798046624,
+   0.19975796842496765,
+   0.01849777227775822,
+   0.2480297751041827
+  ],
+  "bid_by_round": [
+   0.9889276245471054,
+   0.9877384110783776,
+   0.9842014674203932,
+   0.980217279958788
+  ],
+  "ask_by_round": [
+   1.0021026197348042,
+   1.0047293623467946,
+   1.0072679661970976,
+   1.010161934575688
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_tau_const",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    0.02,
+    0.02
+   ],
+   "tau_mm": [
+    0.02,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "_tau_const",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.0,
+  "saved_share": NaN,
+  "flow": 0.0,
+  "share": NaN,
+  "filled_of_capital": 0.0,
+  "bought_share": NaN,
+  "imbalance_floor": NaN,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": -0.0001138719197228082,
+  "mm_bp_2se": 0.00022774327008530607,
+  "edge_pct": [
+   -0.00013058284236816317,
+   -0.0005953818121432261,
+   -9.112267275227246e-05,
+   -9.443270560769827e-05
+  ],
+  "edge_2se_pct": [
+   3.144194825732776e-05,
+   0.001668569986111632,
+   1.0299869188711605e-05,
+   0.0002604848311158561
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "bid_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_tau_const_mm",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.02,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "_tau_const_mm",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 0,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 5.246887744312555e-16,
+   "mm_pl": 5.967448757360216e-16,
+   "trader_pl": 7.274996577377735e-16
+  },
+  "passed": true,
+  "saved_flow": 0.2717758569750942,
+  "saved_share": 0.8783342723086777,
+  "flow": 0.2717758569750942,
+  "share": 0.8783342723086777,
+  "filled_of_capital": 0.3094218972700892,
+  "bought_share": 0.0962378058282084,
+  "imbalance_floor": 0.8997955303821252,
+  "games_both_sides_same_round": 0.0005,
+  "games_both_sides_any_round": 0.31175,
+  "mm_bp": 64.58349338127933,
+  "mm_bp_2se": 1.6778602118208645,
+  "edge_pct": [
+   0.09690907778449755,
+   0.28689961286804844,
+   0.08691085096405184,
+   0.1702342863814204
+  ],
+  "edge_2se_pct": [
+   0.002883696448560817,
+   0.02067156819707104,
+   0.0026874798169252683,
+   0.00622146336922038
+  ],
+  "filled_by_trader": [
+   0.14513798678443915,
+   0.2042070038644594,
+   0.131598656584137,
+   0.2599053618146513
+  ],
+  "bid_by_round": [
+   0.9954473399400963,
+   0.9945430378232055,
+   0.9930128261574049,
+   0.9898443675954186
+  ],
+  "ask_by_round": [
+   0.9997637076937318,
+   1.0014939517918093,
+   1.001336955939284,
+   1.0023055719924359
+  ],
+  "n_population": 0,
+  "roster_seed": 0
+ },
+ {
+  "folder": "checks/pop4s1_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "B",
+   "B"
+  ],
+  "cards": [
+   [
+    50000.0,
+    68108.0,
+    0.0,
+    0.02
+   ],
+   [
+    100000.0,
+    78773.0,
+    0.02,
+    0.1
+   ],
+   [
+    100000.0,
+    80793.0,
+    0.03,
+    0.0
+   ],
+   [
+    50000.0,
+    42028.0,
+    0.2,
+    0.05
+   ]
+  ],
+  "capital": 250000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 1,
+   "capital_pounds": 250000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 2.328306436538696e-16,
+   "fills_traders": 5.820766091346741e-16,
+   "bureau_traders": 5.820766091346741e-16,
+   "bureau_mm": 2.328306436538696e-16,
+   "final_clear": 2.7939677238464354e-16,
+   "mm_pl": 3.885780586188048e-16,
+   "trader_pl": 7.28583859910259e-16
+  },
+  "passed": true,
+  "saved_flow": 0.2303457301147277,
+  "saved_share": 0.879195237048283,
+  "flow": 0.2303457301147277,
+  "share": 0.879195237048283,
+  "filled_of_capital": 0.26199610781339766,
+  "bought_share": 0.10475593330922159,
+  "imbalance_floor": 0.895445205350885,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.07105,
+  "mm_bp": 61.9808212595699,
+  "mm_bp_2se": 1.3755682803850877,
+  "edge_pct": [
+   0.4966980881901935,
+   0.01739910353885141,
+   0.07907404632527569,
+   0.039196403379525756
+  ],
+  "edge_2se_pct": [
+   0.03521583074846948,
+   0.005963877217430351,
+   0.029802939643330355,
+   0.023170304892259606
+  ],
+  "filled_by_trader": [
+   0.0379784047576034,
+   0.1343797715473035,
+   0.12825484029760992,
+   0.10997771169526194
+  ],
+  "bid_by_round": [
+   0.9960584160668042,
+   0.9960765218350331,
+   0.9963460100534105,
+   0.9966751708470084
+  ],
+  "ask_by_round": [
+   1.0076452310801334,
+   1.0077591139877553,
+   1.0081967028129684,
+   1.007074794647885
+  ],
+  "n_population": 4,
+  "roster_seed": 1,
+  "table": {
+   "pound_sellers": 1,
+   "dollar_sellers": 3,
+   "pound_seller_capital": 50000.0,
+   "dollar_seller_capital": 200000.0,
+   "imbalance": 0.6,
+   "dead_cards": [
+    "R01",
+    "R03"
+   ],
+   "dead_capital_share": 0.52,
+   "live_imbalance": 1.0
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "checks/pop4s1_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 1,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 4.91895726029302e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 4.91895726029302e-16,
+   "final_clear": 4.91895726029302e-16,
+   "mm_pl": 4.371503159461554e-16,
+   "trader_pl": 7.251144129583054e-16
+  },
+  "passed": true,
+  "saved_flow": 0.1490535726521462,
+  "saved_share": 0.8596549296907732,
+  "flow": 0.1490535726521462,
+  "share": 0.8596549296907732,
+  "filled_of_capital": 0.17338767859536655,
+  "bought_share": 0.2137126818744832,
+  "imbalance_floor": 0.8831061554314259,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.2336,
+  "mm_bp": 40.49523593133458,
+  "mm_bp_2se": 1.2347028330848662,
+  "edge_pct": [
+   0.08209418763576438,
+   0.036755811504810734,
+   0.07248163006093603,
+   0.03480769825001631
+  ],
+  "edge_2se_pct": [
+   0.0031451978534496575,
+   0.02245247439867132,
+   0.0031376344290925087,
+   0.0030641091870720876
+  ],
+  "filled_by_trader": [
+   0.17203844262307325,
+   0.09455794640072726,
+   0.17446086998088697,
+   0.13485462412609386
+  ],
+  "bid_by_round": [
+   0.9944850949988968,
+   0.9935839007846734,
+   0.9925732699275193,
+   0.9918503842844226
+  ],
+  "ask_by_round": [
+   1.0062629864225856,
+   1.0086225693623914,
+   1.0084270633686492,
+   1.0094026946062824
+  ],
+  "n_population": 4,
+  "roster_seed": 1
+ },
+ {
+  "folder": "checks/pop4s2_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04"
+  ],
+  "sides": [
+   "B",
+   "A",
+   "A",
+   "A"
+  ],
+  "cards": [
+   [
+    100000.0,
+    73471.0,
+    0.1,
+    0.03
+   ],
+   [
+    200000.0,
+    261428.0,
+    0.2,
+    0.02
+   ],
+   [
+    500000.0,
+    596871.0,
+    0.0,
+    0.02
+   ],
+   [
+    200000.0,
+    253113.0,
+    0.02,
+    0.0
+   ]
+  ],
+  "capital": 980000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 2,
+   "capital_pounds": 980000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 9.503291577708964e-17,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 5.939557236068102e-17,
+   "final_clear": 5.939557236068102e-17,
+   "mm_pl": 5.984795992119984e-17,
+   "trader_pl": 4.440892098500626e-16
+  },
+  "passed": true,
+  "saved_flow": 0.018202998328442032,
+  "saved_share": 0.9847844952873256,
+  "flow": 0.018202998328442032,
+  "share": 0.9847844952873256,
+  "filled_of_capital": 0.018484245452230676,
+  "bought_share": 1.0,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 2.8941082098853292,
+  "mm_bp_2se": 0.07936827205625055,
+  "edge_pct": [
+   -0.001880592775567344,
+   0.018756232598278584,
+   0.4675744415104443,
+   0.020878077317370618
+  ],
+  "edge_2se_pct": [
+   0.004952868225557516,
+   0.0013391965365322097,
+   0.03638754050507236,
+   0.0012783882607209165
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.046725182389427265,
+   0.00013769652411973506,
+   0.04237935212748162
+  ],
+  "bid_by_round": [
+   0.9890587259685071,
+   0.9899579402212241,
+   0.9892624183153451,
+   0.9880370334949722
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 4,
+  "roster_seed": 2,
+  "table": {
+   "pound_sellers": 3,
+   "dollar_sellers": 1,
+   "pound_seller_capital": 900000.0,
+   "dollar_seller_capital": 80000.0,
+   "imbalance": 0.8367346938775511,
+   "dead_cards": [
+    "R03",
+    "R04"
+   ],
+   "dead_capital_share": 0.7142857142857143,
+   "live_imbalance": 0.42857142857142855
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "checks/pop4s2_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": -1,
+   "seed_init": [
+    42,
+    42
+   ],
+   "run_tag": "",
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 2,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.6396524200976735e-17,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 1.6396524200976735e-17,
+   "final_clear": 1.6396524200976735e-17,
+   "mm_pl": 1.951563910473908e-17,
+   "trader_pl": 4.718447854656915e-16
+  },
+  "passed": true,
+  "saved_flow": 0.01821194018847807,
+  "saved_share": 0.9722537648045926,
+  "flow": 0.018211940188478062,
+  "share": 0.9722537648045924,
+  "filled_of_capital": 0.01873167361006658,
+  "bought_share": 0.5679771211788526,
+  "imbalance_floor": 0.9466498165891769,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.05385,
+  "mm_bp": 3.3069854781221477,
+  "mm_bp_2se": 0.06497791517500741,
+  "edge_pct": [
+   0.020601173870295607,
+   0.0012368497628948362,
+   0.02504015163404297,
+   -0.00032132624705125183
+  ],
+  "edge_2se_pct": [
+   0.001400036595478958,
+   0.005774645637418995,
+   0.001425612083791743,
+   0.0006778394691326547
+  ],
+  "filled_by_trader": [
+   0.05016447417913721,
+   0.02711974771201266,
+   0.05005745963453379,
+   0.0005038638820079488
+  ],
+  "bid_by_round": [
+   0.9897297810816886,
+   0.990106383564666,
+   0.9892361311484901,
+   0.9883826942826133
+  ],
+  "ask_by_round": [
+   1.0136918279354932,
+   1.0114929058184412,
+   1.0106719166602836,
+   1.0109658193396396
+  ],
+  "n_population": 4,
+  "roster_seed": 2
+ },
+ {
+  "folder": "pop12s0_mm0.01_bdc0.02_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04",
+   "R05",
+   "R06",
+   "R07",
+   "R08",
+   "R09",
+   "R10",
+   "R11",
+   "R12"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "B",
+   "B",
+   "B"
+  ],
+  "cards": [
+   [
+    200000.0,
+    167344.0,
+    0.05,
+    0.05
+   ],
+   [
+    200000.0,
+    173922.0,
+    0.02,
+    0.1
+   ],
+   [
+    200000.0,
+    171437.0,
+    0.0,
+    0.05
+   ],
+   [
+    50000.0,
+    65371.0,
+    0.2,
+    0.02
+   ],
+   [
+    50000.0,
+    63018.0,
+    0.2,
+    0.0
+   ],
+   [
+    100000.0,
+    123067.0,
+    0.03,
+    0.0
+   ],
+   [
+    50000.0,
+    64633.0,
+    0.0,
+    0.05
+   ],
+   [
+    200000.0,
+    255769.0,
+    0.1,
+    0.03
+   ],
+   [
+    100000.0,
+    137021.0,
+    0.2,
+    0.03
+   ],
+   [
+    200000.0,
+    164815.0,
+    0.2,
+    0.1
+   ],
+   [
+    200000.0,
+    148323.0,
+    0.03,
+    0.05
+   ],
+   [
+    200000.0,
+    160811.0,
+    0.03,
+    0.02
+   ]
+  ],
+  "capital": 1510000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 12,
+   "roster_seed": 0,
+   "capital_pounds": 1510000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 7.709623962048663e-17,
+   "fills_traders": 4.3655745685100557e-16,
+   "bureau_traders": 4.3655745685100557e-16,
+   "bureau_mm": 7.709623962048663e-17,
+   "final_clear": 8.480586358253529e-17,
+   "mm_pl": 7.45931094670027e-17,
+   "trader_pl": 7.355227538141662e-16
+  },
+  "passed": true,
+  "saved_flow": 1.9199846539462458e-05,
+  "saved_share": NaN,
+  "flow": 1.9199846539462458e-05,
+  "share": 0.9996848346088808,
+  "filled_of_capital": 1.9205899574313592e-05,
+  "bought_share": 0.6903073258734876,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.009654920551900278,
+  "mm_bp_2se": 0.010947093404383275,
+  "edge_pct": [
+   -0.0005108167544617505,
+   -0.0003120750218862535,
+   -0.0009449166006538395,
+   -0.000325593122128724,
+   -0.0002636163580000168,
+   -0.00019007466794628385,
+   -0.0008391229945657548,
+   -0.00033240940164827793,
+   -0.00030823895655029997,
+   -0.0003422488984637755,
+   -0.0007753025975104576,
+   -0.0012028203413968197
+  ],
+  "edge_2se_pct": [
+   0.0011713048532751894,
+   0.0008273812859088249,
+   0.003313877583920822,
+   3.844673396917221e-05,
+   3.770226149407257e-05,
+   2.15242862900057e-05,
+   9.658685722962973e-05,
+   4.280052427539874e-05,
+   4.425629921947739e-05,
+   0.0008965825032169732,
+   0.0021809992234602268,
+   0.002338473461142874
+  ],
+  "filled_by_trader": [
+   5.538410981706718e-05,
+   0.0,
+   0.0,
+   5.22561096990047e-07,
+   5.094843025306284e-05,
+   6.886291590069566e-08,
+   5.1278599372734e-05,
+   5.1020428216630106e-05,
+   5.0679575617509224e-05,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "bid_by_round": [
+   0.9865932258153571,
+   0.9833339120727751,
+   0.9756186341360068,
+   0.969315906123565
+  ],
+  "ask_by_round": [
+   1.0130254690119305,
+   NaN,
+   1.017561909041298,
+   1.0268007531347587
+  ],
+  "n_population": 12,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 6,
+   "dollar_sellers": 6,
+   "pound_seller_capital": 550000.0,
+   "dollar_seller_capital": 960000.0,
+   "imbalance": 0.271523178807947,
+   "dead_cards": [],
+   "dead_capital_share": 0.0,
+   "live_imbalance": 0.271523178807947
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop12s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 12,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 7.216449660063518e-16
+  },
+  "passed": true,
+  "saved_flow": 1.0780062589042396e-12,
+  "saved_share": NaN,
+  "flow": 1.0780062589042396e-12,
+  "share": 0.964981871961794,
+  "filled_of_capital": 1.1171259173114503e-12,
+  "bought_share": 1.0,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.005049976544271848,
+  "mm_bp_2se": 0.010925690588734572,
+  "edge_pct": [
+   -0.0005556405986703344,
+   -0.0004899690548906343,
+   -0.0007613840533602049,
+   -0.00035519688889901885
+  ],
+  "edge_2se_pct": [
+   6.315190103968753e-05,
+   0.0012712626361620777,
+   8.544824438103459e-05,
+   0.0006588258891975471
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.0,
+   1.6001786529698495e-11,
+   0.0
+  ],
+  "bid_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   0.9723309267930658
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 12,
+  "roster_seed": 0
+ },
+ {
+  "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04",
+   "R05",
+   "R06",
+   "R07",
+   "R08",
+   "R09",
+   "R10",
+   "R11",
+   "R12"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "B",
+   "B",
+   "B"
+  ],
+  "cards": [
+   [
+    200000.0,
+    167344.0,
+    0.05,
+    0.05
+   ],
+   [
+    200000.0,
+    173922.0,
+    0.02,
+    0.1
+   ],
+   [
+    200000.0,
+    171437.0,
+    0.0,
+    0.05
+   ],
+   [
+    50000.0,
+    65371.0,
+    0.2,
+    0.02
+   ],
+   [
+    50000.0,
+    63018.0,
+    0.2,
+    0.0
+   ],
+   [
+    100000.0,
+    123067.0,
+    0.03,
+    0.0
+   ],
+   [
+    50000.0,
+    64633.0,
+    0.0,
+    0.05
+   ],
+   [
+    200000.0,
+    255769.0,
+    0.1,
+    0.03
+   ],
+   [
+    100000.0,
+    137021.0,
+    0.2,
+    0.03
+   ],
+   [
+    200000.0,
+    164815.0,
+    0.2,
+    0.1
+   ],
+   [
+    200000.0,
+    148323.0,
+    0.03,
+    0.05
+   ],
+   [
+    200000.0,
+    160811.0,
+    0.03,
+    0.02
+   ]
+  ],
+  "capital": 1510000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 12,
+   "roster_seed": 0,
+   "capital_pounds": 1510000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 2.3128871886145987e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 2.3128871886145987e-16,
+   "final_clear": 3.7006195017833585e-16,
+   "mm_pl": 4.0592529337857286e-16,
+   "trader_pl": 7.355227538141662e-16
+  },
+  "passed": true,
+  "saved_flow": 0.19306731764090157,
+  "saved_share": 0.8394222868753503,
+  "flow": 0.19306731764090157,
+  "share": 0.8394222868753503,
+  "filled_of_capital": 0.23000022832318606,
+  "bought_share": 0.14581874835647463,
+  "imbalance_floor": 0.8590477638892612,
+  "games_both_sides_same_round": 0.0694,
+  "games_both_sides_any_round": 0.4981,
+  "mm_bp": 56.61775454470316,
+  "mm_bp_2se": 1.101029768588775,
+  "edge_pct": [
+   0.04226822622540441,
+   0.08968586276389524,
+   0.07215963382880361,
+   0.057678446484821046,
+   0.057689710726168936,
+   0.05427848581180467,
+   0.055903315992460255,
+   0.04417765333918367,
+   0.048086124325982575,
+   0.05508045485134372,
+   0.0362199564563008,
+   -0.001267598226281474
+  ],
+  "edge_2se_pct": [
+   0.009735185109028138,
+   0.021608754498282548,
+   0.024899157652672935,
+   0.0020247597555501603,
+   0.0019727687052426613,
+   0.001983638327624061,
+   0.002002324948176941,
+   0.002039668293381194,
+   0.002469385671888923,
+   0.006970543427778833,
+   0.009155792249524857,
+   0.0025601483859491615
+  ],
+  "filled_by_trader": [
+   0.2223626339744441,
+   0.1761985548975741,
+   0.15838501967590785,
+   0.08130085214136322,
+   0.07725652272165326,
+   0.07989690255559008,
+   0.08173081644669826,
+   0.09510540144498873,
+   0.1196251338650537,
+   0.25838973932269965,
+   0.2514324431357404,
+   0.0
+  ],
+  "bid_by_round": [
+   0.9924852843777409,
+   0.991271989639134,
+   0.9880478832280136,
+   0.9860038992695543
+  ],
+  "ask_by_round": [
+   1.0059269730773983,
+   1.005439201570777,
+   1.0057252890252149,
+   1.005442791915289
+  ],
+  "n_population": 12,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 6,
+   "dollar_sellers": 6,
+   "pound_seller_capital": 550000.0,
+   "dollar_seller_capital": 960000.0,
+   "imbalance": 0.271523178807947,
+   "dead_cards": [
+    "R06"
+   ],
+   "dead_capital_share": 0.06622516556291391,
+   "live_imbalance": 0.3617021276595745
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 12,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.6396524200976734e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 1.6396524200976734e-16,
+   "final_clear": 2.6234438721562776e-16,
+   "mm_pl": 3.0531133177191805e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.10892662261104097,
+  "saved_share": 0.8152189218382803,
+  "flow": 0.10892662261104097,
+  "share": 0.8152189218382803,
+  "filled_of_capital": 0.13361640621075938,
+  "bought_share": 0.15571934249950112,
+  "imbalance_floor": 0.8334910641022092,
+  "games_both_sides_same_round": 0.0145,
+  "games_both_sides_any_round": 0.3074,
+  "mm_bp": 31.911801942554746,
+  "mm_bp_2se": 0.7685464238245554,
+  "edge_pct": [
+   0.046353502931466825,
+   0.07490109506609276,
+   0.048654789570119275,
+   0.005324779385447443
+  ],
+  "edge_2se_pct": [
+   0.00205017781108468,
+   0.02175404150203441,
+   0.002290561532555363,
+   0.0025812263339443117
+  ],
+  "filled_by_trader": [
+   0.09102299670364507,
+   0.14904924067776634,
+   0.1119526077405327,
+   0.03906377994679305
+  ],
+  "bid_by_round": [
+   0.992384102918421,
+   0.9913160107552391,
+   0.9896064135019074,
+   0.9880871615635738
+  ],
+  "ask_by_round": [
+   1.00743811061155,
+   1.006344993767385,
+   1.0061786087657272,
+   1.004456388552504
+  ],
+  "n_population": 12,
+  "roster_seed": 0
+ },
+ {
+  "folder": "pop24s0_mm0.01_bdc0.02_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04",
+   "R05",
+   "R06",
+   "R07",
+   "R08",
+   "R09",
+   "R10",
+   "R11",
+   "R12",
+   "R13",
+   "R14",
+   "R15",
+   "R16",
+   "R17",
+   "R18",
+   "R19",
+   "R20",
+   "R21",
+   "R22",
+   "R23",
+   "R24"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "A",
+   "B",
+   "B",
+   "A"
+  ],
+  "cards": [
+   [
+    100000.0,
+    72537.0,
+    0.2,
+    0.1
+   ],
+   [
+    200000.0,
+    149621.0,
+    0.0,
+    0.2
+   ],
+   [
+    50000.0,
+    38398.0,
+    0.05,
+    0.03
+   ],
+   [
+    100000.0,
+    113208.0,
+    0.0,
+    0.0
+   ],
+   [
+    50000.0,
+    64340.0,
+    0.1,
+    0.02
+   ],
+   [
+    200000.0,
+    244184.0,
+    0.03,
+    0.2
+   ],
+   [
+    500000.0,
+    648193.0,
+    0.2,
+    0.2
+   ],
+   [
+    200000.0,
+    259422.0,
+    0.1,
+    0.03
+   ],
+   [
+    500000.0,
+    652686.0,
+    0.0,
+    0.2
+   ],
+   [
+    200000.0,
+    153928.0,
+    0.03,
+    0.03
+   ],
+   [
+    200000.0,
+    173889.0,
+    0.2,
+    0.05
+   ],
+   [
+    100000.0,
+    81144.0,
+    0.02,
+    0.02
+   ],
+   [
+    200000.0,
+    154813.0,
+    0.05,
+    0.1
+   ],
+   [
+    100000.0,
+    86244.0,
+    0.02,
+    0.02
+   ],
+   [
+    200000.0,
+    146688.0,
+    0.05,
+    0.03
+   ],
+   [
+    500000.0,
+    422968.0,
+    0.02,
+    0.02
+   ],
+   [
+    500000.0,
+    364685.0,
+    0.2,
+    0.1
+   ],
+   [
+    100000.0,
+    74404.0,
+    0.2,
+    0.03
+   ],
+   [
+    500000.0,
+    378451.0,
+    0.1,
+    0.1
+   ],
+   [
+    50000.0,
+    39236.0,
+    0.2,
+    0.02
+   ],
+   [
+    500000.0,
+    635042.0,
+    0.0,
+    0.2
+   ],
+   [
+    100000.0,
+    82752.0,
+    0.2,
+    0.02
+   ],
+   [
+    500000.0,
+    389209.0,
+    0.2,
+    0.05
+   ],
+   [
+    50000.0,
+    64114.0,
+    0.1,
+    0.2
+   ]
+  ],
+  "capital": 4980000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 24,
+   "roster_seed": 0,
+   "capital_pounds": 4980000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.46103566549868e-19,
+   "fills_traders": 4.3655745685100557e-16,
+   "bureau_traders": 4.3655745685100557e-16,
+   "bureau_mm": 1.46103566549868e-19,
+   "final_clear": 1.46103566549868e-19,
+   "mm_pl": 1.3552527156068805e-19,
+   "trader_pl": 7.494005416219807e-16
+  },
+  "passed": true,
+  "saved_flow": 1.546064670040056e-07,
+  "saved_share": NaN,
+  "flow": 1.546064670040056e-07,
+  "share": 0.9820896316205954,
+  "filled_of_capital": 1.5742602510616238e-07,
+  "bought_share": 0.9387622326943212,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.0031909001575187042,
+  "mm_bp_2se": 0.008010881168208852,
+  "edge_pct": [
+   -0.0003781550986848187,
+   0.04474397243216136,
+   -0.0007729549734631221,
+   -0.00022272992482850343,
+   -0.00018994475669358265,
+   -0.0001799208245271438,
+   -0.000596219362888706,
+   -0.0005850156872299297,
+   -0.00028619832832524523,
+   -0.0007347631995505027,
+   -0.0003735994200717938,
+   -0.0013591256322160932,
+   -0.00038343191212955445,
+   -0.0008220631536184145,
+   -0.0006993518227400129,
+   -0.0010787692862745636,
+   -0.00018041219969765988,
+   -0.00027708849298980766,
+   -0.0003230798411401631,
+   -0.00023545480372510555,
+   -0.0004705896193743476,
+   -0.00031163949058327496,
+   -0.00017845085443169657,
+   -0.0002238889303943247
+  ],
+  "edge_2se_pct": [
+   0.0008708345689265417,
+   0.003858633710782111,
+   0.0021717456625989263,
+   2.501985631890524e-05,
+   2.174952324267197e-05,
+   2.0398195781039303e-05,
+   6.719443809475445e-05,
+   6.580692425256282e-05,
+   3.231690564138835e-05,
+   0.0021246237612097514,
+   0.0008210689654954624,
+   0.0026517840108537484,
+   0.0008704540074384165,
+   0.003190590902960937,
+   0.002400069769521325,
+   0.003851017731607607,
+   0.00041891591542160333,
+   0.0006878879738910748,
+   0.0007650183426115586,
+   0.0006314032787355528,
+   5.32976812772951e-05,
+   0.001035051132742092,
+   0.00044496181964410016,
+   2.5384599582838937e-05
+  ],
+  "filled_by_trader": [
+   8.706310042988858e-08,
+   0.0,
+   0.0,
+   2.0794436305491512e-07,
+   3.673537048292277e-07,
+   1.9709728407274288e-07,
+   6.153394080447919e-07,
+   1.0345810201878384e-06,
+   3.0604167808167225e-07,
+   0.0,
+   7.788164085935565e-09,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   4.004428733387242e-07,
+   4.895125222825425e-09,
+   7.084692736017392e-08,
+   0.0,
+   6.252031266100451e-08,
+   0.0,
+   7.396239553656256e-10
+  ],
+  "bid_by_round": [
+   NaN,
+   0.97830375301543,
+   0.9726619763326028,
+   0.9667904680266202
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   1.026896319226418,
+   1.0328982793147992
+  ],
+  "n_population": 24,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 8,
+   "dollar_sellers": 16,
+   "pound_seller_capital": 2100000.0,
+   "dollar_seller_capital": 2880000.0,
+   "imbalance": 0.1566265060240964,
+   "dead_cards": [
+    "R04"
+   ],
+   "dead_capital_share": 0.020080321285140562,
+   "live_imbalance": 0.18032786885245902
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop24s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 24,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 6.938893903907228e-16
+  },
+  "passed": true,
+  "saved_flow": 0.0,
+  "saved_share": NaN,
+  "flow": 0.0,
+  "share": NaN,
+  "filled_of_capital": 0.0,
+  "bought_share": NaN,
+  "imbalance_floor": NaN,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.0050825198191919085,
+  "mm_bp_2se": 0.011158225009531753,
+  "edge_pct": [
+   -0.00048718519903375086,
+   -0.0004522101530554819,
+   -0.0006464646945338489,
+   -0.0003374021810376791
+  ],
+  "edge_2se_pct": [
+   5.490128343545837e-05,
+   0.00116303034713044,
+   7.264843361732293e-05,
+   0.0006329073648280157
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.0,
+   0.0,
+   0.0
+  ],
+  "bid_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "ask_by_round": [
+   NaN,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 24,
+  "roster_seed": 0
+ },
+ {
+  "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04",
+   "R05",
+   "R06",
+   "R07",
+   "R08",
+   "R09",
+   "R10",
+   "R11",
+   "R12",
+   "R13",
+   "R14",
+   "R15",
+   "R16",
+   "R17",
+   "R18",
+   "R19",
+   "R20",
+   "R21",
+   "R22",
+   "R23",
+   "R24"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "A",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "B",
+   "A",
+   "B",
+   "B",
+   "A"
+  ],
+  "cards": [
+   [
+    100000.0,
+    72537.0,
+    0.2,
+    0.1
+   ],
+   [
+    200000.0,
+    149621.0,
+    0.0,
+    0.2
+   ],
+   [
+    50000.0,
+    38398.0,
+    0.05,
+    0.03
+   ],
+   [
+    100000.0,
+    113208.0,
+    0.0,
+    0.0
+   ],
+   [
+    50000.0,
+    64340.0,
+    0.1,
+    0.02
+   ],
+   [
+    200000.0,
+    244184.0,
+    0.03,
+    0.2
+   ],
+   [
+    500000.0,
+    648193.0,
+    0.2,
+    0.2
+   ],
+   [
+    200000.0,
+    259422.0,
+    0.1,
+    0.03
+   ],
+   [
+    500000.0,
+    652686.0,
+    0.0,
+    0.2
+   ],
+   [
+    200000.0,
+    153928.0,
+    0.03,
+    0.03
+   ],
+   [
+    200000.0,
+    173889.0,
+    0.2,
+    0.05
+   ],
+   [
+    100000.0,
+    81144.0,
+    0.02,
+    0.02
+   ],
+   [
+    200000.0,
+    154813.0,
+    0.05,
+    0.1
+   ],
+   [
+    100000.0,
+    86244.0,
+    0.02,
+    0.02
+   ],
+   [
+    200000.0,
+    146688.0,
+    0.05,
+    0.03
+   ],
+   [
+    500000.0,
+    422968.0,
+    0.02,
+    0.02
+   ],
+   [
+    500000.0,
+    364685.0,
+    0.2,
+    0.1
+   ],
+   [
+    100000.0,
+    74404.0,
+    0.2,
+    0.03
+   ],
+   [
+    500000.0,
+    378451.0,
+    0.1,
+    0.1
+   ],
+   [
+    50000.0,
+    39236.0,
+    0.2,
+    0.02
+   ],
+   [
+    500000.0,
+    635042.0,
+    0.0,
+    0.2
+   ],
+   [
+    100000.0,
+    82752.0,
+    0.2,
+    0.02
+   ],
+   [
+    500000.0,
+    389209.0,
+    0.2,
+    0.05
+   ],
+   [
+    50000.0,
+    64114.0,
+    0.1,
+    0.2
+   ]
+  ],
+  "capital": 4980000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 24,
+   "roster_seed": 0,
+   "capital_pounds": 4980000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 5.610376955514931e-16,
+   "fills_traders": 3.4924596548080445e-16,
+   "bureau_traders": 3.4924596548080445e-16,
+   "bureau_mm": 5.610376955514931e-16,
+   "final_clear": 5.984402085882593e-16,
+   "mm_pl": 7.771561172376096e-16,
+   "trader_pl": 7.28583859910259e-16
+  },
+  "passed": true,
+  "saved_flow": 0.20066471326066151,
+  "saved_share": 0.8263307986376761,
+  "flow": 0.20066471326066151,
+  "share": 0.8263307986376761,
+  "filled_of_capital": 0.24283823571805122,
+  "bought_share": 0.2063218020534317,
+  "imbalance_floor": 0.842870634905714,
+  "games_both_sides_same_round": 0.63345,
+  "games_both_sides_any_round": 0.68405,
+  "mm_bp": 53.8051825038299,
+  "mm_bp_2se": 1.1401190287673433,
+  "edge_pct": [
+   0.09615443177441851,
+   0.1287473347911383,
+   0.1755690108599947,
+   2.3739313689462254,
+   0.06362078510246008,
+   0.060927688521704944,
+   0.07987130957000124,
+   0.06337934731178577,
+   0.0754213410434499,
+   0.16276375060574885,
+   0.07646176136532347,
+   0.0663070679602868,
+   0.09098713583680766,
+   0.22455639825980114,
+   0.1695369243969051,
+   0.1842136565963834,
+   0.11175886786522879,
+   0.07489714794272485,
+   0.08266787714856491,
+   0.1650139261027357,
+   0.055659684465046926,
+   0.19272850956017348,
+   0.10938799643442054,
+   0.07333641474048731
+  ],
+  "edge_2se_pct": [
+   0.006886454463810536,
+   0.007035631662164126,
+   0.02177582625477917,
+   0.0356950501191683,
+   0.0025275868522854814,
+   0.0024729996298976796,
+   0.002900391823990656,
+   0.0026194926578558654,
+   0.002726654710419234,
+   0.020970680200170344,
+   0.0039364286767129275,
+   0.0036168528086952703,
+   0.00852932241359736,
+   0.02320434561790928,
+   0.01867260226189173,
+   0.02135096845417807,
+   0.013704402127641315,
+   0.003835796253526098,
+   0.006627650424415869,
+   0.018209487702800602,
+   0.0023741586830334904,
+   0.019876780483303456,
+   0.013117341789554508,
+   0.0030639160595741
+  ],
+  "filled_by_trader": [
+   0.18488361996939195,
+   0.1385841772780073,
+   0.1992151459982627,
+   0.9888303555548712,
+   0.12437627308277376,
+   0.12089074840960216,
+   0.13625095142089771,
+   0.1347149916050238,
+   0.11833813021672004,
+   0.19652522920224502,
+   0.19417458810331503,
+   0.20187796944585684,
+   0.19040899248864346,
+   0.19487716537588853,
+   0.19135282947930024,
+   0.18803512399242409,
+   0.18014777475602792,
+   0.19672340309649697,
+   0.18619768545084509,
+   0.19901932715618795,
+   0.11608573051608174,
+   0.2061146274519862,
+   0.1824501775307499,
+   0.15802298160521674
+  ],
+  "bid_by_round": [
+   0.9928888600395206,
+   0.9931799280129116,
+   0.9913263522167329,
+   0.9888351945364384
+  ],
+  "ask_by_round": [
+   1.0037533182964116,
+   1.0035497308088215,
+   1.0032935395757403,
+   1.0032799798490475
+  ],
+  "n_population": 24,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 8,
+   "dollar_sellers": 16,
+   "pound_seller_capital": 2100000.0,
+   "dollar_seller_capital": 2880000.0,
+   "imbalance": 0.1566265060240964,
+   "dead_cards": [
+    "R04"
+   ],
+   "dead_capital_share": 0.020080321285140562,
+   "live_imbalance": 0.18032786885245902
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 24,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 4.91895726029302e-16,
+   "mm_pl": 4.926614671774132e-16,
+   "trader_pl": 7.077671781985373e-16
+  },
+  "passed": true,
+  "saved_flow": 0.17094218320981142,
+  "saved_share": 0.8454237985021625,
+  "flow": 0.17094218320981142,
+  "share": 0.8454237985021625,
+  "filled_of_capital": 0.2021970324382513,
+  "bought_share": 0.13835247083180083,
+  "imbalance_floor": 0.8550203830627142,
+  "games_both_sides_same_round": 0.00185,
+  "games_both_sides_any_round": 0.3515,
+  "mm_bp": 47.66974533006372,
+  "mm_bp_2se": 1.2002715116305251,
+  "edge_pct": [
+   0.056108270151583366,
+   0.13139115996070974,
+   0.06035045865467833,
+   0.030069028483344112
+  ],
+  "edge_2se_pct": [
+   0.0025673859622782082,
+   0.023720115344097573,
+   0.0026317547307707777,
+   0.004264434080105609
+  ],
+  "filled_by_trader": [
+   0.12909008156954924,
+   0.1629689772115497,
+   0.13485307700189622,
+   0.10798324060345799
+  ],
+  "bid_by_round": [
+   0.9929333618782001,
+   0.9927533058477327,
+   0.9916787164718808,
+   0.9903685432601611
+  ],
+  "ask_by_round": [
+   1.0077092623407466,
+   1.0049693834780957,
+   1.0042701736459714,
+   1.0042708818432386
+  ],
+  "n_population": 24,
+  "roster_seed": 0
+ },
+ {
+  "folder": "pop4s0_mm0.01_bdc0.02_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A"
+  ],
+  "cards": [
+   [
+    100000.0,
+    72264.0,
+    0.0,
+    0.02
+   ],
+   [
+    500000.0,
+    433020.0,
+    0.05,
+    0.05
+   ],
+   [
+    500000.0,
+    403490.0,
+    0.1,
+    0.05
+   ],
+   [
+    500000.0,
+    664482.0,
+    0.1,
+    0.0
+   ]
+  ],
+  "capital": 1380000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 0,
+   "capital_pounds": 1380000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.328306436538696e-16,
+   "bureau_traders": 2.328306436538696e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 4.718447854656915e-16
+  },
+  "passed": true,
+  "saved_flow": 5.4227549443943266e-05,
+  "saved_share": NaN,
+  "flow": 5.4227549443943266e-05,
+  "share": 0.9998405709713272,
+  "filled_of_capital": 5.4236196268033185e-05,
+  "bought_share": 0.3427309747210171,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.013331734412167328,
+  "mm_bp_2se": 0.015042648353985692,
+  "edge_pct": [
+   0.18429975319589093,
+   -0.00035545797885644034,
+   -0.00048223001723051974,
+   -0.0003440739644816964
+  ],
+  "edge_2se_pct": [
+   0.03571365456398696,
+   0.0008969106878914029,
+   0.0011326279847571259,
+   5.074143806618245e-05
+  ],
+  "filled_by_trader": [
+   1.4947086056800789e-05,
+   5.587505287682651e-05,
+   5.5107338909776856e-05,
+   5.135775084018873e-05
+  ],
+  "bid_by_round": [
+   0.9876154253595562,
+   0.9823961867646105,
+   0.9759479579190602,
+   NaN
+  ],
+  "ask_by_round": [
+   1.0067631370646777,
+   NaN,
+   NaN,
+   NaN
+  ],
+  "n_population": 4,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 1,
+   "dollar_sellers": 3,
+   "pound_seller_capital": 500000.0,
+   "dollar_seller_capital": 880000.0,
+   "imbalance": 0.2753623188405797,
+   "dead_cards": [
+    "R01"
+   ],
+   "dead_capital_share": 0.057971014492753624,
+   "live_imbalance": 0.23076923076923078
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop4s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.02,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.02,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 0.0,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 0.0,
+   "final_clear": 0.0,
+   "mm_pl": 0.0,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 3.974909936578743e-05,
+  "saved_share": NaN,
+  "flow": 3.974909936578743e-05,
+  "share": 0.9999263559141116,
+  "filled_of_capital": 3.97520268674683e-05,
+  "bought_share": 0.1793325544826732,
+  "imbalance_floor": 1.0,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.0,
+  "mm_bp": 0.015061478963699079,
+  "mm_bp_2se": 0.018533542300512094,
+  "edge_pct": [
+   -0.0005235740197941342,
+   -0.00042238099509811353,
+   -0.0007181843251197226,
+   -0.0003093867609209125
+  ],
+  "edge_2se_pct": [
+   6.39836218438787e-05,
+   0.001318559022187043,
+   8.81969995517362e-05,
+   0.0005712920436440902
+  ],
+  "filled_by_trader": [
+   6.540716821452431e-07,
+   0.0,
+   0.00010070316510015885,
+   5.704031718416893e-05
+  ],
+  "bid_by_round": [
+   0.9858711167532943,
+   0.9848500624929903,
+   0.9816141760731465,
+   0.9711768552266654
+  ],
+  "ask_by_round": [
+   1.009666386977084,
+   NaN,
+   NaN,
+   1.0163525676097738
+  ],
+  "n_population": 4,
+  "roster_seed": 0
+ },
+ {
+  "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way",
+  "traders": [
+   "R01",
+   "R02",
+   "R03",
+   "R04"
+  ],
+  "sides": [
+   "B",
+   "B",
+   "B",
+   "A"
+  ],
+  "cards": [
+   [
+    100000.0,
+    72264.0,
+    0.0,
+    0.02
+   ],
+   [
+    500000.0,
+    433020.0,
+    0.05,
+    0.05
+   ],
+   [
+    500000.0,
+    403490.0,
+    0.1,
+    0.05
+   ],
+   [
+    500000.0,
+    664482.0,
+    0.1,
+    0.0
+   ]
+  ],
+  "capital": 1380000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 0,
+   "capital_pounds": 1380000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 1.6871785772019538e-16,
+   "fills_traders": 2.328306436538696e-16,
+   "bureau_traders": 3.4924596548080445e-16,
+   "bureau_mm": 1.6871785772019538e-16,
+   "final_clear": 2.0246142926423447e-16,
+   "mm_pl": 2.220446049250313e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.2000644000910735,
+  "saved_share": 0.816848629369435,
+  "flow": 0.2000644000910735,
+  "share": 0.8168486293694349,
+  "filled_of_capital": 0.2449222449519355,
+  "bought_share": 0.17509912326297988,
+  "imbalance_floor": 0.8334192951997238,
+  "games_both_sides_same_round": 0.0,
+  "games_both_sides_any_round": 0.1812,
+  "mm_bp": 58.65185644058144,
+  "mm_bp_2se": 1.1867646905090279,
+  "edge_pct": [
+   1.1851463887479388,
+   0.06174687121636755,
+   0.04246108883686688,
+   0.05650099509299218
+  ],
+  "edge_2se_pct": [
+   0.035409750716407444,
+   0.019905633769569525,
+   0.019644843224692208,
+   0.002412661290196658
+  ],
+  "filled_by_trader": [
+   0.0,
+   0.13769181132065017,
+   0.16406135315143508,
+   0.11820242091467806
+  ],
+  "bid_by_round": [
+   0.992679219502517,
+   0.9934076153903044,
+   0.9920289320912898,
+   0.9916189640093238
+  ],
+  "ask_by_round": [
+   1.0073993191717738,
+   1.0065969373151729,
+   1.0065897985007803,
+   1.0044102434441962
+  ],
+  "n_population": 4,
+  "roster_seed": 0,
+  "table": {
+   "pound_sellers": 1,
+   "dollar_sellers": 3,
+   "pound_seller_capital": 500000.0,
+   "dollar_seller_capital": 880000.0,
+   "imbalance": 0.2753623188405797,
+   "dead_cards": [
+    "R01"
+   ],
+   "dead_capital_share": 0.057971014492753624,
+   "live_imbalance": 0.23076923076923078
+  },
+  "frozen": {
+   "identical": true,
+   "table_file": "agents_final.pth"
+  }
+ },
+ {
+  "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "traders": [
+   "T1",
+   "T2",
+   "T3",
+   "T4"
+  ],
+  "sides": [
+   "A",
+   "B",
+   "A",
+   "B"
+  ],
+  "cards": [
+   [
+    100000.0,
+    125000.0,
+    0.02,
+    0.03
+   ],
+   [
+    200000.0,
+    155000.0,
+    0.03,
+    0.02
+   ],
+   [
+    50000.0,
+    63000.0,
+    0.2,
+    0.0
+   ],
+   [
+    500000.0,
+    396000.0,
+    0.0,
+    0.2
+   ]
+  ],
+  "capital": 710000.0,
+  "trader_fee": 0.03,
+  "mm_fee": 0.01,
+  "settings": {
+   "fee": 0.01,
+   "trader_bdc_fee": 0.03,
+   "first": "mm",
+   "mm_level_init": "conservative",
+   "n_outer": 20,
+   "n_inner": 100,
+   "batch": 1000,
+   "lr": [
+    0.001,
+    0.0001
+   ],
+   "trader_plateau": true,
+   "tau_trader": [
+    1.0,
+    0.02
+   ],
+   "tau_mm": [
+    0.2,
+    0.02
+   ],
+   "tau_anneal_frac": 0.35,
+   "tau_anneal_steps": null,
+   "seed_init": null,
+   "run_tag": null,
+   "see_offer_size": true,
+   "see_direction": true,
+   "see_queue": true,
+   "mm_arch": "bid",
+   "two_way": true,
+   "n_mm_feat": 8,
+   "rounds": 4,
+   "a0": 1.25,
+   "sd": 0.05,
+   "n_population": 4,
+   "roster_seed": 0,
+   "capital_pounds": 710000.0
+  },
+  "hard_verdicts": true,
+  "games": 20000,
+  "worst_mismatch": {
+   "fills_mm": 3.279304840195347e-16,
+   "fills_traders": 2.9103830456733706e-16,
+   "bureau_traders": 2.9103830456733706e-16,
+   "bureau_mm": 3.279304840195347e-16,
+   "final_clear": 3.935165808234416e-16,
+   "mm_pl": 4.718447854656915e-16,
+   "trader_pl": 5.828670879282072e-16
+  },
+  "passed": true,
+  "saved_flow": 0.13308505730102918,
+  "saved_share": 0.8034988139080023,
+  "flow": 0.13308505730102918,
+  "share": 0.8034988139080023,
+  "filled_of_capital": 0.16563192751180209,
+  "bought_share": 0.1719712711737718,
+  "imbalance_floor": 0.8237691489093242,
+  "games_both_sides_same_round": 0.0007,
+  "games_both_sides_any_round": 0.2921,
+  "mm_bp": 40.07016480943839,
+  "mm_bp_2se": 1.0485446435955863,
+  "edge_pct": [
+   0.06654718723174911,
+   0.07395764222607878,
+   0.06990438505481059,
+   0.010896229589860452
+  ],
+  "edge_2se_pct": [
+   0.0026448205777074765,
+   0.022796627625956335,
+   0.002668653276414799,
+   0.002660104015418818
+  ],
+  "filled_by_trader": [
+   0.13278305903888413,
+   0.1470835192846083,
+   0.13493759412084744,
+   0.07529386223090093
+  ],
+  "bid_by_round": [
+   0.993798165977833,
+   0.9931517295477805,
+   0.9920867929484286,
+   0.9906646726863273
+  ],
+  "ask_by_round": [
+   1.0097431104150445,
+   1.0066831286363866,
+   1.0057351997806974,
+   1.0043958523169376
+  ],
+  "n_population": 4,
+  "roster_seed": 0
+ }
+]

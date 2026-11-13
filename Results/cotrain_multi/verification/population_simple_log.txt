@@ -1,0 +1,7 @@
+traders' Bureau fee 0.02,  4 random traders: table 0: no trades
+traders' Bureau fee 0.02, 12 random traders: table 0: no trades
+traders' Bureau fee 0.02, 24 random traders: table 0: no trades
+traders' Bureau fee 0.03,  4 random traders: table 0: flow  13.3%  share  80.3%
+traders' Bureau fee 0.03, 12 random traders: table 0: flow  10.9%  share  81.5%
+traders' Bureau fee 0.03, 24 random traders: table 0: flow  17.1%  share  84.5%
+figures in /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/verification

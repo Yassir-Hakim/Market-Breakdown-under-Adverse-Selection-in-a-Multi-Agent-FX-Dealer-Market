@@ -1,0 +1,87 @@
+CO-TRAINED GAME T1-T2-T3-T4  (sides ABAB)
+==============================================================================
+traders
+  T1: side A, L=100,000 T=125,000 A=0.02 B=0.03  (single-trader card A)
+  T2: side B, L=200,000 T=155,000 A=0.03 B=0.02  (single-trader card B)
+  T3: side A, L=50,000 T=63,000 A=0.2 B=0  (new card)
+  T4: side B, L=500,000 T=396,000 A=0 B=0.2  (new card)
+market: a0 1.25, sd 0.05, rounds 4, trader BdC fee 0.02, MM fee 0.01, game capital GBP 710,000
+MM architecture BID: level re-set per offer from the LIVE book; the first offer of a round decided blind (the real game)
+TWO-WAY: one offer a round, the trader choosing its direction. Share of each trader's offered pound-equivalent volume that went REVERSE (sold banked currency back), and those offers' filled share: T1 0.0% / 0.0%  T2 0.0% / 0.0%  T3 0.0% / 0.0%  T4 0.0% / 0.0%
+MM sees: 8 inputs (direction True, sub-round True, offer size True, flow block 0 columns); level read in direction +1
+schedule: 20 x 100 x 1,000 games, mm first, MM init conservative, LR trader 0.001 MM 0.0001, plateau True, tau trader (1.0, 0.02) MM (0.2, 0.02) over 35%
+convergence: 8 blocks; flat, stopped at outer step 6
+
+FINAL (hard game, 200,000 evaluation paths)
+  MM P/L +0.01 bp +/- 0.01; Bureau share of filled pound volume nan%
+  T1 (A) P/L -1.4551%; edge over always-BdC -0.0006% +/- 0.0001% (floor -1.4546%, analytic -1.4441%); vs the single-trader run -0.0001% +/- 0.0000%
+  T2 (B) P/L -2.0121%; edge over always-BdC -0.0005% +/- 0.0013% (floor -2.0117%, analytic -2.0210%); vs the single-trader run +0.0007% +/- 0.0017%
+  T3 (A) P/L -1.3682%; edge over always-BdC -0.0008% +/- 0.0001% (floor -1.3675%, analytic -1.3571%)
+  T4 (B) P/L -2.4160%; edge over always-BdC -0.0004% +/- 0.0007% (floor -2.4157%, analytic -2.4260%)
+  vs naive+flatten      MM    +0.00 bp   co MM - rule +0.00 +/- 0.01 bp   traders vs it -1.4550%  -2.0120%  -1.3681%  -2.4160%
+  vs naive+carry        MM    +0.01 bp   co MM - rule -0.01 +/- 0.02 bp   traders vs it -1.4550%  -2.0120%  -1.3681%  -2.4160%
+  vs fee-aware+flatten  MM    +0.00 bp   co MM - rule +0.00 +/- 0.01 bp   traders vs it -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs fee-aware+carry    MM    +0.00 bp   co MM - rule +0.00 +/- 0.01 bp   traders vs it -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs book+flatten       MM    +0.00 bp   co MM - rule +0.00 +/- 0.01 bp   traders vs it -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs book+carry         MM    +0.00 bp   co MM - rule +0.00 +/- 0.01 bp   traders vs it -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  verdicts agree with naive+carry on 100.0% of offered pound volume; filled 0.00% (rule 0.00%)
+
+THE POLICY BY ROUND (record paths)
+  bid (pound sellers filled below) / X : r1 nan  r2 nan  r3 nan  r4 0.9723   (fee-aware 0.9900, naive 1)
+  ask (dollar sellers filled above) / X: r1 nan  r2 nan  r3 nan  r4 nan   (fee-aware 1.0101, naive 1)
+  spread ask - bid, % of X          : r1 +nan%  r2 +nan%  r3 +nan%  r4 +nan%   (fee-aware 2.02%, naive 0)
+  repay fraction on short books     : r1 nan  r2 nan  r3 nan  r4 0.272
+  T1 (A) offer, median $/GBP : r1 1.4395  r2 1.4329  r3 1.4430  r4 1.4499
+  T1 (A) book put up, median : r1  99.5%  r2  99.2%  r3  99.0%  r4  98.8%
+  T1 (A) volume filled       : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.00%
+  T2 (B) offer, median $/GBP : r1 1.0682  r2 1.0771  r3 1.0621  r4 1.0445
+  T2 (B) book put up, median : r1  96.6%  r2  95.2%  r3  94.5%  r4  93.9%
+  T2 (B) volume filled       : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.00%
+  T3 (A) offer, median $/GBP : r1 1.4419  r2 1.4378  r3 1.4260  r4 1.4111
+  T3 (A) book put up, median : r1  98.7%  r2  97.8%  r3  97.5%  r4  97.1%
+  T3 (A) volume filled       : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.01%
+  T4 (B) offer, median $/GBP : r1 1.0578  r2 1.0347  r3 1.0473  r4 1.0598
+  T4 (B) book put up, median : r1  99.7%  r2  99.9%  r3  99.9%  r4  99.9%
+  T4 (B) volume filled       : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.00%
+  MM pound volume filled, mean      : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.00% of capital
+  MM pound volume at the Bureau     : r1  0.00%  r2  0.00%  r3  0.00%  r4  0.00%  settle  0.00%
+  crossed or carried out solvent    : not measurable (0.00% of offered volume filled)
+  netting inside the round          : crossing offers in 0.0% of rounds; could net 0.00% of capital per game, the MM netted 0.00%
+
+FINAL BOOKS (record paths, medians)
+  T1 (A): leftover 0.00% of L, banked 97.98% of T, target met in 30.2% of games
+  T2 (B): leftover 0.00% of L, banked 101.18% of T, target met in 61.6% of games
+  T3 (A): leftover 0.00% of L, banked 97.20% of T, target met in 23.7% of games
+  T4 (B): leftover 0.00% of L, banked 99.02% of T, target met in 40.3% of games
+  MM: pounds +0.000% of capital, dollars (at a5) +0.000%; P/L +0.00 bp
+
+THE DEMO GAME (rates [np.float64(1.3), np.float64(1.36), np.float64(1.37), np.float64(1.41), np.float64(1.33)])
+  MM P/L +0.00 bp; traders T1 -4.196%  T2 -0.106%  T3 -4.190%  T4 -0.924%
+  T1 (A): r1 quote 1.4395 level 1.2757 rejected  r2 quote 1.4896 level 1.3325 rejected  r3 quote 1.5689 level 1.3348 rejected  r4 quote 1.5970 level 1.3706 rejected
+  T2 (B): r1 quote 1.0682 level 1.3065 rejected  r2 quote 1.1249 level 1.3697 rejected  r3 quote 1.1616 level 1.3869 rejected  r4 quote 1.1500 level 1.4322 rejected
+  T3 (A): r1 quote 1.4419 level 1.2779 rejected  r2 quote 1.4940 level 1.3305 rejected  r3 quote 1.5462 level 1.3338 rejected  r4 quote 1.5414 level 1.3672 rejected
+  T4 (B): r1 quote 1.0578 level 1.3113 rejected  r2 quote 1.0789 level 1.3727 rejected  r3 quote 1.1485 level 1.3854 rejected  r4 quote 1.1813 level 1.4339 rejected
+
+THE MEDIAN GAME (median MM P/L of 20,000 record paths, path #9997; rates [1.2443, 1.247, 1.2619, 1.3004, 1.2691])
+  MM P/L +0.00 bp; traders T1 -3.982% (41th pct)  T2 -0.076% (60th pct)  T3 -3.909% (41th pct)  T4 -0.173% (61th pct)
+  T1 (A): r1 quote 1.4395 level 1.2202 rejected  r2 quote 1.4270 level 1.2162 rejected  r3 quote 1.4389 level 1.2258 rejected  r4 quote 1.4629 level 1.2592 rejected
+  T2 (B): r1 quote 1.0682 level 1.2539 rejected  r2 quote 1.0720 level 1.2626 rejected  r3 quote 1.0589 level 1.2843 rejected  r4 quote 1.0548 level 1.3281 rejected
+  T3 (A): r1 quote 1.4419 level 1.2195 rejected  r2 quote 1.4318 level 1.2190 rejected  r3 quote 1.4222 level 1.2268 rejected  r4 quote 1.4241 level 1.2603 rejected
+  T4 (B): r1 quote 1.0578 level 1.2540 rejected  r2 quote 1.0301 level 1.2612 rejected  r3 quote 1.0440 level 1.2798 rejected  r4 quote 1.0709 level 1.3264 rejected
+
+NEGATIVE RATE PATHS (share deleted, by sd; first-hit draw 1..rounds+1)
+  sd 0.05: P(deleted) 0.0e+00   0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00
+  sd 0.10: P(deleted) 0.0e+00   0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00
+  sd 0.20: P(deleted) 3.0e-03   0.0e+00  0.0e+00  1.1e-04  7.8e-04  2.1e-03
+  sd 0.30: P(deleted) 3.8e-02   5.0e-06  1.5e-03  7.2e-03  1.2e-02  1.7e-02
+  sd 0.40: P(deleted) 1.1e-01   8.2e-04  1.3e-02  2.6e-02  3.3e-02  3.4e-02
+
+LEARNING CURVE (validation paths; MM bp, traders % of L; edge = paired over always-BdC)
+  block  0 after init   MM  +101.95 bp  T1 -1.4941% (edge -0.0965, filled  4.70%)  T2 -3.9393% (edge -1.8760, filled 86.55%)  T3 -1.9732% (edge -0.6630, filled 25.71%)  T4 -2.7963% (edge -0.3318, filled 32.12%)  bid 0.9830 ask 1.0078 bureau  90.8%  lr 1e-03/1e-03/1e-03/1e-03
+  block  1 after trader MM   +19.79 bp  T1 -1.4873% (edge -0.0897, filled  6.01%)  T2 -2.1068% (edge -0.0435, filled  8.65%)  T3 -1.3777% (edge -0.0674, filled  4.61%)  T4 -2.5656% (edge -0.1012, filled  8.95%)  bid 0.9829 ask 1.0105 bureau  97.3%  lr 1e-03/1e-03/1e-03/1e-03
+  block  2 after trader MM   +14.34 bp  T1 -1.4129% (edge -0.0153, filled  1.33%)  T2 -2.0867% (edge -0.0233, filled  5.93%)  T3 -1.3244% (edge -0.0142, filled  1.15%)  T4 -2.5449% (edge -0.0804, filled  6.37%)  bid 0.9835 ask 1.0110 bureau  98.5%  lr 1e-03/1e-03/1e-03/1e-03
+  block  3 after trader MM    +2.46 bp  T1 -1.4008% (edge -0.0032, filled  0.18%)  T2 -2.0649% (edge -0.0016, filled  1.11%)  T3 -1.3144% (edge -0.0041, filled  0.21%)  T4 -2.4710% (edge -0.0066, filled  1.13%)  bid 0.9842 ask 1.0120 bureau  98.8%  lr 5e-04/1e-03/5e-04/5e-04
+  block  4 after trader MM    +0.16 bp  T1 -1.3989% (edge -0.0013, filled  0.00%)  T2 -2.0614% (edge +0.0020, filled  0.21%)  T3 -1.3121% (edge -0.0018, filled  0.00%)  T4 -2.4629% (edge +0.0016, filled  0.06%)  bid 0.9859 ask 1.0121 bureau   nan%  lr 5e-04/5e-04/5e-04/5e-04
+  block  5 after trader MM    +0.03 bp  T1 -1.3986% (edge -0.0010, filled  0.00%)  T2 -2.0612% (edge +0.0022, filled  0.02%)  T3 -1.3116% (edge -0.0014, filled  0.00%)  T4 -2.4633% (edge +0.0012, filled  0.02%)  bid 0.9901 ask 1.0098 bureau   nan%  lr 3e-04/5e-04/3e-04/3e-04
+  block  6 after trader MM    +0.00 bp  T1 -1.3984% (edge -0.0008, filled  0.00%)  T2 -2.0611% (edge +0.0023, filled  0.01%)  T3 -1.3113% (edge -0.0011, filled  0.00%)  T4 -2.4633% (edge +0.0012, filled  0.00%)  bid 0.9918 ask 1.0118 bureau   nan%  lr 3e-04/3e-04/3e-04/3e-04
+  block  7 after trader MM    +0.00 bp  T1 -1.3983% (edge -0.0007, filled  0.00%)  T2 -2.0613% (edge +0.0020, filled  0.00%)  T3 -1.3112% (edge -0.0009, filled  0.00%)  T4 -2.4635% (edge +0.0010, filled  0.00%)  bid 0.9951 ask nan bureau   nan%  lr 1e-04/3e-04/1e-04/1e-04

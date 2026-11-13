@@ -1,0 +1,1142 @@
+{
+ "p.a0": {
+  "value": 1.25,
+  "text": "1.25",
+  "source": "fx_mechanics.A0_DEFAULT"
+ },
+ "p.sd": {
+  "value": 0.05,
+  "text": "0.05",
+  "source": "fx_mechanics.sd_DEFAULT"
+ },
+ "p.f": {
+  "value": 0.02,
+  "text": "2\\%",
+  "source": "rules: traders' Bureau fee"
+ },
+ "p.g": {
+  "value": 0.01,
+  "text": "1\\%",
+  "source": "rules: market maker's Bureau fee"
+ },
+ "p.sdrel": {
+  "value": 0.04,
+  "text": "4\\%",
+  "source": "sd / a0"
+ },
+ "st.batch": {
+  "value": 1000,
+  "text": "1,000",
+  "source": "MM_Phase_1/torch_train_fee.py: BATCH"
+ },
+ "st.iters": {
+  "value": 2000,
+  "text": "2,000",
+  "source": "MM_Phase_1/torch_train_fee.py: ITERS"
+ },
+ "v0.Pstar": {
+  "value": 1.3221784258003872,
+  "text": "1.3222",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.zstar": {
+  "value": 1.443568516007745,
+  "text": "1.44",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.zstarfine": {
+  "value": 1.443568516007745,
+  "text": "1.4436",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.fill": {
+  "value": 0.07443019323653666,
+  "text": "7.4\\%",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.fillfine": {
+  "value": 0.07443019323653666,
+  "text": "7.44\\%",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.value": {
+  "value": 1.225337042102224,
+  "text": "1.225337",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.floor": {
+  "value": 1.225,
+  "text": "1.2250",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.share": {
+  "value": 0.013481684088958445,
+  "text": "1.3\\%",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.edge": {
+  "value": 0.00033704210222396114,
+  "text": "\\ensuremath{3.4\\times 10^{-4}}",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0.edgebp": {
+  "value": 0.0002696336817791689,
+  "text": "2.7",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit (bp of a pound)"
+ },
+ "v0.pie": {
+  "value": 0.025,
+  "text": "0.025",
+  "source": "f * a0"
+ },
+ "v0B.P": {
+  "value": 1.1627065853147869,
+  "text": "1.1627",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0B.offer": {
+  "value": 0.8600622140015348,
+  "text": "0.8601",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit (pounds per dollar)"
+ },
+ "v0B.zstar": {
+  "value": 1.7458682937042624,
+  "text": "1.75",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0B.fill": {
+  "value": 0.04041692023200054,
+  "text": "4.0\\%",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0B.share": {
+  "value": 0.0052159478410377345,
+  "text": "0.52\\%",
+  "source": "v0_game.closed_form_optimal_rate / expected_target_per_unit"
+ },
+ "v0B.Einv": {
+  "value": 0.8012861937105722,
+  "text": "0.801286",
+  "source": "v0_game.perfect_information_value(side B)"
+ },
+ "v0.mc": {
+  "value": 1.2254752927341128,
+  "text": "1.22548",
+  "source": "v0_game.monte_carlo_expected_target_per_unit (200,000 games, seed 0)"
+ },
+ "v0.mcse": {
+  "value": 0.00022013659282710949,
+  "text": "0.00022",
+  "source": "same, 2 s.e."
+ },
+ "v0.mcgap": {
+  "value": 1.2560440780270368,
+  "text": "+1.3",
+  "source": "same, gap in s.e."
+ },
+ "v0.sdY": {
+  "value": 0.04936888395551075,
+  "text": "0.0494",
+  "source": "sd of the one-shot payoff at P*, quadrature"
+ },
+ "v0.edgeratio": {
+  "value": 0.006827014816208726,
+  "text": "0.007",
+  "source": "edge / payoff sd"
+ },
+ "v0.ndetect": {
+  "value": 85821.93467896133,
+  "text": "86,000",
+  "source": "(2 / ratio)^2 games to see the edge at 2 s.e."
+ },
+ "v0.pathwise": {
+  "value": 0.07443019323653666,
+  "text": "0.0744",
+  "source": "pathwise dG/dP with the hard rule = Pr(X > P*) (true derivative 0)"
+ },
+ "relax.shifta": {
+  "value": -0.018442234950462044,
+  "text": "\\ensuremath{-}0.018",
+  "source": "argmax of the relaxed one-shot payoff minus P*, in sd, tau = 1.0"
+ },
+ "relax.gaina": {
+  "value": 0.01456832749506587,
+  "text": "\\ensuremath{1.5\\times 10^{-2}}",
+  "source": "relaxed optimum value minus the exact optimum value, tau = 1.0"
+ },
+ "relax.shiftb": {
+  "value": -0.25087903676127343,
+  "text": "\\ensuremath{-}0.251",
+  "source": "argmax of the relaxed one-shot payoff minus P*, in sd, tau = 0.2"
+ },
+ "relax.gainb": {
+  "value": 0.0009520443308126403,
+  "text": "\\ensuremath{9.5\\times 10^{-4}}",
+  "source": "relaxed optimum value minus the exact optimum value, tau = 0.2"
+ },
+ "relax.shiftc": {
+  "value": -0.004976240939273957,
+  "text": "\\ensuremath{-}0.005",
+  "source": "argmax of the relaxed one-shot payoff minus P*, in sd, tau = 0.02"
+ },
+ "relax.gainc": {
+  "value": 8.100045242320775e-06,
+  "text": "\\ensuremath{8.1\\times 10^{-6}}",
+  "source": "relaxed optimum value minus the exact optimum value, tau = 0.02"
+ },
+ "relax.shiftd": {
+  "value": -1.3022681426555494e-05,
+  "text": "\\ensuremath{-1.3\\times 10^{-5}}",
+  "source": "argmax of the relaxed one-shot payoff minus P*, in sd, tau = 0.001"
+ },
+ "relax.gaind": {
+  "value": 2.018058875563611e-08,
+  "text": "\\ensuremath{2.0\\times 10^{-8}}",
+  "source": "relaxed optimum value minus the exact optimum value, tau = 0.001"
+ },
+ "kappa.one": {
+  "value": 0.8012861937105724,
+  "text": "0.801286",
+  "source": "v2_multiple_rounds.kappa(a0, sd)"
+ },
+ "kappa.onebonus": {
+  "value": 0.0016077421382154622,
+  "text": "0.16\\%",
+  "source": "a0 * kappa - 1"
+ },
+ "kappa.four": {
+  "value": 0.8052215993982501,
+  "text": "0.805222",
+  "source": "v2_multiple_rounds.kappa(a0, 2 sd)"
+ },
+ "kappa.fourbonus": {
+  "value": 0.006526999247812526,
+  "text": "0.65\\%",
+  "source": "a0 * kappa4 - 1"
+ },
+ "kappa.recip": {
+  "value": 0.8,
+  "text": "0.800000",
+  "source": "1 / a0"
+ },
+ "kappa.slopeshort": {
+  "value": 0.8253247795218897,
+  "text": "0.8253",
+  "source": "(1 + B) kappa, T1"
+ },
+ "siegel.lnone": {
+  "value": 0.001601280682939743,
+  "text": "0.16\\%",
+  "source": "exp(s^2) - 1, s = sd/a0"
+ },
+ "floor.round1": {
+  "value": -0.014441004233387357,
+  "text": "\\ensuremath{-}1.44\\%",
+  "source": "T1 converts everything at the Bureau in round 1, quadrature"
+ },
+ "floor.round2": {
+  "value": -0.016256610844017996,
+  "text": "\\ensuremath{-}1.63\\%",
+  "source": "T1 converts everything at the Bureau in round 2, quadrature"
+ },
+ "floor.round3": {
+  "value": -0.01803546439197453,
+  "text": "\\ensuremath{-}1.80\\%",
+  "source": "T1 converts everything at the Bureau in round 3, quadrature"
+ },
+ "floor.round4": {
+  "value": -0.019793651261249615,
+  "text": "\\ensuremath{-}1.98\\%",
+  "source": "T1 converts everything at the Bureau in round 4, quadrature"
+ },
+ "floor.perround": {
+  "value": 0.001784215675954086,
+  "text": "0.18",
+  "source": "mean cost of a round's delay, points"
+ },
+ "floorB.round1": {
+  "value": -0.020209620354901564,
+  "text": "\\ensuremath{-}2.021\\%",
+  "source": "T2 converts everything at the Bureau in round 1, quadrature"
+ },
+ "floorB.round2": {
+  "value": -0.020333928234836058,
+  "text": "\\ensuremath{-}2.033\\%",
+  "source": "T2 converts everything at the Bureau in round 2, quadrature"
+ },
+ "floorB.round3": {
+  "value": -0.0204306665917192,
+  "text": "\\ensuremath{-}2.043\\%",
+  "source": "T2 converts everything at the Bureau in round 3, quadrature"
+ },
+ "floorB.round4": {
+  "value": -0.02051236455415434,
+  "text": "\\ensuremath{-}2.051\\%",
+  "source": "T2 converts everything at the Bureau in round 4, quadrature"
+ },
+ "floorB.perround": {
+  "value": 0.0001009147330842582,
+  "text": "0.010",
+  "source": "T2: mean cost of a round's delay, points"
+ },
+ "left.fT1": {
+  "value": 0.04854368932038835,
+  "text": "4.85\\%",
+  "source": "T1: trader fee above which an unconverted unit costs less than the Bureau"
+ },
+ "left.fT2": {
+  "value": 0.049019607843137254,
+  "text": "4.90\\%",
+  "source": "T2: trader fee above which an unconverted unit costs less than the Bureau"
+ },
+ "neg.sd05": {
+  "value": 5.089468973814369e-29,
+  "text": "\\ensuremath{5\\times 10^{-29}}",
+  "source": "Levy's inequality: Pr(some rate <= 0 in 5 draws) <= 2 Pr(a5 <= 0), sd 0.05"
+ },
+ "neg.sd10": {
+  "value": 1.1547866611889404e-08,
+  "text": "\\ensuremath{1\\times 10^{-8}}",
+  "source": "same, sd 0.10"
+ },
+ "neg.cut8": {
+  "value": 1.244192114854348e-15,
+  "text": "\\ensuremath{1\\times 10^{-15}}",
+  "source": "probability a step lies beyond 8 sd"
+ },
+ "neg.sd40": {
+  "value": 0.105847,
+  "text": "10.6\\%",
+  "source": "Monte Carlo, 1e6 paths, sd 0.40"
+ },
+ "neg.t1000": {
+  "value": 0.21459765022017463,
+  "text": "21\\%",
+  "source": "Pr(a_1000 <= 0), sd 0.05"
+ },
+ "neg.e1000": {
+  "value": 0.42919530044034926,
+  "text": "43\\%",
+  "source": "reflection: Pr(the walk touches 0 by round 1000)"
+ },
+ "sweep.Bdead": {
+  "value": 0.09,
+  "text": "0.0900",
+  "source": "smallest sd on the grid where the buyer has no interior optimum"
+ },
+ "sweep.sdlo": {
+  "value": 0.005,
+  "text": "0.005",
+  "source": "grid start"
+ },
+ "sweep.sdhi": {
+  "value": 0.12,
+  "text": "0.120",
+  "source": "grid end"
+ },
+ "sigma.Bstar": {
+  "value": 0.08829812592314737,
+  "text": "0.088",
+  "source": "largest sd with an interior dollar-seller offer, bisection"
+ },
+ "sigma.Bapprox": {
+  "value": 0.08838834764831843,
+  "text": "0.088",
+  "source": "a0 sqrt(f) / 2"
+ },
+ "carrymm.f2g0.carryfill": {
+  "value": 0.14499915311648298,
+  "text": "14\\%",
+  "source": "one round-1 dollar-seller offer, carry market maker, fill probability"
+ },
+ "carrymm.f2g0.carryshare": {
+  "value": 0.039897266958340984,
+  "text": "4.0\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.f2g0.flatfill": {
+  "value": 0.040416916545569115,
+  "text": "4.0\\%",
+  "source": "one round-1 dollar-seller offer, flat market maker, fill probability"
+ },
+ "carrymm.f2g0.flatshare": {
+  "value": 0.005215947841141664,
+  "text": "0.52\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.f2g1.carryfill": {
+  "value": 0.016293207406065248,
+  "text": "1.6\\%",
+  "source": "one round-1 dollar-seller offer, carry market maker, fill probability"
+ },
+ "carrymm.f2g1.carryshare": {
+  "value": 0.0017336864340461793,
+  "text": "0.17\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.f2g1.flatfill": {
+  "value": 1.4879572941048488e-06,
+  "text": "\\ensuremath{1.5\\times 10^{-4}}\\%",
+  "source": "one round-1 dollar-seller offer, flat market maker, fill probability"
+ },
+ "carrymm.f2g1.flatshare": {
+  "value": 2.541546996518033e-08,
+  "text": "\\ensuremath{2.5\\times 10^{-6}}\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.f3g1.carryfill": {
+  "value": 0.14794050861798308,
+  "text": "15\\%",
+  "source": "one round-1 dollar-seller offer, carry market maker, fill probability"
+ },
+ "carrymm.f3g1.carryshare": {
+  "value": 0.027372649708518805,
+  "text": "2.7\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.f3g1.flatfill": {
+  "value": 0.042880885519588394,
+  "text": "4.3\\%",
+  "source": "one round-1 dollar-seller offer, flat market maker, fill probability"
+ },
+ "carrymm.f3g1.flatshare": {
+  "value": 0.003745700176407312,
+  "text": "0.37\\%",
+  "source": "same, edge over the Bureau as a share of the fee f E[1/X]"
+ },
+ "carrymm.break": {
+  "value": 1.0035508345587039,
+  "text": "1.0036",
+  "source": "dollar side, carry break-even price / X at X = a0, g = 1%"
+ },
+ "fee.fprime21": {
+  "value": 0.010101010101010102,
+  "text": "1.01\\%",
+  "source": "(f-g)/(1-g)"
+ },
+ "fee.fprime31": {
+  "value": 0.0202020202020202,
+  "text": "2.02\\%",
+  "source": "(f-g)/(1-g)"
+ },
+ "fee.rho20": {
+  "value": 0.5,
+  "text": "0.50",
+  "source": "f' a0 / sd"
+ },
+ "fee.rho21": {
+  "value": 0.25252525252525254,
+  "text": "0.253",
+  "source": "f' a0 / sd"
+ },
+ "fee.rho31": {
+  "value": 0.505050505050505,
+  "text": "0.505",
+  "source": "f' a0 / sd"
+ },
+ "fee.rho30": {
+  "value": 0.75,
+  "text": "0.75",
+  "source": "f' a0 / sd"
+ },
+ "card.alphaA": {
+  "value": 0.010101010101010055,
+  "text": "1.01\\%",
+  "source": "1 - (1-A)/(1-g), T1"
+ },
+ "card.alphaB": {
+  "value": 0.02020202020202022,
+  "text": "2.02\\%",
+  "source": "1 - (1-A)/(1-g), T2"
+ },
+ "card.Tup": {
+  "value": 0.010101010101010166,
+  "text": "1.01\\%",
+  "source": "1/(1-g) - 1"
+ },
+ "fee.z21": {
+  "value": 3.2387146243885567,
+  "text": "3.24",
+  "source": "fee_aware_v0.closed_form_optimal_rate, (2%,1%), seller"
+ },
+ "fee.fill21": {
+  "value": 0.0006003482244613112,
+  "text": "0.06\\%",
+  "source": "same, fill probability"
+ },
+ "fee.quote21": {
+  "value": 1.3978163739072336,
+  "text": "1.3978",
+  "source": "same, quote on the slip"
+ },
+ "fee.edge21bp": {
+  "value": 4.951357579940918e-07,
+  "text": "0.005",
+  "source": "same, edge over the Bureau in bp of a pound"
+ },
+ "fee.share21": {
+  "value": 4.951357579940936e-05,
+  "text": "0.0050\\%",
+  "source": "same, share of the prize"
+ },
+ "fee.Binterior21": {
+  "value": true,
+  "text": "yes",
+  "source": "fee_aware_v0.offer_is_interior, (2%,1%), buyer"
+ },
+ "fee.Bz21": {
+  "value": 4.672397421263095,
+  "text": "4.67",
+  "source": "(2%,1%) buyer threshold, sd below a0"
+ },
+ "fee.Bfill21": {
+  "value": 1.4885210437123916e-06,
+  "text": "\\ensuremath{1.5\\times 10^{-4}}\\%",
+  "source": "(2%,1%) buyer fill"
+ },
+ "fee.rho251": {
+  "value": 0.37878787878787884,
+  "text": "0.38",
+  "source": "f' a0 / sd at (2.5%, 1%)"
+ },
+ "fee.fill251": {
+  "value": 0.01909447824421895,
+  "text": "1.9\\%",
+  "source": "(2.5%,1%) one-offer seller fill"
+ },
+ "fee.z31": {
+  "value": 1.422917759912563,
+  "text": "1.42",
+  "source": "(3%,1%) seller threshold, sd"
+ },
+ "fee.fill31": {
+  "value": 0.07737999858654332,
+  "text": "7.7\\%",
+  "source": "(3%,1%) seller fill"
+ },
+ "fee.z20": {
+  "value": 1.443568516007745,
+  "text": "1.44",
+  "source": "(2%,0) seller threshold, sd"
+ },
+ "fee.fillhalfsd": {
+  "value": 0.0692272553268013,
+  "text": "6.9\\%",
+  "source": "(2%,1%), sd halved: fill"
+ },
+ "fee.finer4": {
+  "value": 0.0006003482244613112,
+  "text": "0.06\\%",
+  "source": "(2%,1%) one-shot fill with sd * sqrt(4/4)"
+ },
+ "fee.finer8": {
+  "value": 0.011088818780066734,
+  "text": "1.1\\%",
+  "source": "(2%,1%) one-shot fill with sd * sqrt(4/8)"
+ },
+ "fee.finer16": {
+  "value": 0.0692272553268013,
+  "text": "6.9\\%",
+  "source": "(2%,1%) one-shot fill with sd * sqrt(4/16)"
+ },
+ "fee.finer32": {
+  "value": 0.20572416037542784,
+  "text": "20.6\\%",
+  "source": "(2%,1%) one-shot fill with sd * sqrt(4/32)"
+ },
+ "fee.finer64": {
+  "value": 0.3881197503345012,
+  "text": "38.8\\%",
+  "source": "(2%,1%) one-shot fill with sd * sqrt(4/64)"
+ },
+ "strip.beatsg0": {
+  "value": 0.05075949857245188,
+  "text": "5.08\\%",
+  "source": "Pr(P/(1-g) < X < P/(1-f)), g=0.0"
+ },
+ "strip.worseg0": {
+  "value": 0.02367069466408478,
+  "text": "2.37\\%",
+  "source": "Pr(X > P/(1-f)), g=0.0"
+ },
+ "strip.beatsg1": {
+  "value": 0.01989984313949944,
+  "text": "1.99\\%",
+  "source": "Pr(P/(1-g) < X < P/(1-f)), g=0.01"
+ },
+ "strip.worseg1": {
+  "value": 0.02367069466408478,
+  "text": "2.37\\%",
+  "source": "Pr(X > P/(1-f)), g=0.01"
+ },
+ "rho.filla": {
+  "value": 0.07443019323653666,
+  "text": "7.4\\%",
+  "source": "one-shot fill at rho=0.5"
+ },
+ "rho.sharea": {
+  "value": 0.013481684088958494,
+  "text": "1.3\\%",
+  "source": "share of the prize at rho=0.5"
+ },
+ "rho.fillb": {
+  "value": 0.01145518662840983,
+  "text": "1.1\\%",
+  "source": "one-shot fill at rho=0.35"
+ },
+ "rho.shareb": {
+  "value": 0.0013992723559270353,
+  "text": "0.14\\%",
+  "source": "share of the prize at rho=0.35"
+ },
+ "rho.fillc": {
+  "value": 0.0005338442908410235,
+  "text": "0.053\\%",
+  "source": "one-shot fill at rho=0.25"
+ },
+ "rho.sharec": {
+  "value": 4.348451469127228e-05,
+  "text": "0.0043\\%",
+  "source": "share of the prize at rho=0.25"
+ },
+ "band.lo": {
+  "value": 1.225,
+  "text": "1.2250",
+  "source": "(1-f) a0"
+ },
+ "band.hi": {
+  "value": 1.2734628042697584,
+  "text": "1.2735",
+  "source": "1 / ((1-f) E[1/X])"
+ },
+ "band.width": {
+  "value": 0.038770243415806684,
+  "text": "3.9\\%",
+  "source": "(hi - lo)/a0"
+ },
+ "band.jensen": {
+  "value": 0.0016077421382152401,
+  "text": "0.16\\%",
+  "source": "a0 E[1/X] - 1"
+ },
+ "carry.flatA": {
+  "value": 0.99,
+  "text": "0.9900",
+  "source": "fee-aware cut, side A"
+ },
+ "carry.carryA": {
+  "value": 0.983704292527822,
+  "text": "0.9837",
+  "source": "(1-g)/(1+4 s^2), side A"
+ },
+ "carry.flatB": {
+  "value": 1.0101010101010102,
+  "text": "1.0101",
+  "source": "1/(1-g), side B"
+ },
+ "carry.carryB": {
+  "value": 1.0036774742657095,
+  "text": "1.0037",
+  "source": "1/((1-g)(1+4 s^2)), side B"
+ },
+ "v1.share1": {
+  "value": 0.013481222352496047,
+  "text": "1.3\\%",
+  "source": "v1_sequential_offers.solve_v1, K=1"
+ },
+ "v1.share2": {
+  "value": 0.08997915702683379,
+  "text": "9.0\\%",
+  "source": "v1_sequential_offers.solve_v1, K=2"
+ },
+ "v1.share3": {
+  "value": 0.1899027517577423,
+  "text": "19.0\\%",
+  "source": "v1_sequential_offers.solve_v1, K=3"
+ },
+ "v1.share4": {
+  "value": 0.282680825225583,
+  "text": "28.3\\%",
+  "source": "v1_sequential_offers.solve_v1, K=4"
+ },
+ "v1.share5": {
+  "value": 0.3615767155320171,
+  "text": "36.2\\%",
+  "source": "v1_sequential_offers.solve_v1, K=5"
+ },
+ "v1.share6": {
+  "value": 0.4272505245963121,
+  "text": "42.7\\%",
+  "source": "v1_sequential_offers.solve_v1, K=6"
+ },
+ "v1.share7": {
+  "value": 0.4818654782368359,
+  "text": "48.2\\%",
+  "source": "v1_sequential_offers.solve_v1, K=7"
+ },
+ "v1.share8": {
+  "value": 0.5277356175311443,
+  "text": "52.8\\%",
+  "source": "v1_sequential_offers.solve_v1, K=8"
+ },
+ "v1.share9": {
+  "value": 0.5665046249757566,
+  "text": "56.7\\%",
+  "source": "v1_sequential_offers.solve_v1, K=9"
+ },
+ "v1.share10": {
+  "value": 0.5996319566383246,
+  "text": "60.0\\%",
+  "source": "v1_sequential_offers.solve_v1, K=10"
+ },
+ "v1.ladder5": {
+  "value": 0,
+  "text": "1.3122 $\\to$ 1.2830 $\\to$ 1.2597 $\\to$ 1.2388 $\\to$ 1.2170",
+  "source": "v1 ladder, K=5, every offer rejected"
+ },
+ "grid.zmax": {
+  "value": 4.0,
+  "text": "4",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.noffer": {
+  "value": 49,
+  "text": "49",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.zstep": {
+  "value": 0.16666666666666666,
+  "text": "0.167",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.quad": {
+  "value": 5,
+  "text": "5",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.nc": {
+  "value": 17,
+  "text": "17",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.nd": {
+  "value": 41,
+  "text": "41",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.na": {
+  "value": 13,
+  "text": "13",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.ahalf": {
+  "value": 8.0,
+  "text": "8",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.astep": {
+  "value": 1.3333333333333333,
+  "text": "1.33",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.nq": {
+  "value": 24,
+  "text": "24",
+  "source": "v2_multiple_rounds.Grids defaults"
+ },
+ "grid.joint": {
+  "value": 2138490093782341,
+  "text": "\\ensuremath{2\\times 10^{15}}",
+  "source": "v2_multiple_rounds.Grids defaults: (n_c n_d)^5 n_a, five agents' holdings"
+ },
+ "interp.maxerr": {
+  "value": 0.0009578916825953844,
+  "text": "0.096\\%",
+  "source": "max relative error of linear interpolation of kappa, default grid"
+ },
+ "interp.ratio": {
+  "value": 3.879605918108862,
+  "text": "3.9",
+  "source": "ratio of max errors, default grid vs half step"
+ },
+ "k3.T1.value": {
+  "value": -0.004701974526672223,
+  "text": "\\ensuremath{-}0.47\\%",
+  "source": "v2 K=3, floor-anchored replay (20,000 paths, seed 1)"
+ },
+ "k3.T1.se": {
+  "value": 0.0006385580245387162,
+  "text": "0.06\\%",
+  "source": "same, 2 s.e."
+ },
+ "k3.T1.table": {
+  "value": -0.003560381128262379,
+  "text": "\\ensuremath{-}0.36\\%",
+  "source": "v2 K=3 table value (inflated)"
+ },
+ "k3.T1.edge": {
+  "value": 0.009739044777367433,
+  "text": "+0.97\\%",
+  "source": "v2 K=3 edge over the floor"
+ },
+ "k3.T1.cv": {
+  "value": 0.041029272080425144,
+  "text": "+4.10\\%",
+  "source": "clairvoyant, same paths"
+ },
+ "k3.T1.clear1": {
+  "value": 0.3894,
+  "text": "38.9\\%",
+  "source": "games clearing in round 1"
+ },
+ "k3.T1.bureau": {
+  "value": 0.0746,
+  "text": "7.5\\%",
+  "source": "games using the Bureau at all"
+ },
+ "k3.T1.firstz": {
+  "value": 0.16666666666666607,
+  "text": "+0.17",
+  "source": "first offer, sd from a0"
+ },
+ "k3.T1.firstsize": {
+  "value": 0.002,
+  "text": "0.2\\%",
+  "source": "first offer, share of the book"
+ },
+ "k3.T1.lastz1": {
+  "value": 2.666666666666666,
+  "text": "+2.67",
+  "source": "last-offer threshold, round 1"
+ },
+ "k3.T1.lastz2": {
+  "value": 2.333333333333333,
+  "text": "+2.33",
+  "source": "last-offer threshold, round 2"
+ },
+ "k3.T1.lastz3": {
+  "value": 2.0,
+  "text": "+2.00",
+  "source": "last-offer threshold, round 3"
+ },
+ "k3.T1.lastz4": {
+  "value": 1.333333333333333,
+  "text": "+1.33",
+  "source": "last-offer threshold, round 4"
+ },
+ "k3.T2.value": {
+  "value": -0.008747039507037164,
+  "text": "\\ensuremath{-}0.87\\%",
+  "source": "v2 K=3, floor-anchored replay (20,000 paths, seed 1)"
+ },
+ "k3.T2.se": {
+  "value": 0.0007009690290718263,
+  "text": "0.07\\%",
+  "source": "same, 2 s.e."
+ },
+ "k3.T2.table": {
+  "value": -0.00876161670731497,
+  "text": "\\ensuremath{-}0.88\\%",
+  "source": "v2 K=3 table value (inflated)"
+ },
+ "k3.T2.edge": {
+  "value": 0.01146259347890528,
+  "text": "+1.15\\%",
+  "source": "v2 K=3 edge over the floor"
+ },
+ "k3.T2.cv": {
+  "value": 0.03826996069882836,
+  "text": "+3.83\\%",
+  "source": "clairvoyant, same paths"
+ },
+ "k3.T2.clear1": {
+  "value": 0.2006,
+  "text": "20.1\\%",
+  "source": "games clearing in round 1"
+ },
+ "k3.T2.bureau": {
+  "value": 0.122,
+  "text": "12.2\\%",
+  "source": "games using the Bureau at all"
+ },
+ "k3.T2.firstz": {
+  "value": 0.16666666666666607,
+  "text": "+0.17",
+  "source": "first offer, sd from a0"
+ },
+ "k3.T2.firstsize": {
+  "value": 0.002,
+  "text": "0.2\\%",
+  "source": "first offer, share of the book"
+ },
+ "k3.T2.lastz1": {
+  "value": 4.0,
+  "text": "+4.00",
+  "source": "last-offer threshold, round 1"
+ },
+ "k3.T2.lastz2": {
+  "value": 3.5,
+  "text": "+3.50",
+  "source": "last-offer threshold, round 2"
+ },
+ "k3.T2.lastz3": {
+  "value": 2.666666666666666,
+  "text": "+2.67",
+  "source": "last-offer threshold, round 3"
+ },
+ "k3.T2.lastz4": {
+  "value": 1.666666666666666,
+  "text": "+1.67",
+  "source": "last-offer threshold, round 4"
+ },
+ "sized.share1": {
+  "value": 0.013350837350287748,
+  "text": "1.3\\%",
+  "source": "one round, sized offers, K=1"
+ },
+ "sized.share2": {
+  "value": 0.11276415785155258,
+  "text": "11.3\\%",
+  "source": "one round, sized offers, K=2"
+ },
+ "sized.share3": {
+  "value": 0.2885050815389256,
+  "text": "28.9\\%",
+  "source": "one round, sized offers, K=3"
+ },
+ "sized.share4": {
+  "value": 0.5233285039775026,
+  "text": "52.3\\%",
+  "source": "one round, sized offers, K=4"
+ },
+ "refine.gap13": {
+  "value": 0.0019421037647399941,
+  "text": "+0.194",
+  "source": "table - replay, points, n_a=13"
+ },
+ "refine.step13": {
+  "value": 1.3333333333333333,
+  "text": "1.33",
+  "source": "anchor step, sd"
+ },
+ "refine.replay13": {
+  "value": -0.014169977807256772,
+  "text": "\\ensuremath{-}1.417\\%",
+  "source": "floor-anchored replay"
+ },
+ "refine.gap25": {
+  "value": 0.0004783155910817443,
+  "text": "+0.048",
+  "source": "table - replay, points, n_a=25"
+ },
+ "refine.step25": {
+  "value": 0.6666666666666666,
+  "text": "0.67",
+  "source": "anchor step, sd"
+ },
+ "refine.replay25": {
+  "value": -0.014169977807256772,
+  "text": "\\ensuremath{-}1.417\\%",
+  "source": "floor-anchored replay"
+ },
+ "refine.gap49": {
+  "value": 0.00011391218394503876,
+  "text": "+0.011",
+  "source": "table - replay, points, n_a=49"
+ },
+ "refine.step49": {
+  "value": 0.3333333333333333,
+  "text": "0.33",
+  "source": "anchor step, sd"
+ },
+ "refine.replay49": {
+  "value": -0.014169977807256772,
+  "text": "\\ensuremath{-}1.417\\%",
+  "source": "floor-anchored replay"
+ },
+ "refine.ratioa": {
+  "value": 4.06029784717615,
+  "text": "4.1",
+  "source": "ratio of successive table - replay gaps"
+ },
+ "refine.ratiob": {
+  "value": 4.198985345698628,
+  "text": "4.2",
+  "source": "ratio of successive table - replay gaps"
+ },
+ "k.T1.K2g1.edge": {
+  "value": 0.00045165544861305856,
+  "text": "+0.045",
+  "source": "v2 K=2, g=1%, floor-anchored replay, edge in points (20,000 paths)"
+ },
+ "k.T1.K2g1.edgese": {
+  "value": 2.624331137922616e-05,
+  "text": "0.003",
+  "source": "same, 2 s.e."
+ },
+ "k.T1.K2g1.value": {
+  "value": -0.013989363855426597,
+  "text": "\\ensuremath{-}1.399\\%",
+  "source": "same, value"
+ },
+ "k.T1.K2g1.bureau": {
+  "value": 0.874,
+  "text": "87.4\\%",
+  "source": "games using the Bureau"
+ },
+ "k.T1.K2g1.clear1": {
+  "value": 1.0,
+  "text": "100.0\\%",
+  "source": "games clearing in round 1"
+ },
+ "k.T1.K3g1.edge": {
+  "value": 0.0013531350858899188,
+  "text": "+0.135",
+  "source": "v2 K=3, g=1%, floor-anchored replay, edge in points (20,000 paths)"
+ },
+ "k.T1.K3g1.edgese": {
+  "value": 5.1021763688672574e-05,
+  "text": "0.005",
+  "source": "same, 2 s.e."
+ },
+ "k.T1.K3g1.value": {
+  "value": -0.013087884218149737,
+  "text": "\\ensuremath{-}1.309\\%",
+  "source": "same, value"
+ },
+ "k.T1.K3g1.bureau": {
+  "value": 0.686,
+  "text": "68.6\\%",
+  "source": "games using the Bureau"
+ },
+ "k.T1.K3g1.clear1": {
+  "value": 0.9952,
+  "text": "99.5\\%",
+  "source": "games clearing in round 1"
+ },
+ "k.T2.K2g1.edge": {
+  "value": 0.0015546220397567615,
+  "text": "+0.155",
+  "source": "v2 K=2, g=1%, floor-anchored replay, edge in points (20,000 paths)"
+ },
+ "k.T2.K2g1.edgese": {
+  "value": 0.0008863339954601585,
+  "text": "0.089",
+  "source": "same, 2 s.e."
+ },
+ "k.T2.K2g1.value": {
+  "value": -0.01865501094618568,
+  "text": "\\ensuremath{-}1.866\\%",
+  "source": "same, value"
+ },
+ "k.T2.K2g1.bureau": {
+  "value": 0.6952,
+  "text": "69.5\\%",
+  "source": "games using the Bureau"
+ },
+ "k.T2.K2g1.clear1": {
+  "value": 0.0664,
+  "text": "6.6\\%",
+  "source": "games clearing in round 1"
+ },
+ "k.T2.K3g1.edge": {
+  "value": 0.003819079029567205,
+  "text": "+0.382",
+  "source": "v2 K=3, g=1%, floor-anchored replay, edge in points (20,000 paths)"
+ },
+ "k.T2.K3g1.edgese": {
+  "value": 0.0007727742944490577,
+  "text": "0.077",
+  "source": "same, 2 s.e."
+ },
+ "k.T2.K3g1.value": {
+  "value": -0.016390553956375238,
+  "text": "\\ensuremath{-}1.639\\%",
+  "source": "same, value"
+ },
+ "k.T2.K3g1.bureau": {
+  "value": 0.3624,
+  "text": "36.2\\%",
+  "source": "games using the Bureau"
+ },
+ "k.T2.K3g1.clear1": {
+  "value": 0.2006,
+  "text": "20.1\\%",
+  "source": "games clearing in round 1"
+ },
+ "gridchk.anchor.diff": {
+  "value": 0.0,
+  "text": "+0.0000",
+  "source": "replayed value, refined-grid policy minus base-grid policy, points, paired"
+ },
+ "gridchk.anchor.diffse": {
+  "value": 0.0,
+  "text": "0.0000",
+  "source": "same, 2 s.e."
+ },
+ "gridchk.anchor.same": {
+  "value": 1.0,
+  "text": "every",
+  "source": "refined and base policies give the same final wealth on every path (zero mean, zero s.d.)"
+ },
+ "gridchk.anchor.tablegap": {
+  "value": -0.0018281915807949554,
+  "text": "\\ensuremath{-}0.183",
+  "source": "table value, fine minus base, points"
+ },
+ "gridchk.cd.diff": {
+  "value": 0.0,
+  "text": "+0.0000",
+  "source": "replayed value, refined-grid policy minus base-grid policy, points, paired"
+ },
+ "gridchk.cd.diffse": {
+  "value": 0.0,
+  "text": "0.0000",
+  "source": "same, 2 s.e."
+ },
+ "gridchk.cd.same": {
+  "value": 1.0,
+  "text": "every",
+  "source": "refined and base policies give the same final wealth on every path (zero mean, zero s.d.)"
+ },
+ "gridchk.cd.tablegap": {
+  "value": -2.914335439641036e-16,
+  "text": "\\ensuremath{-}0.000",
+  "source": "table value, fine minus base, points"
+ },
+ "gridchk.cdB.diff": {
+  "value": -1.3335152894765423e-05,
+  "text": "\\ensuremath{-}0.0013",
+  "source": "replayed value, refined-grid policy minus base-grid policy, points, paired"
+ },
+ "gridchk.cdB.diffse": {
+  "value": 0.0001294368834494804,
+  "text": "0.0129",
+  "source": "same, 2 s.e."
+ },
+ "gridchk.cdB.same": {
+  "value": 0.0,
+  "text": "not every",
+  "source": "refined and base policies give the same final wealth on every path (zero mean, zero s.d.)"
+ },
+ "gridchk.cdB.tablegap": {
+  "value": 1.0058240055659667e-05,
+  "text": "+0.001",
+  "source": "table value, fine minus base, points"
+ },
+ "gate2.game": {
+  "value": 2.0081643015146255e-14,
+  "text": "\\ensuremath{2\\times 10^{-14}}",
+  "source": "v2 gate2_mm_fee, part (d), worst table gap / L"
+ },
+ "gate2.ref": {
+  "value": 6.151755726713226e-06,
+  "text": "\\ensuremath{6\\times 10^{-6}}",
+  "source": "gate 2 (b),(c) worst gap"
+ },
+ "gate2.same": {
+  "value": 6.661338147750939e-16,
+  "text": "\\ensuremath{7\\times 10^{-16}}",
+  "source": "gate 2 (a) worst gap"
+ }
+}

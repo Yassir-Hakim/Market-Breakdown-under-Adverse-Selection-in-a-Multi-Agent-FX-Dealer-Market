@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# LaTeX build files
+Paper/*.aux
+Paper/*.bbl
+Paper/*.blg
+Paper/*.log
+Paper/*.out
+Paper/*.toc
+Paper/*.fls
+Paper/*.fdb_latexmk
+Paper/*.synctex.gz
+
+# Local only: old drafts, scratch, smoke tests
+_archive/
+_to_delete/
+Results_smoke/
+
+# Full evaluation records (200,000 paths each, up to 415 MB per file; above GitHub's 100 MB limit)
+Results/cotrain_multi/**/cotrain_multi_eval.npz

@@ -1,0 +1,31 @@
+base run vs outer-30 check, first 20 outer steps: {'rows': 41, 'mm_gap': 0.0, 'trader_gap': 0.0}
+  pop4s0_mm0.01_bdc0.03_bid_size_2way table row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.004564029825901355, 'mm_replayed': 0.004564029825901355}
+  pop4s0_mm0.01_bdc0.03_bid_size_2way table row 1 (after the mm block, 58 s): {'row': 1, 'moved': 'mm', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.017928139060229456, 'mm_replayed': 0.017928139060229456}
+  pop4s0_mm0.01_bdc0.03_bid_size_2way table row 2 (after the trader block, 125 s): {'row': 2, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.0027846757176958202, 'mm_replayed': 0.0027846757176958202}
+  pop4s0_mm0.01_bdc0.03_bid_size_2way cards row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.010860652956791852, 'mm_replayed': 0.010860652956791852}
+  pop4s0_mm0.01_bdc0.03_bid_size_2way cards row 1 (after the trader block, 126 s): {'row': 1, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.004378745678054673, 'mm_replayed': 0.004378745678054673}
+pop4s0_mm0.01_bdc0.03_bid_size_2way done in 5.7 min
+  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way table row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.004119410795037551, 'mm_replayed': 0.004119410795037551}
+  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way table row 1 (after the mm block, 58 s): {'row': 1, 'moved': 'mm', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.012629087123766201, 'mm_replayed': 0.012629087123766201}
+  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way table row 2 (after the trader block, 126 s): {'row': 2, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.003174287950111714, 'mm_replayed': 0.003174287950111714}
+  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way cards row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.010871753042635822, 'mm_replayed': 0.010871753042635822}
+  checks/pop4s1_mm0.01_bdc0.03_bid_size_2way cards row 1 (after the trader block, 127 s): {'row': 1, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.003138094082394101, 'mm_replayed': 0.003138094082394101}
+checks/pop4s1_mm0.01_bdc0.03_bid_size_2way done in 5.7 min
+  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way table row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.001121410053576716, 'mm_replayed': 0.001121410053576716}
+  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way table row 1 (after the mm block, 60 s): {'row': 1, 'moved': 'mm', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.007645314983997817, 'mm_replayed': 0.007645314983997817}
+  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way table row 2 (after the trader block, 128 s): {'row': 2, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.0030180332323307777, 'mm_replayed': 0.0030180332323307777}
+  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way cards row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.009517878641393265, 'mm_replayed': 0.009517878641393265}
+  checks/pop4s2_mm0.01_bdc0.03_bid_size_2way cards row 1 (after the trader block, 128 s): {'row': 1, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.003814644078135325, 'mm_replayed': 0.003814644078135325}
+checks/pop4s2_mm0.01_bdc0.03_bid_size_2way done in 5.8 min
+  pop12s0_mm0.01_bdc0.03_bid_size_2way table row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.029456640662818154, 'mm_replayed': 0.029456640662818154}
+  pop12s0_mm0.01_bdc0.03_bid_size_2way table row 1 (after the mm block, 176 s): {'row': 1, 'moved': 'mm', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.037794087234130455, 'mm_replayed': 0.037794087234130455}
+  pop12s0_mm0.01_bdc0.03_bid_size_2way cards row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.010823925081730914, 'mm_replayed': 0.010823925081730914}
+  pop12s0_mm0.01_bdc0.03_bid_size_2way cards row 1 (after the trader block, 133 s): {'row': 1, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.004682034186518581, 'mm_replayed': 0.004682034186518581}
+pop12s0_mm0.01_bdc0.03_bid_size_2way done in 6.0 min
+  pop24s0_mm0.01_bdc0.03_bid_size_2way table row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.008656221724125144, 'mm_replayed': 0.008656221724125144}
+  pop24s0_mm0.01_bdc0.03_bid_size_2way table row 1 (after the mm block, 436 s): {'row': 1, 'moved': 'mm', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.013057394922662105, 'mm_replayed': 0.013057394922662105}
+  pop24s0_mm0.01_bdc0.03_bid_size_2way cards row 0 (before training): {'row': 0, 'moved': 'init', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.01084980986683134, 'mm_replayed': 0.01084980986683134}
+  pop24s0_mm0.01_bdc0.03_bid_size_2way cards row 1 (after the trader block, 136 s): {'row': 1, 'moved': 'trader', 'mm_gap': 0.0, 'trader_gap': 0.0, 'mm_saved': 0.004778498192555553, 'mm_replayed': 0.004778498192555553}
+pop24s0_mm0.01_bdc0.03_bid_size_2way done in 11.1 min
+largest gap over every replayed row: 0.000e+00
+written /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/verification/replay_check.json

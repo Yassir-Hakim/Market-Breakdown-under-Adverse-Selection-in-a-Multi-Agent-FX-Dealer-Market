@@ -1,0 +1,55 @@
+{
+ "p_pound": 7.5e-05,
+ "p_dollar": 0.0,
+ "p_both": 0.0,
+ "p_both_indep": 0.0,
+ "games_both": 0.0,
+ "quote_pound": [
+  0.11851300121377292,
+  0.13662084442842592,
+  0.15046110321250777
+ ],
+ "quote_dollar": [
+  -0.174407529522671,
+  -0.15514627098212186,
+  -0.1413769870891421
+ ],
+ "reverse_offered": 0.0,
+ "reverse_filled": 0.0,
+ "quote_pound_filled": 0.13337080010333457,
+ "quote_dollar_filled": null,
+ "pound_fill_after_rise": 1.0,
+ "dollar_fill_after_fall": null,
+ "move_pound": 3.940527965947589,
+ "move_dollar": null,
+ "n_pound_fill": 6,
+ "n_dollar_fill": 0,
+ "final_share": 0.47833751250304496,
+ "imbalance": 1.0,
+ "bureau_share": NaN,
+ "bid_by_round": [
+  NaN,
+  0.9823537127311688,
+  NaN,
+  0.9693154343880259
+ ],
+ "ask_by_round": [
+  NaN,
+  NaN,
+  NaN,
+  NaN
+ ],
+ "kappa_A": [
+  NaN,
+  1.7646287268831218,
+  NaN,
+  3.068456561197408
+ ],
+ "kappa_B": [
+  NaN,
+  NaN,
+  NaN,
+  NaN
+ ],
+ "_seconds": 0.1
+}

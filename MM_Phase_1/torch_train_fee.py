@@ -36,7 +36,7 @@ import torch
 
 from NN_one_offer_game.rl_env import Game, GameSpec, P_MIN, P_MAX
 import NN_one_offer_game.rl_diagnostics as D
-from Mechanics.fx_mechanics import GameParams, results_path
+from Mechanics.fx_mechanics import GameParams, results_path, BDC_FEE_DEFAULT
 
 # ============================ SETTINGS ======================================
 GATE = "smoothed"     # "smoothed": annealed sigmoid (the recipe, made to
@@ -58,9 +58,7 @@ MM_FEE = 0.003         # the MM's OWN Bureau cost g. The trader never pays it
                       # ((1-g)X selling pounds to it, X/(1-g) buying), so it
                       # enters rollout's verdict and NOTHING else. g = 0 is
                       # the naive rule and reproduces torch_train exactly
-BDC_FEE = 0.02        # the trader's own Bureau fee, from its card. 0.02 is
-                      # the card as printed; a knob here only so the two
-                      # costs of trading sit side by side
+BDC_FEE = BDC_FEE_DEFAULT            
 SIDES = ("A", "B")    # every side trained in one run, each into its own folder
 
 CARDS = {"A": dict(L=100_000.0, T=125_000.0, A=0.02, B=0.03),
@@ -576,7 +574,7 @@ def train_one(spec):
     # The card is the study's, from train_traders.CARD; this file sets only
     # its own two fees and, optionally, the horizon.
     run_directory = results_path(
-        f"mm_phase1/torch_{spec.side}_R{spec.rounds}_{GATE}_g{MM_FEE:g}")
+        f"mm_phase1/torch_{spec.side}_R{spec.rounds}_{GATE}_g{MM_FEE:g}_BDC_FEE_{BDC_FEE_DEFAULT}")
     run_directory.mkdir(parents=True, exist_ok=True)
 
     print(f"\n################ side {spec.side}: card L={spec.L:,.0f} "

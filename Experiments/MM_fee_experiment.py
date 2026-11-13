@@ -36,13 +36,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.stats import norm
 
+from Mechanics.fx_mechanics import BDC_FEE_DEFAULT
 import MM_Phase_1.torch_train_fee as T
 from MM_Phase_1.fee_aware_v0 import (closed_form_optimal_rate,
                                     quote_from_threshold)
 
 # ============================ SETTINGS ======================================
-FEES = np.round(np.arange(0.0, 0.01, 0.001), 3)   # g: 21 points, 0 -> f
-TORCH_EVERY =3        # train at FEES[::TORCH_EVERY]; v0 runs at every fee
+FEES = np.round(np.arange(0.0, 0.0201, 0.001), 3)   # g: 21 points, 0 -> f
+TORCH_EVERY =5        # train at FEES[::TORCH_EVERY]; v0 runs at every fee
 SIDES = ("A", "B")
 # ============================================================================
 
@@ -56,6 +57,21 @@ def shown(quote_usd_per_gbp, side):
 
 def unit(side):
     return "$/GBP" if side == "A" else "GBP/$"
+
+
+def card_line(spec):
+    """The trader's card in its own currencies: side A holds pounds and wants
+    dollars, side B holds dollars and wants pounds. A is the residue penalty
+    on initial currency left unconverted, B the deficit penalty on the target
+    shortfall below T. This is the TORCH arm's card -- v0 is card-free, and
+    rounds is what the run used (torch_train_fee.ROUNDS overrides the card's
+    own value on both sides when it is set)."""
+    held, want = ("GBP", "USD") if spec.side == "A" else ("USD", "GBP")
+    return (f"card  L = {spec.L:,.0f} {held} held"
+            f"   T = {spec.T:,.0f} {want} target"
+            f"   A = {spec.A:g} residue on leftover {held}"
+            f"   B = {spec.B:g} deficit below T"
+            f"   rounds = {spec.rounds}   K = {spec.K}")
 
 
 def fill_prob(quote, g, side, a0, sd):
@@ -103,7 +119,7 @@ def torch_arm(spec, g, outdir):
 
 
 def main():
-    outdir = T.results_path("mm_phase1/fee_sweep")
+    outdir = T.results_path(f"mm_phase1/MM_fee_sweep_BdC_Fee_{BDC_FEE_DEFAULT}")
     outdir.mkdir(parents=True, exist_ok=True)
     specs = {s: T.build_spec(s) for s in SIDES}
     a0, sd, f = (specs["A"].params.a0, specs["A"].params.sd,
@@ -132,6 +148,7 @@ def main():
              f"{T.EVAL_PATHS:,}).  fill = P(offer filled)"]
     for s in SIDES:
         lines += ["", f"side {s}  (quotes in {unit(s)})",
+                  f"  {card_line(specs[s])}",
                   f"{'fee':>6} {'v0 quote':>9} {'v0 fill':>9}  |"
                   f"{'t quote':>9} {'t fill':>9} {'t P/L%':>9} {'floor%':>9}"]
         for k, g in enumerate(FEES):

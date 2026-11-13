@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
    6. ACTING FROM THE TABLES    - greedy actions, used by replay and plots
    7. POLICY REPLAY             - Monte Carlo through the shared rules
    8. THE CLAIRVOYANT BENCHMARK - per-path hindsight optimum; regret
-   9. VALIDATION                - gate 1 (v1 anchor), gate 2 (B=0 linearity),
+   9. VALIDATION                - gate 1 (v1 anchor), gate 2 (the MM's fee),
                                   gate 3 (MC vs DP), gate 4 (money conservation)
   10. PLOTS
   11. RUN
@@ -57,6 +57,10 @@ from Mechanics.fx_mechanics import (
     sd_DEFAULT,
     BDC_FEE_DEFAULT,
 )
+# the MM's rule when clearing its book costs it g, and the slip price that
+# implements an acceptance threshold -- the same two rules fee_aware_v0 uses.
+# At g = 0 both are the identity on the rules above, bit for bit.
+from MM_Phase_1.fee_aware_v0 import mm_accepts_fee, quote_from_threshold
 
 NO_FLOOR = -1        # sentinel floor index: "no floor learned yet"  (z = -inf)
                      # the ceiling sentinel is n_offer: "no ceiling yet" (+inf)
@@ -80,6 +84,12 @@ class TraderSpec:
     all_or_nothing   gate-1 switch: force q = everything, as in v1.
     terminal_mode    "pounds" is the official P/L; "dollars" is gate 1's
                      objective (maximise expected dollars, exactly v1's).    
+    mm_fee   the MM's OWN Bureau cost g when it clears its book. The trader
+             never pays it; it moves where the MM breaks even, so the MM
+             takes a seller only below (1-g) X and a buyer only above
+             X / (1-g). The offer grid then indexes the acceptance
+             THRESHOLD, and the price on the slip is its quote (fee_aware_v0's
+             convention). 0.0: the MM takes any offer better than X.
     """
     L: float = 100000.0
     T: float = 125000.0
@@ -93,6 +103,7 @@ class TraderSpec:
     q_floor: float = 0.0          
     side: str = "A"               # "A": start pounds, target dollars (T1 family)
                                   # "B": start dollars, target pounds (T4 family)
+    mm_fee: float = 0.0           # the MM's own Bureau cost g; 0.0 = no fee
 
 
 # ------------------------------------------------------------------------------
@@ -434,7 +445,10 @@ def solve_round(spec, grids, Wnext, a):
         # AV[pi, hi] = best value if an offer at price pi (ceiling hi) is ACCEPTED. 
         AV = np.full((no, no + 1, nc, nd), np.nan)
         for pi in range(no):
-            P = trade_rate(_rate_at(spec, a, grids.z[pi]), spec.side)  # at pi
+            # pi is the acceptance threshold; a fill pays its quote
+            P = trade_rate(quote_from_threshold(_rate_at(spec, a, grids.z[pi]),
+                                                spec.side, spec.mm_fee),
+                           spec.side)
             for hi in range(pi + 1, no + 1):
                 if aon:
                     # All-or-nothing (Gate 1 only): q is forced to ALL of c, so
@@ -601,8 +615,10 @@ def greedy_offer_action(sol, n, k_rem, lo, hi, c, d, a):
     if p_start >= hi or c < 0:
         return None, stop
     price_indices = np.arange(p_start, hi)               # candidate offer prices
-    price_values = trade_rate(_rate_at(spec, a, grids.z[price_indices]),
-                              spec.side)     # in the trader's units (target/unit)
+    price_values = trade_rate(
+        quote_from_threshold(_rate_at(spec, a, grids.z[price_indices]),
+                             spec.side, spec.mm_fee),
+        spec.side)                           # in the trader's units (target/unit)
     PhiH, PhiL = grids.PhiH(hi), grids.PhiL(lo)
     mass = PhiH - PhiL
     wA = (PhiH - grids.Phi[price_indices]) / mass         # P(accept) per price
@@ -753,9 +769,10 @@ def play_game(sol, seed=None, rng=None, path=None, a5=None):
             if action is None:
                 break                                   # stop early: to the BdC
             pi, q = action
-            price = _rate_at(spec, a, grids.z[pi])
+            price = quote_from_threshold(_rate_at(spec, a, grids.z[pi]),
+                                         spec.side, spec.mm_fee)
             P = trade_rate(price, spec.side)
-            accepted = mm_accepts(price, X, spec.side)                  
+            accepted = mm_accepts_fee(price, X, spec.side, spec.mm_fee)
             if accepted:
                 c -= q
                 d += P * q
@@ -1017,9 +1034,10 @@ def simulate_paths(sol, n_paths=20_000, seed=0, print_progress=False):
                 if action is None:
                     break
                 p_i, q = action
-                price = _rate_at(spec, a, grids.z[p_i])
+                price = quote_from_threshold(_rate_at(spec, a, grids.z[p_i]),
+                                             spec.side, spec.mm_fee)
                 P = trade_rate(price, spec.side)
-                if mm_accepts(price, X, spec.side):   # the shared rule
+                if mm_accepts_fee(price, X, spec.side, spec.mm_fee):   # the shared rule
                     c -= q
                     d += P * q
                     mm_p += q
@@ -1066,6 +1084,9 @@ def clairvoyant_wealth(spec, Xs, a5s):
         r = (1.0 / Xs).max(axis=1)
     else:
         r = Xs.max(axis=1)
+    # hindsight still pays the cheaper channel's cost: the MM fills at most at
+    # its break-even (1-g), the Bureau at (1-f)
+    r = r * (1.0 - min(spec.mm_fee, spec.params.bdc_fee))
     cands = [np.zeros_like(r), np.full_like(r, spec.L)]
     s_kink = spec.T / r
     cands.append(np.where(s_kink <= spec.L, s_kink, 0.0))
@@ -1119,9 +1140,10 @@ def gate1_v1_anchor(K=3, print_progress=True):
     # side is PINNED to "A" here: v1 and v0's closed form model the seller,
     # so this spec must not inherit the file's default side. Without the pin,
     # a default of side="B" makes gate 1 compare a buyer-v2 against a
-    # seller-v1 and fail (or worse, pass for the wrong reason).
+    # seller-v1 and fail (or worse, pass for the wrong reason). The MM's fee
+    # is pinned to 0 for the same reason; gate 2 checks the fee.
     spec = TraderSpec(rounds=1, K=K, B=0.0, all_or_nothing=True,
-                      terminal_mode="dollars", side="A")
+                      terminal_mode="dollars", side="A", mm_fee=0.0)
     grids = Grids(spec, n_offer=161, quad_per_cell=3, n_c=2, n_d=5, n_a=3)
     _, Ulv, _ = solve_round(spec, grids, np.stack(
         [terminal_matrix(spec, grids, a4) for a4 in grids.a]), spec.params.a0)
@@ -1141,6 +1163,94 @@ def gate1_v1_anchor(K=3, print_progress=True):
     if print_progress:
         print(f"  K=1 vs v0 closed form: gap {gap0:.2e}")
     return worst
+
+def gate2_mm_fee(g=0.01, f=BDC_FEE_DEFAULT, K=3, tol=2e-5,
+                 print_progress=True):
+    """The MM's fee in gate 1's game (one round, all-or-nothing, expected
+    target currency), both sides. Divide every payoff by (1-g): a fill at
+    threshold X* pays X*, the Bureau pays (1-f)/(1-g) = 1-f' with
+    f' = (f-g)/(1-g), and every belief depends on the threshold alone. So
+    the fee game IS the no-fee game at f', scaled by (1-g):
+      (a) on the same grid, to rounding     -- the fee is wired in right;
+      (b) against v1 solved at f', every offer budget up to K;
+      (c) K = 1 against fee_aware_v0's closed form at (f, g).
+    (b) and (c) carry the grid error gate 1 shows (a few 1e-6).
+      (d) the whole game (rounds, sizes, floors, carry, penalties): in target
+          currency per (1-g) the card becomes T' = T/(1-g) and
+          A' = 1 - (1-A)/(1-g), B unchanged -- so the fee game equals (1-g)
+          times the no-fee game at f' on that card, every table, to rounding
+          (the dollar grid maps exactly when T and T' share their node)."""
+    from v1_sequential_offers import solve_v1
+    from MM_Phase_1.fee_aware_v0 import (closed_form_optimal_rate as cf_rate,
+                                         expected_target_per_unit as cf_value)
+    f_eff = (f - g) / (1.0 - g)
+    worst_same, worst_ref = 0.0, 0.0
+    for side in ("A", "B"):
+        vals = {}
+        for fee, mm_fee in ((f, g), (f_eff, 0.0)):
+            spec = TraderSpec(rounds=1, K=K, B=0.0, all_or_nothing=True,
+                              terminal_mode="dollars", side=side,
+                              mm_fee=mm_fee, params=GameParams(bdc_fee=fee))
+            grids = Grids(spec, n_offer=161, quad_per_cell=3, n_c=2, n_d=5,
+                          n_a=3)
+            _, Ulv, _ = solve_round(spec, grids, np.stack(
+                [terminal_matrix(spec, grids, a4) for a4 in grids.a]),
+                spec.params.a0)
+            vals[mm_fee] = [Ulv[k][NO_FLOOR + 1, grids.n_offer][grids.n_c - 1, 0]
+                            / spec.L for k in range(1, K + 1)]
+        v1 = solve_v1(GameParams(bdc_fee=f_eff), max_offers=K, side=side)
+        p0 = GameParams(bdc_fee=f)
+        x_star = cf_rate(p0.a0, p0.sd, f, side, g)
+        closed = cf_value(x_star, p0.a0, p0.sd, f, side, g)
+        for k in range(1, K + 1):
+            fee_val = vals[g][k - 1]
+            same = abs(fee_val - (1.0 - g) * vals[0.0][k - 1])
+            ref = abs(fee_val - (1.0 - g) * v1.value(k))
+            worst_same, worst_ref = max(worst_same, same), max(worst_ref, ref)
+            if print_progress:
+                print(f"  side {side} K={k}: fee game {fee_val:.6f}   "
+                      f"(1-g) x no-fee game at f' {(1.0 - g) * vals[0.0][k - 1]:.6f}"
+                      f" (gap {same:.1e})   (1-g) x v1 at f' "
+                      f"{(1.0 - g) * v1.value(k):.6f} (gap {ref:.1e})")
+        gap0 = abs(vals[g][0] - closed)
+        worst_ref = max(worst_ref, gap0)
+        if print_progress:
+            print(f"  side {side} K=1 vs fee_aware_v0 closed form "
+                  f"{closed:.6f}: gap {gap0:.1e}")
+    cards = {"A": dict(L=100_000.0, T=125_000.0, A=0.02, B=0.03),   # T1
+             "B": dict(L=200_000.0, T=155_000.0, A=0.03, B=0.02)}   # T2
+    small = dict(n_offer=25, quad_per_cell=3, n_c=9, n_d=21, n_a=7, n_qfrac=8)
+    worst_game = 0.0
+    for side, card in cards.items():
+        fee_spec = TraderSpec(**card, side=side, rounds=2, K=2, mm_fee=g,
+                              params=GameParams(bdc_fee=f))
+        eq_card = dict(card, T=card["T"] / (1.0 - g),
+                       A=1.0 - (1.0 - card["A"]) / (1.0 - g))
+        eq_spec = TraderSpec(**eq_card, side=side, rounds=2, K=2, mm_fee=0.0,
+                             params=GameParams(bdc_fee=f_eff))
+        fee_grids, eq_grids = Grids(fee_spec, **small), Grids(eq_spec, **small)
+        if fee_grids.jT != eq_grids.jT:
+            print(f"  side {side} whole game: skipped (T and T' fall on "
+                  f"different dollar nodes)")
+            continue
+        fee_sol = solve_v2(fee_spec, fee_grids, store_tables=False)
+        eq_sol = solve_v2(eq_spec, eq_grids, store_tables=False)
+        gap = max(float(np.max(np.abs(fee_sol.Wtables[n]
+                                      - (1.0 - g) * eq_sol.Wtables[n])))
+                  for n in fee_sol.Wtables) / fee_spec.L
+        gap = max(gap, float(np.max(np.abs(
+            fee_sol.entry1 - (1.0 - g) * eq_sol.entry1))) / fee_spec.L)
+        worst_game = max(worst_game, gap)
+        if print_progress:
+            print(f"  side {side} whole game (2 rounds, K=2, sized offers): "
+                  f"fee game {fee_sol.value:,.2f}   (1-g) x no-fee game on "
+                  f"T'={eq_card['T']:,.0f}, A'={eq_card['A']:.4%} "
+                  f"{(1.0 - g) * eq_sol.value:,.2f}   worst table gap "
+                  f"{gap:.1e} of L")
+    assert worst_same < 1e-12, f"gate 2 FAILED: (a) gap {worst_same:.1e}"
+    assert worst_ref < tol, f"gate 2 FAILED: (b)/(c) gap {worst_ref:.1e}"
+    assert worst_game < 1e-10, f"gate 2 FAILED: (d) gap {worst_game:.1e}"
+    return worst_same, worst_ref, worst_game
 
 def gate3_and_4(sol, n_paths=20_000, seed=1, print_progress=True):
     """Gate 3: a Monte Carlo of the tables, played through the shared rules,
@@ -1263,14 +1373,20 @@ def plot_kink_and_policy(sol, save_path="v2_fig1_policy.png"):
     # comparable across sides -- but the one-shot reference is NOT the same
     # number: it is v0's own optimum for THIS side, computed rather than
     # hardcoded (+1.44 sd for the seller, 1.75 sd for the buyer).
-    from v0_game import closed_form_optimal_rate
+    # With the MM's fee both are THRESHOLDS: fee_aware_v0's optimum at g,
+    # which is v0's at g = 0; none is drawn when the offer channel is dominated.
+    from MM_Phase_1.fee_aware_v0 import (closed_form_optimal_rate,
+                                         offer_is_interior)
     p0 = spec.params
-    zref = abs(closed_form_optimal_rate(p0.a0, p0.sd, p0.bdc_fee, spec.side)
-               - p0.a0) / p0.sd
+    xref = closed_form_optimal_rate(p0.a0, p0.sd, p0.bdc_fee, spec.side,
+                                    spec.mm_fee)
+    zref = abs(xref - p0.a0) / p0.sd
     ax2.step(rounds, zstars, where="mid", marker="o", lw=2, color="tab:orange",
              label="last-offer z* (sd from anchor, greedy direction)")
-    ax2.axhline(zref, ls=":", color="grey",
-                label=f"single-round optimum |z*| = {zref:.2f} (v0)")
+    if offer_is_interior(xref, p0.a0, p0.sd, p0.bdc_fee, spec.side,
+                         spec.mm_fee):
+        ax2.axhline(zref, ls=":", color="grey",
+                    label=f"single-round optimum |z*| = {zref:.2f} (v0)")
     ax2.set_xlabel("round")
     ax2.set_ylabel("last-offer distance from anchor (sd; higher = holds out)")
     ax2.set_title("Last-offer risk decreases over time (round 4 -> the one-shot v0 price)")
@@ -1353,12 +1469,20 @@ if __name__ == "__main__":
     print("\n[1] Gate 1: one round + all-or-nothing + dollar objective == v1")
     gate1_v1_anchor(K=3)
     print("  gate 1 PASSED: v2 collapses to v1 (and v0 through it)")
+
+    if TraderSpec().mm_fee > 0:
+        g, f = TraderSpec().mm_fee, TraderSpec().params.bdc_fee
+        print(f"\n[2] Gate 2: MM fee g = {g:g}: one round == the no-fee game at "
+              f"f' = (f-g)/(1-g), times (1-g)")
+        gate2_mm_fee(g=g, f=f)
+        print("  gate 2 PASSED")
  
     print("\n[3] Headline solve")
     spec = TraderSpec()
     i_sym, t_sym = ("GBP", "$") if spec.side == "A" else ("$", "GBP")
     print(f"  card: L={i_sym} {spec.L:,.0f}, T={t_sym} {spec.T:,.0f}, "
-          f"A={spec.A:.0%}, B={spec.B:.0%}, {spec.rounds} rounds, K={spec.K}")
+          f"A={spec.A:.0%}, B={spec.B:.0%}, {spec.rounds} rounds, K={spec.K}"
+          + (f", MM fee g={spec.mm_fee:g}" if spec.mm_fee > 0 else ""))
     t0 = time.time()
     sol = solve_v2(spec, print_progress=True)
     print(f"  solved in {time.time() - t0:.0f}s")

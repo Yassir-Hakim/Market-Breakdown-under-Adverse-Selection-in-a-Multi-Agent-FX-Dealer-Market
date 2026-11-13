@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-_ROOT = Path(__file__).resolve().parent.parent
+_ROOT = Path(__file__).resolve().parent.parent.parent
 _CORE = _ROOT / "NN_one_offer_game"      # the folder holding rl_env.py and
                                          # torch_train.py; edit this ONE name
                                          # if that folder is ever renamed

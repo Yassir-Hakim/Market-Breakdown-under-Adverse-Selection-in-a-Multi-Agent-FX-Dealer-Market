@@ -1,0 +1,149 @@
+worker: arm bid (bid, size True, two-way), fee 0.01, 1 torch thread(s)
+
+################ 12 trader(s) R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12: R01(side B, L=200,000 T=167,344 A=0.05 B=0.05), R02(side B, L=200,000 T=173,922 A=0.02 B=0.1), R03(side B, L=200,000 T=171,437 A=0 B=0.05), R04(side A, L=50,000 T=65,371 A=0.2 B=0.02), R05(side A, L=50,000 T=63,018 A=0.2 B=0), R06(side A, L=100,000 T=123,067 A=0.03 B=0), R07(side A, L=50,000 T=64,633 A=0 B=0.05), R08(side A, L=200,000 T=255,769 A=0.1 B=0.03), R09(side A, L=100,000 T=137,021 A=0.2 B=0.03), R10(side B, L=200,000 T=164,815 A=0.2 B=0.1), R11(side B, L=200,000 T=148,323 A=0.03 B=0.05), R12(side B, L=200,000 T=160,811 A=0.03 B=0.02)  rounds=4  a0=1.25  sd=0.05  trader BdC fee 0.02  MM fee 0.01  capital GBP 1,510,000 ################
+  MM architecture BID: level re-set per offer from the LIVE book; the first offer of a round is decided blind (this is the real game)
+  MM sees: rounds left, phase, X, book, offer size, offer direction, offers still to come (8 inputs); level read in direction +1 and mirrored for the other
+  offers a round: 12 (one per trader) -- TWO-WAY: each trader chooses its offer's DIRECTION, its fraction read signed (+ sells what it holds, - sells what it has banked back); it opens at 50% of what it holds, forward
+  negative rates: any path touching <= 0 is deleted. Share deleted at a0 1.25 over 5 draws (first-hit draw 1..5):
+    sd 0.05  P(deleted) 0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00   <- this game
+    sd 0.10  P(deleted) 0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00  0.0e+00
+    sd 0.20  P(deleted) 3.0e-03  0.0e+00  0.0e+00  1.1e-04  7.8e-04  2.1e-03
+    sd 0.30  P(deleted) 3.8e-02  5.0e-06  1.5e-03  7.2e-03  1.2e-02  1.7e-02
+    sd 0.40  P(deleted) 1.1e-01  8.2e-04  1.3e-02  2.6e-02  3.3e-02  3.4e-02
+  co-training: 20 x 100 x 1,000 games per block, mm first, MM level init conservative; the traders' block updates all 12 at once, each on its own P/L
+  check 1  N=1 (R01, side B) vs mm_train.rollout, init net hard            2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, random net hard          2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, init net soft tau 0.2    2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, random net soft tau 0.2  2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, naive+flatten            2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, naive+carry              2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, fee-aware+flatten        2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R01, side B) vs mm_train.rollout, fee-aware+carry          2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, init net hard            2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, random net hard          2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, init net soft tau 0.2    2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, random net soft tau 0.2  2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, naive+flatten            2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, naive+carry              2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, fee-aware+flatten        2000 games: max |gap| 0.0e+00  [ok]
+  check 1  N=1 (R04, side A) vs mm_train.rollout, fee-aware+carry          2000 games: max |gap| 0.0e+00  [ok]
+  check 2  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 naive+flatten  books conserve, 2000 games (fee 0.01, filled 66.3% of volume): fill gap 1.16e-10  Bureau gap 2.91e-11  round-5 gap 0.00e+00 GBP  [ok]
+  check 2  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 untrained net  books conserve, 2000 games (fee 0.01, filled 92.3% of volume): fill gap 2.33e-10  Bureau gap 2.91e-11  round-5 gap 0.00e+00 GBP  [ok]
+  check 3  freeze seam (R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12): the MM's step moves the MM only; each of 12 trader(s) moves by its own gradient only  [ok]
+  check 4  order (R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12): every one of 12 offer(s) in every slot with frequency 1/12 +/- 0.0029; reshuffled every round  [ok]
+  check 5  always-BdC floor (R01, side B): analytic -2.3347%, per path on 200,000 eval paths -2.3251% +/- 0.0350%  [ok]
+  check 5  always-BdC floor (R02, side B): analytic -3.0711%, per path on 200,000 eval paths -3.0611% +/- 0.0348%  [ok]
+  check 5  always-BdC floor (R03, side B): analytic -2.4587%, per path on 200,000 eval paths -2.4491% +/- 0.0350%  [ok]
+  check 5  always-BdC floor (R04, side A): analytic -1.4946%, per path on 200,000 eval paths -1.5051% +/- 0.0360%  [ok]
+  check 5  always-BdC floor (R05, side A): analytic -1.3571%, per path on 200,000 eval paths -1.3675% +/- 0.0361%  [ok]
+  check 5  always-BdC floor (R06, side A): analytic -1.3571%, per path on 200,000 eval paths -1.3675% +/- 0.0361%  [ok]
+  check 5  always-BdC floor (R07, side A): analytic -1.6449%, per path on 200,000 eval paths -1.6556% +/- 0.0360%  [ok]
+  check 5  always-BdC floor (R08, side A): analytic -1.4998%, per path on 200,000 eval paths -1.5103% +/- 0.0360%  [ok]
+  check 5  always-BdC floor (R09, side A): analytic -1.7133%, per path on 200,000 eval paths -1.7239% +/- 0.0359%  [ok]
+  check 5  always-BdC floor (R10, side B): analytic -2.5233%, per path on 200,000 eval paths -2.5134% +/- 0.0350%  [ok]
+  check 5  always-BdC floor (R11, side B): analytic -2.0064%, per path on 200,000 eval paths -1.9971% +/- 0.0351%  [ok]
+  check 5  always-BdC floor (R12, side B): analytic -2.0632%, per path on 200,000 eval paths -2.0538% +/- 0.0351%  [ok]
+  [check 0 skipped] R01 is not a single-trader card; no cotrain artefact applies to it
+  [check 0 skipped] R04 is not a single-trader card; no cotrain artefact applies to it
+  check 6  N=1 (R01, side B) bid  vs round, init net hard            2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, random net hard          2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, init net soft tau 0.2    2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, random net soft tau 0.2  2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, naive+flatten            2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, naive+carry              2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, fee-aware+flatten        2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, fee-aware+carry          2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, book+flatten             2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R01, side B) bid  vs round, book+carry               2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, init net hard            2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, random net hard          2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, init net soft tau 0.2    2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, random net soft tau 0.2  2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, naive+flatten            2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, naive+carry              2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, fee-aware+flatten        2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, fee-aware+carry          2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, book+flatten             2000 games: max |gap| 0.0e+00  [ok]
+  check 6  N=1 (R04, side A) bid  vs round, book+carry               2000 games: max |gap| 0.0e+00  [ok]
+  check 7  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 (bid, size on, 8 inputs) with the 1 extra column(s) zero-weighted vs (bid, size off), random net hard         2000 games: max |gap| 0.0e+00  [exact]
+  check 7  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 (bid, size on, 8 inputs) with the 1 extra column(s) zero-weighted vs (bid, size off), random net soft tau 0.2 2000 games: max |gap| 0.0e+00  [exact]
+  check 7  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 (bid) the 1 extra column(s) carry gradient to the MM (min |grad| 3.0e-03, soft game, 500 games)  [ok]
+  check 8  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 (bid) two arrival orders, hard        : levels differ by up to 5.7e-02 (must be > 0 in the soft game: the book is live)  [ok]
+  check 8  R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 (bid) two arrival orders, soft tau 0.2: levels differ by up to 5.4e-02 (must be > 0 in the soft game: the book is live)  [ok]
+  check 9  flow block (R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12, two-way layout): layout as documented (gap 0.0e+00); every offer of the round is in it -- moving any one moves the block (smallest move 5.5e-01 over 12 offers)  [ok]
+  [check 10 skipped] 12 offers a round: the book rule enumerates 2^(offers) subsets and is not run past 8 offers
+  check 11 R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 two-way pinned forward vs one-way, naive+flatten      2000 games: max |gap| 0.0e+00  [ok]
+  check 11 R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 two-way pinned forward vs one-way, naive+carry        2000 games: max |gap| 0.0e+00  [ok]
+  check 11 R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 two-way pinned forward vs one-way, fee-aware+flatten  2000 games: max |gap| 0.0e+00  [ok]
+  check 11 R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 two-way pinned forward vs one-way, fee-aware+carry    2000 games: max |gap| 0.0e+00  [ok]
+  check 11 R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 the reverse branch is live: pinned at -1 every offer flips direction [yes], 0.00 units filled, the traders' P/L moves by up to 5.8e-01, min |grad| on the fraction head 1.9e-02  [ok]
+  EVAL_ONLY: agents loaded from agents_last.pth, curve of 17 blocks
+  evaluating: 12 trader(s), 200,000 paths, 4 benchmark rules
+  eval P/Ls and recorded plays done; benchmark agreement next
+
+traders R01-R02-R03-R04-R05-R06-R07-R08-R09-R10-R11-R12 final (hard game, 200,000 paths, torch engine):
+  co-trained MM P/L +0.01 bp +/- 0.01 of the game's capital (GBP 1,510,000); Bureau share of filled pound volume nan% (crossed or carried out nan%)
+  MM-Bureau pound flow per game 0.00% of the game's capital -- how much of the game's money the market maker exchanged at the Bureau
+  R01 (side B) P/L -2.3256%; edge over always-BdC -0.0005% +/- 0.0012% (paired; floor here -2.3251%, analytic -2.3347%)
+  R02 (side B) P/L -3.0614%; edge over always-BdC -0.0003% +/- 0.0008% (paired; floor here -3.0611%, analytic -3.0711%)
+  R03 (side B) P/L -2.4500%; edge over always-BdC -0.0009% +/- 0.0033% (paired; floor here -2.4491%, analytic -2.4587%)
+  R04 (side A) P/L -1.5055%; edge over always-BdC -0.0003% +/- 0.0000% (paired; floor here -1.5051%, analytic -1.4946%)
+  R05 (side A) P/L -1.3677%; edge over always-BdC -0.0003% +/- 0.0000% (paired; floor here -1.3675%, analytic -1.3571%)
+  R06 (side A) P/L -1.3677%; edge over always-BdC -0.0002% +/- 0.0000% (paired; floor here -1.3675%, analytic -1.3571%)
+  R07 (side A) P/L -1.6564%; edge over always-BdC -0.0008% +/- 0.0001% (paired; floor here -1.6556%, analytic -1.6449%)
+  R08 (side A) P/L -1.5106%; edge over always-BdC -0.0003% +/- 0.0000% (paired; floor here -1.5103%, analytic -1.4998%)
+  R09 (side A) P/L -1.7242%; edge over always-BdC -0.0003% +/- 0.0000% (paired; floor here -1.7239%, analytic -1.7133%)
+  R10 (side B) P/L -2.5138%; edge over always-BdC -0.0003% +/- 0.0009% (paired; floor here -2.5134%, analytic -2.5233%)
+  R11 (side B) P/L -1.9979%; edge over always-BdC -0.0008% +/- 0.0022% (paired; floor here -1.9971%, analytic -2.0064%)
+  R12 (side B) P/L -2.0550%; edge over always-BdC -0.0012% +/- 0.0023% (paired; floor here -2.0538%, analytic -2.0632%)
+  vs naive+flatten      MM   +0.00 bp   co MM - rule +0.01 +/- 0.01 bp (paired)   traders vs this rule -2.3253%  -3.0613%  -2.4498%  -1.5053%  -1.3673%  -1.3677%  -1.6560%  -1.5101%  -1.7236%  -2.5136%  -1.9978%  -2.0550%
+  vs naive+carry        MM   +0.01 bp   co MM - rule -0.00 +/- 0.03 bp (paired)   traders vs this rule -2.3253%  -3.0613%  -2.4498%  -1.5053%  -1.3673%  -1.3677%  -1.6560%  -1.5101%  -1.7236%  -2.5136%  -1.9978%  -2.0550%
+  vs fee-aware+flatten  MM   +0.01 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -2.3255%  -3.0614%  -2.4500%  -1.5054%  -1.3677%  -1.3677%  -1.6564%  -1.5106%  -1.7242%  -2.5138%  -1.9979%  -2.0550%
+  vs fee-aware+carry    MM   +0.02 bp   co MM - rule -0.01 +/- 0.01 bp (paired)   traders vs this rule -2.3255%  -3.0614%  -2.4500%  -1.5054%  -1.3677%  -1.3677%  -1.6564%  -1.5106%  -1.7242%  -2.5138%  -1.9979%  -2.0550%
+  verdicts agree with the fee-aware+carry rule on 100.0% of offered pound volume; filled 0.0% (fee-aware+carry 0.0%)
+  bid (pound sellers, accept below) P/X by round: r1 0.9866  r2 0.9833  r3 0.9756  r4 0.9693
+  ask (dollar sellers, accept above) P/X by round: r1 1.0130  r2 nan  r3 1.0176  r4 1.0268
+  spread ask - bid, x true rate: r1 +2.64%  r2 +nan%  r3 +4.19%  r4 +5.75%   (fee-aware flatten would be 2.00%, naive 0)
+  Bureau repay fraction on SHORT books, short-weighted, by round: r1 0.269  r2 0.272  r3 0.276  r4 0.279
+  direction chosen, share of each trader's offered pound-equivalent volume that went REVERSE, and the reverse fills' share: R01 0.0% / 0.0%  R02 0.0% / 0.0%  R03 0.0% / 0.0%  R04 0.0% / 0.0%  R05 0.0% / 0.0%  R06 0.0% / 0.0%  R07 0.0% / 0.0%  R08 0.0% / 0.0%  R09 0.0% / 0.0%  R10 0.0% / 0.0%  R11 0.0% / 0.0%  R12 0.0% / 0.0%
+  round-1 quotes, $/GBP (median): R01 1.0803  R02 1.0708  R03 1.0726  R04 1.4278  R05 1.4167  R06 1.4647  R07 1.4175  R08 1.4163  R09 1.4154  R10 1.0729  R11 1.0689  R12 0.8268
+  writing artefacts to pop12s0_mm0.01_bdc0.02_bid_size_2way/
+artefacts in /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/pop12s0_mm0.01_bdc0.02_bid_size_2way/  (6.37 min)
+
+  population co-training done; market maker frozen, loaded from agents_final.pth
+
+---- market maker FROZEN; 4 trader(s) T1-T2-T3-T4 respond from fresh (up to 20 trader blocks) ----
+  outer  -1 after init     init   MM  +101.95 bp (best rule +108.70)  bureau  90.8%  T1(A) -1.4941% (vs BdC -0.0965) up 62.0% filled  4.70%  T2(B) -3.9393% (vs BdC -1.8760) up 47.1% filled 86.55%  T3(A) -1.9732% (vs BdC -0.6630) up 38.3% filled 25.71%  T4(B) -2.7963% (vs BdC -0.3318) up 57.7% filled 32.12%  bid r1 0.9830  ask r1 1.0078  spread +2.48%  agree(naive+carry)  92.8%  lr 1e-03/1e-03/1e-03/1e-03
+  outer   0 after trader tau  0.5746  MM   +19.79 bp (best rule  +21.22)  bureau  97.3%  T1(A) -1.4873% (vs BdC -0.0897) up 96.3% filled  6.01%  T2(B) -2.1068% (vs BdC -0.0435) up 87.6% filled  8.65%  T3(A) -1.3777% (vs BdC -0.0674) up 91.3% filled  4.61%  T4(B) -2.5656% (vs BdC -0.1012) up 93.8% filled  8.95%  bid r1 0.9829  ask r1 1.0105  spread +2.76%  agree(book+carry)  98.7%  lr 1e-03/1e-03/1e-03/1e-03
+  outer   1 after trader tau  0.3283  MM   +14.34 bp (best rule  +15.75)  bureau  98.5%  T1(A) -1.4129% (vs BdC -0.0153) up 98.4% filled  1.33%  T2(B) -2.0867% (vs BdC -0.0233) up 93.5% filled  5.93%  T3(A) -1.3244% (vs BdC -0.0142) up 96.3% filled  1.15%  T4(B) -2.5449% (vs BdC -0.0804) up 98.0% filled  6.37%  bid r1 0.9835  ask r1 1.0110  spread +2.74%  agree(fee-aware+carry)  99.2%  lr 1e-03/1e-03/1e-03/1e-03
+  outer   2 after trader tau  0.1876  MM    +2.46 bp (best rule   +3.31)  bureau  98.8%  T1(A) -1.4008% (vs BdC -0.0032) up 98.9% filled  0.18%  T2(B) -2.0649% (vs BdC -0.0016) up 94.9% filled  1.11%  T3(A) -1.3144% (vs BdC -0.0041) up 97.2% filled  0.21%  T4(B) -2.4710% (vs BdC -0.0066) up 99.0% filled  1.13%  bid r1 0.9842  ask r1 1.0120  spread +2.78%  agree(naive+carry)  99.0%  lr 5e-04/1e-03/5e-04/5e-04
+  outer   3 after trader tau  0.1072  MM    +0.16 bp (best rule   +0.31)  bureau   nan%  T1(A) -1.3989% (vs BdC -0.0013) up 99.3% filled  0.00%  T2(B) -2.0614% (vs BdC +0.0020) up 95.2% filled  0.21%  T3(A) -1.3121% (vs BdC -0.0018) up 98.0% filled  0.00%  T4(B) -2.4629% (vs BdC +0.0016) up 99.2% filled  0.06%  bid r1 0.9859  ask r1 1.0121  spread +2.62%  agree(naive+carry)  99.9%  lr 5e-04/5e-04/5e-04/5e-04
+  outer   4 after trader tau  0.0613  MM    +0.03 bp (best rule   +0.02)  bureau   nan%  T1(A) -1.3986% (vs BdC -0.0010) up 99.4% filled  0.00%  T2(B) -2.0612% (vs BdC +0.0022) up 96.2% filled  0.02%  T3(A) -1.3116% (vs BdC -0.0014) up 98.3% filled  0.00%  T4(B) -2.4633% (vs BdC +0.0012) up 99.6% filled  0.02%  bid r1 0.9901  ask r1 1.0098  spread +1.98%  agree(fee-aware+carry) 100.0%  lr 3e-04/5e-04/3e-04/3e-04
+  outer   5 after trader tau  0.0350  MM    +0.00 bp (best rule   +0.00)  bureau   nan%  T1(A) -1.3984% (vs BdC -0.0008) up 99.5% filled  0.00%  T2(B) -2.0611% (vs BdC +0.0023) up 96.1% filled  0.01%  T3(A) -1.3113% (vs BdC -0.0011) up 98.5% filled  0.00%  T4(B) -2.4633% (vs BdC +0.0012) up 99.6% filled  0.00%  bid r1 0.9918  ask r1 1.0118  spread +2.00%  agree(naive+carry) 100.0%  lr 3e-04/3e-04/3e-04/3e-04
+  outer   6 after trader tau  0.0200  MM    +0.00 bp (best rule   +0.00)  bureau   nan%  T1(A) -1.3983% (vs BdC -0.0007) up 99.5% filled  0.00%  T2(B) -2.0613% (vs BdC +0.0020) up 96.6% filled  0.00%  T3(A) -1.3112% (vs BdC -0.0009) up 98.7% filled  0.00%  T4(B) -2.4635% (vs BdC +0.0010) up 99.7% filled  0.00%  bid r1 0.9951  agree(fee-aware+flatten) 100.0%  lr 1e-04/3e-04/1e-04/1e-04
+  flat over the last 4 trader blocks: stopping at block 6
+  evaluating: 4 trader(s), 200,000 paths, 6 benchmark rules
+  eval P/Ls and recorded plays done; benchmark agreement next
+
+traders T1-T2-T3-T4 final (hard game, 200,000 paths, torch engine):
+  co-trained MM P/L +0.01 bp +/- 0.01 of the game's capital (GBP 710,000); Bureau share of filled pound volume nan% (crossed or carried out nan%)
+  MM-Bureau pound flow per game 0.00% of the game's capital -- how much of the game's money the market maker exchanged at the Bureau
+  T1 (side A) P/L -1.4551%; edge over always-BdC -0.0006% +/- 0.0001% (paired; floor here -1.4546%, analytic -1.4441%); vs cotrain's single-trader card A on these paths -0.0001% +/- 0.0000% (paired; that trader -1.4550%)
+  T2 (side B) P/L -2.0121%; edge over always-BdC -0.0005% +/- 0.0013% (paired; floor here -2.0117%, analytic -2.0210%); vs cotrain's single-trader card B on these paths +0.0007% +/- 0.0017% (paired; that trader -2.0128%)
+  T3 (side A) P/L -1.3682%; edge over always-BdC -0.0008% +/- 0.0001% (paired; floor here -1.3675%, analytic -1.3571%)
+  T4 (side B) P/L -2.4160%; edge over always-BdC -0.0004% +/- 0.0007% (paired; floor here -2.4157%, analytic -2.4260%)
+  vs naive+flatten      MM   +0.00 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -1.4550%  -2.0120%  -1.3681%  -2.4160%
+  vs naive+carry        MM   +0.01 bp   co MM - rule -0.01 +/- 0.02 bp (paired)   traders vs this rule -1.4550%  -2.0120%  -1.3681%  -2.4160%
+  vs fee-aware+flatten  MM   +0.00 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs fee-aware+carry    MM   +0.00 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs book+flatten       MM   +0.00 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  vs book+carry         MM   +0.00 bp   co MM - rule +0.00 +/- 0.01 bp (paired)   traders vs this rule -1.4551%  -2.0121%  -1.3682%  -2.4160%
+  verdicts agree with the naive+carry rule on 100.0% of offered pound volume; filled 0.0% (naive+carry 0.0%)
+  bid (pound sellers, accept below) P/X by round: r1 nan  r2 nan  r3 nan  r4 0.9723
+  spread ask - bid, x true rate: r1 +nan%  r2 +nan%  r3 +nan%  r4 +nan%   (fee-aware flatten would be 2.00%, naive 0)
+  Bureau repay fraction on SHORT books, short-weighted, by round: r1 nan  r2 nan  r3 nan  r4 0.272
+  direction chosen, share of each trader's offered pound-equivalent volume that went REVERSE, and the reverse fills' share: T1 0.0% / 0.0%  T2 0.0% / 0.0%  T3 0.0% / 0.0%  T4 0.0% / 0.0%
+  round-1 quotes, $/GBP (median): T1 1.4395  T2 1.0682  T3 1.4419  T4 1.0578
+  writing artefacts to respond_on_cards/
+artefacts in /Users/yassirhakim/Downloads/Summer project/untitled folder/Summer Project/Results/cotrain_multi/pop12s0_mm0.01_bdc0.02_bid_size_2way/respond_on_cards/  (18.60 min)
+worker done in 25.7 min: MM +0.01 bp; TABLE vs the frozen MM: MM +0.01 bp, Bureau share nan%, MM-Bureau flow 0.00% of capital

@@ -1,0 +1,122 @@
+[
+ {
+  "label": "Baseline MM",
+  "sub": "trained with T1\u2013T4",
+  "kind": "baseline",
+  "folder": "checks/T1-T2-T3-T4_mm0.01_bdc0.03_bid_size_2way_frozen_cotrained/respond_on_cards",
+  "mm_trades": 0.5065098920949146,
+  "mm_bureau": 0.4672923200409252,
+  "cards_bureau": 0.4823843560508004,
+  "saved_mm_bureau": 0.4672923200409252,
+  "by_card": {
+   "T1": {
+    "to_mm": 0.11175202758327639,
+    "to_bureau": 0.8882479495326655
+   },
+   "T2": {
+    "to_mm": 0.502259304545777,
+    "to_bureau": 0.48575959663411866
+   },
+   "T3": {
+    "to_mm": 0.09679186473938936,
+    "to_bureau": 0.9032080295378876
+   },
+   "T4": {
+    "to_mm": 0.6581143466619198,
+    "to_bureau": 0.326965402261121
+   }
+  },
+  "netted": 0.0392175720539894,
+  "total_bureau": 0.9496766760917256
+ },
+ {
+  "label": "Population MM",
+  "sub": "4 random traders",
+  "kind": "population",
+  "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "mm_trades": 0.16563192751180209,
+  "mm_bureau": 0.13308505730102918,
+  "cards_bureau": 0.8320482250868456,
+  "saved_mm_bureau": 0.13308505730102918,
+  "by_card": {
+   "T1": {
+    "to_mm": 0.1343192654519742,
+    "to_bureau": 0.865680730285561
+   },
+   "T2": {
+    "to_mm": 0.40894656249955075,
+    "to_bureau": 0.5822773311950381
+   },
+   "T3": {
+    "to_mm": 0.1358333194166178,
+    "to_bureau": 0.8641665836522641
+   },
+   "T4": {
+    "to_mm": 0.07985906504355765,
+    "to_bureau": 0.9195336615232127
+   }
+  },
+  "netted": 0.032546870210772905,
+  "total_bureau": 0.9651332823878748
+ },
+ {
+  "label": "Population MM",
+  "sub": "12 random traders",
+  "kind": "population",
+  "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "mm_trades": 0.13361640621075938,
+  "mm_bureau": 0.10892662261104097,
+  "cards_bureau": 0.8647647753535291,
+  "saved_mm_bureau": 0.10892662261104097,
+  "by_card": {
+   "T1": {
+    "to_mm": 0.09167058759470696,
+    "to_bureau": 0.9083293907733877
+   },
+   "T2": {
+    "to_mm": 0.3942082349886436,
+    "to_bureau": 0.597263265906734
+   },
+   "T3": {
+    "to_mm": 0.11211338150704318,
+    "to_bureau": 0.8878865106862875
+   },
+   "T4": {
+    "to_mm": 0.042554007441583365,
+    "to_bureau": 0.9579840083606878
+   }
+  },
+  "netted": 0.024689783599718407,
+  "total_bureau": 0.97369139796457
+ },
+ {
+  "label": "Population MM",
+  "sub": "24 random traders",
+  "kind": "population",
+  "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way/respond_on_cards",
+  "mm_trades": 0.2021970324382513,
+  "mm_bureau": 0.17094218320981142,
+  "cards_bureau": 0.7945403806429122,
+  "saved_mm_bureau": 0.17094218320981142,
+  "by_card": {
+   "T1": {
+    "to_mm": 0.13071235364595518,
+    "to_bureau": 0.8692876431113546
+   },
+   "T2": {
+    "to_mm": 0.46623524908554737,
+    "to_bureau": 0.5233309446101874
+   },
+   "T3": {
+    "to_mm": 0.13581261097228547,
+    "to_bureau": 0.8641873172689962
+   },
+   "T4": {
+    "to_mm": 0.12275096816065269,
+    "to_bureau": 0.875631472360631
+   }
+  },
+  "netted": 0.03125484922843988,
+  "total_bureau": 0.9654825638527236
+ }
+]

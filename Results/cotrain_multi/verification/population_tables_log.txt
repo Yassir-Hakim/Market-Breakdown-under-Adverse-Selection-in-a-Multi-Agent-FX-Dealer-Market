@@ -1,0 +1,80 @@
+How a random trader is drawn
+  side            coin toss, redrawn until both sides are present
+  start amount L  one of 50k, 100k, 200k, 500k in the trader's own currency (the four cards' amounts)
+  target T        all of L converted at 1.25, times u; u uniform in 0.90-1.10
+  penalties A, B  each one of 0%, 2%, 3%, 5%, 10%, 20%
+  market          4 rounds, rate opens at 1.25 $/GBP and moves by a normal step of sd 0.05 a round
+
+The four cards T1-T4 (traders' fee 3%)
+      T1  pound  seller  start  £100k  (£100k)  target  $125,000  u 1.000  A  2%  B  3%
+      T2  dollar seller  start  $200k  (£160k)  target  £155,000  u 0.969  A  3%  B  2%
+      T3  pound  seller  start   £50k  (£50k)  target   $63,000  u 1.008  A 20%  B  0%
+      T4  dollar seller  start  $500k  (£400k)  target  £396,000  u 0.990  A  0%  B 20%
+
+4 traders, table 1: saved table is the draw from (N, seed): True; money £250,000, 20% pound sellers (traders' fee 3%)
+     R01  pound  seller  start   £50k  (£50k)  target   $68,108  u 1.090  A  0%  B  2%   A+B <= 3%: no reason to use the Bureau
+     R02  dollar seller  start  $100k  (£80k)  target   £78,773  u 0.985  A  2%  B 10%
+     R03  dollar seller  start  $100k  (£80k)  target   £80,793  u 1.010  A  3%  B  0%   A+B <= 3%: no reason to use the Bureau
+     R04  dollar seller  start   $50k  (£40k)  target   £42,028  u 1.051  A 20%  B  5%
+  2% spread (checks/pop4s1_mm0.01_bdc0.03_bid_size_2way): MM trained 2,000 steps and traders 2,000, 1,000 games a step; T1-T4 relearned 2,000 steps against it (MM steps 0); measured on 20,000 games; its MM on T1-T4: 14.91% of the money, 86.0% to the Bureau
+
+4 traders, table 2: saved table is the draw from (N, seed): True; money £980,000, 92% pound sellers (traders' fee 3%)
+     R01  dollar seller  start  $100k  (£80k)  target   £73,471  u 0.918  A 10%  B  3%
+     R02  pound  seller  start  £200k  (£200k)  target  $261,428  u 1.046  A 20%  B  2%
+     R03  pound  seller  start  £500k  (£500k)  target  $596,871  u 0.955  A  0%  B  2%   A+B <= 3%: no reason to use the Bureau
+     R04  pound  seller  start  £200k  (£200k)  target  $253,113  u 1.012  A  2%  B  0%   A+B <= 3%: no reason to use the Bureau
+  2% spread (checks/pop4s2_mm0.01_bdc0.03_bid_size_2way): MM trained 2,000 steps and traders 2,000, 1,000 games a step; T1-T4 relearned 2,000 steps against it (MM steps 0); measured on 20,000 games; its MM on T1-T4: 1.82% of the money, 97.2% to the Bureau
+
+12 traders, table 0: saved table is the draw from (N, seed): True; money £1,510,000, 36% pound sellers (traders' fee 2%)
+     R01  dollar seller  start  $200k  (£160k)  target  £167,344  u 1.046  A  5%  B  5%
+     R02  dollar seller  start  $200k  (£160k)  target  £173,922  u 1.087  A  2%  B 10%
+     R03  dollar seller  start  $200k  (£160k)  target  £171,437  u 1.071  A  0%  B  5%
+     R04  pound  seller  start   £50k  (£50k)  target   $65,371  u 1.046  A 20%  B  2%
+     R05  pound  seller  start   £50k  (£50k)  target   $63,018  u 1.008  A 20%  B  0%
+     R06  pound  seller  start  £100k  (£100k)  target  $123,067  u 0.985  A  3%  B  0%
+     R07  pound  seller  start   £50k  (£50k)  target   $64,633  u 1.034  A  0%  B  5%
+     R08  pound  seller  start  £200k  (£200k)  target  $255,769  u 1.023  A 10%  B  3%
+     R09  pound  seller  start  £100k  (£100k)  target  $137,021  u 1.096  A 20%  B  3%
+     R10  dollar seller  start  $200k  (£160k)  target  £164,815  u 1.030  A 20%  B 10%
+     R11  dollar seller  start  $200k  (£160k)  target  £148,323  u 0.927  A  3%  B  5%
+     R12  dollar seller  start  $200k  (£160k)  target  £160,811  u 1.005  A  3%  B  2%
+  1% spread (pop12s0_mm0.01_bdc0.02_bid_size_2way): MM trained 800 steps and traders 800, 1,000 games a step, stopped early; T1-T4 relearned 700 steps against it (MM steps 0), stopped early; measured on 20,000 games; its MM on T1-T4: 0.00% of the money, 96.5% to the Bureau
+  2% spread (pop12s0_mm0.01_bdc0.03_bid_size_2way): MM trained 2,000 steps and traders 2,000, 1,000 games a step; T1-T4 relearned 2,000 steps against it (MM steps 0); measured on 20,000 games; its MM on T1-T4: 10.89% of the money, 81.5% to the Bureau
+
+24 traders, table 0: saved table is the draw from (N, seed): True; money £4,980,000, 42% pound sellers (traders' fee 2%)
+     R01  dollar seller  start  $100k  (£80k)  target   £72,537  u 0.907  A 20%  B 10%
+     R02  dollar seller  start  $200k  (£160k)  target  £149,621  u 0.935  A  0%  B 20%
+     R03  dollar seller  start   $50k  (£40k)  target   £38,398  u 0.960  A  5%  B  3%
+     R04  pound  seller  start  £100k  (£100k)  target  $113,208  u 0.906  A  0%  B  0%   A+B <= 2%: no reason to use the Bureau
+     R05  pound  seller  start   £50k  (£50k)  target   $64,340  u 1.029  A 10%  B  2%
+     R06  pound  seller  start  £200k  (£200k)  target  $244,184  u 0.977  A  3%  B 20%
+     R07  pound  seller  start  £500k  (£500k)  target  $648,193  u 1.037  A 20%  B 20%
+     R08  pound  seller  start  £200k  (£200k)  target  $259,422  u 1.038  A 10%  B  3%
+     R09  pound  seller  start  £500k  (£500k)  target  $652,686  u 1.044  A  0%  B 20%
+     R10  dollar seller  start  $200k  (£160k)  target  £153,928  u 0.962  A  3%  B  3%
+     R11  dollar seller  start  $200k  (£160k)  target  £173,889  u 1.087  A 20%  B  5%
+     R12  dollar seller  start  $100k  (£80k)  target   £81,144  u 1.014  A  2%  B  2%
+     R13  dollar seller  start  $200k  (£160k)  target  £154,813  u 0.968  A  5%  B 10%
+     R14  dollar seller  start  $100k  (£80k)  target   £86,244  u 1.078  A  2%  B  2%
+     R15  dollar seller  start  $200k  (£160k)  target  £146,688  u 0.917  A  5%  B  3%
+     R16  dollar seller  start  $500k  (£400k)  target  £422,968  u 1.057  A  2%  B  2%
+     R17  dollar seller  start  $500k  (£400k)  target  £364,685  u 0.912  A 20%  B 10%
+     R18  dollar seller  start  $100k  (£80k)  target   £74,404  u 0.930  A 20%  B  3%
+     R19  dollar seller  start  $500k  (£400k)  target  £378,451  u 0.946  A 10%  B 10%
+     R20  dollar seller  start   $50k  (£40k)  target   £39,236  u 0.981  A 20%  B  2%
+     R21  pound  seller  start  £500k  (£500k)  target  $635,042  u 1.016  A  0%  B 20%
+     R22  dollar seller  start  $100k  (£80k)  target   £82,752  u 1.034  A 20%  B  2%
+     R23  dollar seller  start  $500k  (£400k)  target  £389,209  u 0.973  A 20%  B  5%
+     R24  pound  seller  start   £50k  (£50k)  target   $64,114  u 1.026  A 10%  B 20%
+  1% spread (pop24s0_mm0.01_bdc0.02_bid_size_2way): MM trained 1,400 steps and traders 1,400, 1,000 games a step, stopped early; T1-T4 relearned 700 steps against it (MM steps 0), stopped early; measured on 20,000 games
+  2% spread (pop24s0_mm0.01_bdc0.03_bid_size_2way): MM trained 2,000 steps and traders 2,000, 1,000 games a step; T1-T4 relearned 2,000 steps against it (MM steps 0); measured on 20,000 games; its MM on T1-T4: 17.09% of the money, 84.5% to the Bureau
+
+4 traders, table 0: saved table is the draw from (N, seed): True; money £1,380,000, 36% pound sellers (traders' fee 2%)
+     R01  dollar seller  start  $100k  (£80k)  target   £72,264  u 0.903  A  0%  B  2%   A+B <= 2%: no reason to use the Bureau
+     R02  dollar seller  start  $500k  (£400k)  target  £433,020  u 1.083  A  5%  B  5%
+     R03  dollar seller  start  $500k  (£400k)  target  £403,490  u 1.009  A 10%  B  5%
+     R04  pound  seller  start  £500k  (£500k)  target  $664,482  u 1.063  A 10%  B  0%
+  1% spread (pop4s0_mm0.01_bdc0.02_bid_size_2way): MM trained 800 steps and traders 800, 1,000 games a step, stopped early; T1-T4 relearned 800 steps against it (MM steps 0), stopped early; measured on 20,000 games; its MM on T1-T4: 0.00% of the money, 100.0% to the Bureau
+  2% spread (pop4s0_mm0.01_bdc0.03_bid_size_2way): MM trained 2,000 steps and traders 2,000, 1,000 games a step; T1-T4 relearned 2,000 steps against it (MM steps 0); measured on 20,000 games; its MM on T1-T4: 13.31% of the money, 80.3% to the Bureau
+
+wrote Results/cotrain_multi/verification/tables.json and fig_tables.png

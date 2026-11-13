@@ -1,0 +1,230 @@
+{
+ "threads": 1,
+ "torch": "2.10.0",
+ "base_vs_outer30": {
+  "rows": 41,
+  "mm_gap": 0.0,
+  "trader_gap": 0.0
+ },
+ "runs": [
+  {
+   "folder": "pop4s0_mm0.01_bdc0.03_bid_size_2way",
+   "table": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.004564029825901355,
+     "mm_replayed": 0.004564029825901355
+    },
+    {
+     "row": 1,
+     "moved": "mm",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.017928139060229456,
+     "mm_replayed": 0.017928139060229456
+    },
+    {
+     "row": 2,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.0027846757176958202,
+     "mm_replayed": 0.0027846757176958202
+    }
+   ],
+   "cards": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.010860652956791852,
+     "mm_replayed": 0.010860652956791852
+    },
+    {
+     "row": 1,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.004378745678054673,
+     "mm_replayed": 0.004378745678054673
+    }
+   ]
+  },
+  {
+   "folder": "checks/pop4s1_mm0.01_bdc0.03_bid_size_2way",
+   "table": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.004119410795037551,
+     "mm_replayed": 0.004119410795037551
+    },
+    {
+     "row": 1,
+     "moved": "mm",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.012629087123766201,
+     "mm_replayed": 0.012629087123766201
+    },
+    {
+     "row": 2,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.003174287950111714,
+     "mm_replayed": 0.003174287950111714
+    }
+   ],
+   "cards": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.010871753042635822,
+     "mm_replayed": 0.010871753042635822
+    },
+    {
+     "row": 1,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.003138094082394101,
+     "mm_replayed": 0.003138094082394101
+    }
+   ]
+  },
+  {
+   "folder": "checks/pop4s2_mm0.01_bdc0.03_bid_size_2way",
+   "table": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.001121410053576716,
+     "mm_replayed": 0.001121410053576716
+    },
+    {
+     "row": 1,
+     "moved": "mm",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.007645314983997817,
+     "mm_replayed": 0.007645314983997817
+    },
+    {
+     "row": 2,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.0030180332323307777,
+     "mm_replayed": 0.0030180332323307777
+    }
+   ],
+   "cards": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.009517878641393265,
+     "mm_replayed": 0.009517878641393265
+    },
+    {
+     "row": 1,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.003814644078135325,
+     "mm_replayed": 0.003814644078135325
+    }
+   ]
+  },
+  {
+   "folder": "pop12s0_mm0.01_bdc0.03_bid_size_2way",
+   "table": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.029456640662818154,
+     "mm_replayed": 0.029456640662818154
+    },
+    {
+     "row": 1,
+     "moved": "mm",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.037794087234130455,
+     "mm_replayed": 0.037794087234130455
+    }
+   ],
+   "cards": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.010823925081730914,
+     "mm_replayed": 0.010823925081730914
+    },
+    {
+     "row": 1,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.004682034186518581,
+     "mm_replayed": 0.004682034186518581
+    }
+   ]
+  },
+  {
+   "folder": "pop24s0_mm0.01_bdc0.03_bid_size_2way",
+   "table": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.008656221724125144,
+     "mm_replayed": 0.008656221724125144
+    },
+    {
+     "row": 1,
+     "moved": "mm",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.013057394922662105,
+     "mm_replayed": 0.013057394922662105
+    }
+   ],
+   "cards": [
+    {
+     "row": 0,
+     "moved": "init",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.01084980986683134,
+     "mm_replayed": 0.01084980986683134
+    },
+    {
+     "row": 1,
+     "moved": "trader",
+     "mm_gap": 0.0,
+     "trader_gap": 0.0,
+     "mm_saved": 0.004778498192555553,
+     "mm_replayed": 0.004778498192555553
+    }
+   ]
+  }
+ ]
+}
